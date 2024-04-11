@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://x-lance.github.io/multi-language-al-folio/sitemap.xml
+Sitemap: https://x-lance.github.io/sitemap.xml
