@@ -3,11 +3,52 @@ page_id: teaching
 layout: page
 permalink: /teaching/
 title: 课程
-description: 由实验室开设的课程
+description: 由X-LANCE开设的课程
 nav: false
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
 
-Organize your courses by years, topics, or universities, however you like!
+## 2024春
+**智能语音技术 [AI2304 AI2651]** 俞凯，钱彦旻
+
+## 2023秋
+**人工智能前沿讲座 [AI3605]** 俞凯
+**自然语言处理 [CS3602 CS4314]** 俞凯，陈露，王瑞
+**计算机网络 [ICE4407P]** 申丽萍
+**计算机网络（D类） [CS3311]** 申丽萍，阮娜
+**离散数学 [CS2501]** 申丽萍
+**学术写作、规范与伦理 [GE6001]** 吴梦玥
+
+## 2023春
+**智能语音技术 [AI2304 AI2651]** 俞凯，钱彦旻
+**知识表征与推理 [AI3612]** 陈露
+
+## 2022秋
+**人工智能前沿讲座 [AI3605]** 俞凯
+**自然语言处理 [CS3602 CS4314]** 俞凯，陈露，王瑞
+**离散数学 [CS2501]** 申丽萍
+**程序设计思想与方法（C++） [CS1501]** 陈谐
+**学术写作、规范与伦理 [GE6001]** 吴梦玥
+
+## 2022春
+**智能语音技术 [AI2304 AI2651]** 俞凯，钱彦旻
+**知识表征与推理 [AI3612]** 陈露
+**智能感知认知实践 [AI3611]** 吴梦玥，陈谐
+
+## 2021秋
+**人工智能前沿讲座 [AI3605]** 俞凯
+**自然语言处理 [CS3602 CS4314]** 俞凯，陈露，王瑞
+**计算机网络（D类） [CS3311]** 申丽萍，阮娜
+**离散数学 [CS2501]** 申丽萍
+
+## 2021春
+**智能语音技术 [AI2304 AI2651]** 俞凯，钱彦旻
+
+## 2020秋
+**程序设计思想与方法（C++） [CS1501]** 申丽萍
+
+## 未分类或更早
+**计算机组成与体系结构 [ICE4406P]** 申丽萍，赵世振
+**计算机伦理学 [CS3309]** 吴梦玥
+
