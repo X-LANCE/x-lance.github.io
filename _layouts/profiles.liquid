@@ -7,7 +7,8 @@ layout: page
       {% for profile in page.profiles %}
         <hr>
         <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
-          {% if profile.image %}
+          <div align="center">
+            {% if profile.image %}
             {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
             {% if profile.image_circular %}
               {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
@@ -20,6 +21,7 @@ layout: page
           {% if profile.more_info %}
             <div class="more-info">{{ profile.more_info }}</div>
           {% endif %}
+        </div>
         </div>
 
         <div class="clearfix">
