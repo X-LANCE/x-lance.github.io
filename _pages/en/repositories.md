@@ -2,7 +2,7 @@
 page_id: repositories
 layout: page
 permalink: /repositories/
-title: Repositories
+title: Repos
 description: GitHub homepages and repositories of the lab
 nav: true
 nav_order: 5

@@ -2,7 +2,7 @@
 page_id: repositories
 layout: page
 permalink: /repositories/
-title: 部分项目仓库
+title: 仓库
 description: 实验室Github主页与部分项目仓库
 nav: true
 nav_order: 5
