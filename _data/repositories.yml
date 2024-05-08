@@ -1,6 +1,6 @@
-github_users:
-  - X-LANCE
-  - OpenDFM
+#github_users:
+#  - X-LANCE
+#  - OpenDFM
 
 github_repos:
   - X-LANCE/VoiceFlow-TTS
