@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: Repos
-description: GitHub homepages and repositories of the lab
+description: GitHub repositories (selected) of X-LANCE
 nav: true
 nav_order: 5
 ---
@@ -55,7 +55,7 @@ nav_order: 5
 
 [//]: # ({% endif %})
 
-## GitHub Repositories
+[//]: # (## GitHub Repositories)
 
 {% if site.data.repositories.github_repos %}
 

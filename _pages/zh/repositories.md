@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: 仓库
-description: 实验室Github主页与部分项目仓库
+description: X-LANCE的部分GitHub项目仓库
 nav: true
 nav_order: 5
 ---
@@ -55,7 +55,7 @@ nav_order: 5
 
 [//]: # ({% endif %})
 
-## GitHub 项目
+[//]: # (## GitHub 项目)
 
 {% if site.data.repositories.github_repos %}
 
