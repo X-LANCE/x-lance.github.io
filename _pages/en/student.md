@@ -9,7 +9,11 @@ nav: false
 
 
 <h2> Postdocs </h2>
-
+<img src="members/faculty/ky_square.jpg" class="round_icon"  alt="">
+<p align="center"><h3>Professor Kai Yu</h3>
+      SEIEE 3-539<br>
+      kai.yu@sjtu.edu.cn<br>
+      <a href="https://x-lance.github.io/kaiyu/">Personal Website</a></p>
 <h2> PhD Candidates </h2>
 
 <h2> Master Candidates </h2>
