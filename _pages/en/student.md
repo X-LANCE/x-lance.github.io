@@ -14,7 +14,7 @@ nav: false
   overflow:auto;
 }
 .mycontainer div {
-  width:200px;
+  width:30%;
   float:left;
 }
 </style>
