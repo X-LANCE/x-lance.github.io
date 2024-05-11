@@ -8,40 +8,74 @@ nav: false
 ---
 
 <h2> Postdocs </h2>
-<table><tr>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-
-</tr><tr>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-<td><figure align="center">
-    <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width: 70px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
-    <figcaption><b>Kai Yu</b><br>
-    kai.yu@sjtu.edu.cn<br></figcaption>
-    </figure></td>
-</tr></table>
+<style>
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+.mycontainer div {
+  width:200px;
+  float:left;
+}
+</style>
+<div class="mycontainer">
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+    <div>
+        <figure align="center">
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%;" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <figcaption><b>Kai Yu</b><br>
+        kai.yu@sjtu.edu.cn<br></figcaption>
+        </figure>
+    </div>
+</div>
     
 <h2> PhD Candidates </h2>
 
