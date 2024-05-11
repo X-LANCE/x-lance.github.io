@@ -7,7 +7,7 @@ subtitle: <a href='https://www.sjtu.edu.cn/'>Shanghai Jiao Tong University</a>. 
 
 profile:
   align: right
-  image: logo_red.png
+  image: logo_red_clipped.png
   image_circular: true # crops the image to make it circular
   more_info: >
     <p align="center">SEIEE 3-223, 3-225<br>Shanghai Jiao Tong University<br>Shanghai, Minhang<br>xlance@sjtu.edu.cn</p>

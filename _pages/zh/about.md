@@ -7,7 +7,7 @@ subtitle: <a href='https://www.sjtu.edu.cn/'>上海交通大学</a> 跨媒体语
 
 profile:
   align: right
-  image: logo_red.png
+  image: logo_red_clipped.png
   image_circular: true # crops the image to make it circular
   more_info: >
     <p align="center">电院3号楼223、225<br>上海交通大学<br>上海，闵行<br>xlance@sjtu.edu.cn</p>
