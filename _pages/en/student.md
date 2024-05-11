@@ -14,62 +14,63 @@ nav: false
   overflow:auto;
 }
 .mycontainer div {
+  margin: 0 10px;
   float:left;
 }
 </style>
 <div class="mycontainer">
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
     </div>
     <div>
         <figure align="center">
-        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:120px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
+        <a href="https://x-lance.github.io/kaiyu/"><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/ky_square.jpg" alt=""></a>
         <figcaption><b>Kai Yu</b><br>
         kai.yu@sjtu.edu.cn<br></figcaption>
         </figure>
