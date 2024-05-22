@@ -1,0 +1,26 @@
+---
+page_id: student
+layout: page
+permalink: /members/student/
+title: Students
+description: Students of X-LANCE
+nav: false
+---
+
+<h2> 博士后 </h2>
+<style>
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+.mycontainer div {
+  margin: 0 10px;
+  float:left;
+}
+!{postdoc_containers}!
+<h2> 博士研究生 </h2>
+!{phd_containers}!
+<h2> 硕士研究生 </h2>
+!{master_containers}!
+<h2> 本科生 </h2>
+!{undergraduate_containers}!

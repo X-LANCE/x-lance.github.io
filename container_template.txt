@@ -1,0 +1,8 @@
+<div class="mycontainer">
+    <div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/!{fig_name}!.png" alt=""></a>
+        <figcaption><b>!{name}!</b></figcaption>
+        </figure>
+    </div>
+</div>
