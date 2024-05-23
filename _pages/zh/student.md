@@ -11,6 +11,9 @@ nav: false
 <style>
 .mycontainer {
   width:100%;
+  height: auto;
+  display: flex; /* 使用flex布局 */
+  flex-wrap: wrap; /* 设置子元素自动换行 */
   overflow:auto;
 }
 .mycontainer div {
