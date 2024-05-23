@@ -17,7 +17,7 @@ nav: false
   margin: 0 10px;
   float:left;
 }
-
+</style>
 <h2> PhD Candidates </h2>
 <div class="mycontainer">
     <div>

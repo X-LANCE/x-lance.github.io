@@ -17,6 +17,7 @@ nav: false
   margin: 0 10px;
   float:left;
 }
+</style>
 !{postdoc_containers}!
 <h2> PhD Candidates </h2>
 !{phd_containers}!
