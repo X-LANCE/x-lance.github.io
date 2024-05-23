@@ -20,8 +20,14 @@ nav: false
 </style>
 !{postdoc_containers}!
 <h2> 博士研究生 </h2>
+<div class="mycontainer">
 !{phd_containers}!
+</div>
 <h2> 硕士研究生 </h2>
+<div class="mycontainer">
 !{master_containers}!
+</div>
 <h2> 本科生 </h2>
+<div class="mycontainer">
 !{undergraduate_containers}!
+</div>

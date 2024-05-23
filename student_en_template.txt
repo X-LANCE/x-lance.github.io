@@ -20,8 +20,14 @@ nav: false
 </style>
 !{postdoc_containers}!
 <h2> PhD Candidates </h2>
+<div class="mycontainer">
 !{phd_containers}!
+</div>
 <h2> Master Candidates </h2>
+<div class="mycontainer">
 !{master_containers}!
+</div>
 <h2> Undergraduates </h2>
+<div class="mycontainer">
 !{undergraduate_containers}!
+</div>
