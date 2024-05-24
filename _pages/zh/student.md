@@ -68,7 +68,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/曹瑞升.jpeg" alt=""></a>
         <figcaption><b>曹瑞升</b><br><b>084-M</b></figcaption>
         </figure>
     </div>
