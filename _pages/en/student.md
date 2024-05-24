@@ -63,18 +63,12 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yuncong Liu</b><br><b>133-P</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
         <figcaption><b>Tao Liu</b><br><b>129-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/曹瑞升.jpeg" alt=""></a>
         <figcaption><b>Ruisheng Cao</b><br><b>084-M</b></figcaption>
         </figure>
     </div>
@@ -110,12 +104,6 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Xingyu Chen</b><br><b>093-M</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/朱梓臣.jpg" alt=""></a>
         <figcaption><b>Zichen Zhu</b><br><b>146-UP</b></figcaption>
         </figure>
@@ -134,7 +122,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/兰焜耀.jpg" alt=""></a>
         <figcaption><b>Kunyao Lan</b><br><b>131-MP</b></figcaption>
         </figure>
     </div>
@@ -156,13 +144,25 @@ nav: false
         <figcaption><b>Jiaming Luo</b><br><b>147-P</b></figcaption>
         </figure>
     </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/宋秀杰.jpg" alt=""></a>
+        <figcaption><b>Xiujie Song</b><br><b>164-P</b></figcaption>
+        </figure>
+    </div>
 </div>
 <h2> Master Candidates </h2>
 <div class="mycontainer">
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Ganyu Huang</b><br><b>id</b></figcaption>
+        <figcaption><b>Yuncong Liu</b><br><b>133-P</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <figcaption><b>Ganyu Huang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -216,7 +216,7 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yushen Chen</b><br><b>id</b></figcaption>
+        <figcaption><b>Yushen Chen</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -228,7 +228,7 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/曾泓川.JPG" alt=""></a>
-        <figcaption><b>Hongchuan Ceng</b><br><b>id</b></figcaption>
+        <figcaption><b>Hongchuan Ceng</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -240,7 +240,7 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/杨飞.jpg" alt=""></a>
-        <figcaption><b>Fei Yang</b><br><b>id</b></figcaption>
+        <figcaption><b>Fei Yang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -258,19 +258,19 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yakun Song</b><br><b>id</b></figcaption>
+        <figcaption><b>Yakun Song</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yuezhang Peng</b><br><b>id</b></figcaption>
+        <figcaption><b>Yuezhang Peng</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yijie Luo</b><br><b>id</b></figcaption>
+        <figcaption><b>Yijie Luo</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -297,6 +297,12 @@ nav: false
         <figcaption><b>Senyu Han</b><br><b>167-M</b></figcaption>
         </figure>
     </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/李星源.jpg" alt=""></a>
+        <figcaption><b>Xingyuan Li</b><br><b>172-M</b></figcaption>
+        </figure>
+    </div>
 </div>
 <h2> Undergraduates </h2>
 <div class="mycontainer">
@@ -309,37 +315,31 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Dengdeng Huang</b><br><b>id</b></figcaption>
+        <figcaption><b>Hanglei Zhang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Hanglei Zhang</b><br><b>id</b></figcaption>
+        <figcaption><b>Chenrun Wang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Chenrun Wang</b><br><b>id</b></figcaption>
+        <figcaption><b>Xizhuo Zhang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Xizhuo Zhang</b><br><b>id</b></figcaption>
+        <figcaption><b>Baocai Chen</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Baocai Chen</b><br><b>id</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Zhennan Shen</b><br><b>id</b></figcaption>
+        <figcaption><b>Zhennan Shen</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -351,13 +351,13 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yaozhong Zhang</b><br><b>id</b></figcaption>
+        <figcaption><b>Yaozhong Zhang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Wenxi Chen</b><br><b>id</b></figcaption>
+        <figcaption><b>Wenxi Chen</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -369,25 +369,25 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Zhisheng Zheng</b><br><b>id</b></figcaption>
+        <figcaption><b>Zhisheng Zheng</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yanqiao Zhu</b><br><b>id</b></figcaption>
+        <figcaption><b>Yanqiao Zhu</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Hang Zheng</b><br><b>id</b></figcaption>
+        <figcaption><b>Hang Zheng</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Zhikang Niu</b><br><b>id</b></figcaption>
+        <figcaption><b>Zhikang Niu</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -399,79 +399,115 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Qixi Zheng</b><br><b>id</b></figcaption>
+        <figcaption><b>Qixi Zheng</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Bohan Li</b><br><b>id</b></figcaption>
+        <figcaption><b>Bohan Li</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Xuancheng Liu</b><br><b>id</b></figcaption>
+        <figcaption><b>Xuancheng Liu</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/李之涵.jpg" alt=""></a>
-        <figcaption><b>Zhihan Li</b><br><b>id</b></figcaption>
+        <figcaption><b>Zhihan Li</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yuzhe Liang</b><br><b>id</b></figcaption>
+        <figcaption><b>Yuzhe Liang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陈逸恒.jpg" alt=""></a>
-        <figcaption><b>Yiheng Chen</b><br><b>id</b></figcaption>
+        <figcaption><b>Yiheng Chen</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Zhengshun Xia</b><br><b>id</b></figcaption>
+        <figcaption><b>Zhengshun Xia</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Ding Zhou</b><br><b>id</b></figcaption>
+        <figcaption><b>Ding Zhou</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Xiquan  Li</b><br><b>id</b></figcaption>
+        <figcaption><b>Xiquan  Li</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Xinming Shu</b><br><b>id</b></figcaption>
+        <figcaption><b>Xinming Shu</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Haoxiang Jiang</b><br><b>id</b></figcaption>
+        <figcaption><b>Haoxiang Jiang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/徐瑞阳.jpg" alt=""></a>
-        <figcaption><b>Ruiyang Xu</b><br><b>id</b></figcaption>
+        <figcaption><b>Ruiyang Xu</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Yifan Zhang</b><br><b>id</b></figcaption>
+        <figcaption><b>Yifan Zhang</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/郭思佳.jpeg" alt=""></a>
+        <figcaption><b>Sijia Guo</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/靳秉睿.jpeg" alt=""></a>
+        <figcaption><b>Bingrui Jin</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/万恬溪.jpg" alt=""></a>
+        <figcaption><b>Tianxi Wan</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王熠笑.jpg" alt=""></a>
+        <figcaption><b>Yixiao Wang</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/文雯.jpg" alt=""></a>
+        <figcaption><b>Wen Wen</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张耀匀.jpg" alt=""></a>
+        <figcaption><b>Yaoyun Zhang</b><br><b></b></figcaption>
         </figure>
     </div>
 </div>
