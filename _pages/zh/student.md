@@ -297,13 +297,13 @@ nav: false
         <figcaption><b>韩森宇</b><br><b>167-M</b></figcaption>
         </figure>
     </div>
-</div>
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/李星源.jpg" alt=""></a>
         <figcaption><b>李星源</b><br><b>172-M</b></figcaption>
         </figure>
     </div>
+</div>
 <h2> 本科生 </h2>
 <div class="mycontainer">
 <div>
