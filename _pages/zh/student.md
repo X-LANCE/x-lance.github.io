@@ -303,6 +303,12 @@ nav: false
         <figcaption><b>李星源</b><br><b>172-M</b></figcaption>
         </figure>
     </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/张耀匀.jpg" alt=""></a>
+        <figcaption><b>张耀匀</b><br><b></b></figcaption>
+        </figure>
+    </div>
 </div>
 <h2> 本科生 </h2>
 <div class="mycontainer">
@@ -502,12 +508,6 @@ nav: false
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/文雯.jpg" alt=""></a>
         <figcaption><b>文雯</b><br><b></b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/张耀匀.jpg" alt=""></a>
-        <figcaption><b>张耀匀</b><br><b></b></figcaption>
         </figure>
     </div>
 </div>
