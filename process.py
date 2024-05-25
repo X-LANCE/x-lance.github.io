@@ -46,15 +46,15 @@ def construct_containers(df, prompt_path, language):
         print(image_list)
         if language == 'zh':
             variable_dict = {
-                "fig_name": image_list[row["姓名"]] if row["姓名"] in image_list else "assets/img/octocat.png",
+                "fig_name": "../../../" + image_list[row["姓名"]] if row["姓名"] in image_list else "../../../assets/img/octocat.png",
                 "name": row["姓名"],
-                "id": name_id_df[name_id_df["姓名"] == row["姓名"]]["编号"].values[0] if row["姓名"] in name_id_df["姓名"].values else "id",
+                "id": name_id_df[name_id_df["姓名"] == row["姓名"]]["编号"].values[0] if row["姓名"] in name_id_df["姓名"].values else "",
             }
         elif language == 'en':
             variable_dict = {
-                "fig_name": image_list[row["姓名"]] if row["姓名"] in image_list else "assets/img/octocat.png",
+                "fig_name": "../../" + image_list[row["姓名"]] if row["姓名"] in image_list else "../../assets/img/octocat.png",
                 "name": chinese_name_to_pinyin(row["姓名"]),
-                "id": name_id_df[name_id_df["姓名"] == row["姓名"]]["编号"].values[0] if row["姓名"] in name_id_df["姓名"].values else "id",
+                "id": name_id_df[name_id_df["姓名"] == row["姓名"]]["编号"].values[0] if row["姓名"] in name_id_df["姓名"].values else "",
             }
         prompt_processed = _load_variables_by_name(prompt, variable_dict)
         containers.append(prompt_processed)

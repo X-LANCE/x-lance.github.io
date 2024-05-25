@@ -1,6 +1,6 @@
     <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../!{fig_name}!" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="!{fig_name}!" alt=""></a>
         <figcaption><b>!{name}!</b><br><b>!{id}!</b></figcaption>
         </figure>
     </div>
