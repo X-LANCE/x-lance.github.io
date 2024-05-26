@@ -7,11 +7,11 @@ contact_note: >
   欢迎关注我们的工作，如果有任何问题欢迎随时联系我们。
 footer_text: > # ">" 符号表示忽略直到 "titles:" 的所有新行
   由 <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> 驱动，使用 <a href="https://github.com/george-gca/multi-language-al-folio">多语言-al-folio</a> 主题。
-  托管于 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>。
+  托管于 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>。 由朱梓臣、兰焜耀和杨景凯维护。
 latest_posts: 最新文章
 news: 🔥新闻
 selected_publications: 📑论文摘选
-site_description: 一个简单的、以空白为主题的学术网站。基于 [*folio](https://github.com/bogoli/-folio) 设计。
+site_description: X-LANCE 实验室官方网站
 archive_category: 该分类下的文章存档
 archive_tag: 带有此标签的文章存档
 archive_year: 该年份的文章存档

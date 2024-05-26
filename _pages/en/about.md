@@ -13,7 +13,7 @@ profile:
     <p align="center">SEIEE 3-223, 3-225<br>Shanghai Jiao Tong University<br>Shanghai, Minhang<br>xlance@sjtu.edu.cn</p>
 
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 Welcome to SJTU X-LANCE Lab!
