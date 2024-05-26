@@ -34,7 +34,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/许洪琛.jpg" alt=""></a>
         <figcaption><b>许洪深</b><br><b>091-P</b></figcaption>
         </figure>
     </div>
@@ -82,7 +82,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/马达.jpg" alt=""></a>
         <figcaption><b>马达</b><br><b>094-M</b></figcaption>
         </figure>
     </div>
@@ -187,7 +187,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/宋哲书.jpeg" alt=""></a>
         <figcaption><b>宋哲书</b><br><b>154-M</b></figcaption>
         </figure>
     </div>
@@ -253,7 +253,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/肖云冲.jpg" alt=""></a>
         <figcaption><b>肖云冲</b><br><b>162-M</b></figcaption>
         </figure>
     </div>
@@ -328,13 +328,13 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/王辰润.jpg" alt=""></a>
         <figcaption><b>王辰润</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/张熙灼.jpeg" alt=""></a>
         <figcaption><b>张熙灼</b><br><b></b></figcaption>
         </figure>
     </div>
@@ -346,7 +346,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/申振南.jpeg" alt=""></a>
         <figcaption><b>申振南</b><br><b></b></figcaption>
         </figure>
     </div>
@@ -406,7 +406,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/郑棋曦.jpg" alt=""></a>
         <figcaption><b>郑棋曦</b><br><b></b></figcaption>
         </figure>
     </div>
