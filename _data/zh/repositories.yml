@@ -1,9 +1,11 @@
 github_repos:
-  - X-LANCE/VoiceFlow-TTS
   - X-LANCE/AniTalker
-  - X-LANCE/WebSRC-Baseline
   - X-LANCE/Mobile-Env
-  - OpenDFM/Rememberer
+  - X-LANCE/StoryTTS
+  - X-LANCE/text2sql-lgesql
+  - X-LANCE/VoiceFlow-TTS
+  - X-LANCE/WebSRC-Baseline
   - OpenDFM/ChemDFM
   - OpenDFM/MULTI-Benchmark
+  - OpenDFM/Rememberer
   - OpenDFM/SciEval

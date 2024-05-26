@@ -13,7 +13,7 @@ profile:
     <p align="center">电院3号楼223、225<br>上海交通大学<br>上海，闵行<br>xlance@sjtu.edu.cn</p>
 
 news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 欢迎访问上海交通大学 X-LANCE 实验室！
