@@ -11,7 +11,7 @@ children:
   - title: divider
   - title: 🧑‍💻Student
     permalink: /members/student/
-  - title: divider
-  - title: 🧑‍🎓Alumni
-    permalink: /members/alumni/
+#  - title: divider
+#  - title: 🧑‍🎓Alumni
+#    permalink: /members/alumni/
 ---

@@ -7,7 +7,6 @@ description: Students of X-LANCE
 nav: false
 ---
 
-<h2> Postdocs </h2>
 <style>
 .mycontainer {
   width:100%;
@@ -21,6 +20,9 @@ nav: false
   float:left;
 }
 </style>
+
+
+[//]: # (<h2> Postdocs </h2>)
 
 <h2> PhD Candidates </h2>
 <div class="mycontainer">

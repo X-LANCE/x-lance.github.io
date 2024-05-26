@@ -7,7 +7,6 @@ description: Students of X-LANCE
 nav: false
 ---
 
-<h2> 博士后 </h2>
 <style>
 .mycontainer {
   width:100%;
@@ -21,6 +20,9 @@ nav: false
   float:left;
 }
 </style>
+
+[//]: # (<h2> 博士后 </h2>)
+
 
 <h2> 博士研究生 </h2>
 <div class="mycontainer">
