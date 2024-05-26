@@ -8,7 +8,7 @@ middle_name: "-"
 last_name: LANCE
 email: xlance@sjtu.edu.cn
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-icon: 🛠️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ️ logo_red_clipped.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://x-lance.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
