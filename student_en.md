@@ -144,7 +144,7 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student\郭奕玮.jpg" alt=""></a>
-        <figcaption><b>Yiwei Guo</b><br><b>158-P</b></figcaption>
+        <figcaption><b>Yiwei Guo</b><br><b>158-UP</b></figcaption>
         </figure>
     </div>
 <div>
