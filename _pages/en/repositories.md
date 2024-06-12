@@ -2,7 +2,7 @@
 page_id: repositories
 layout: page
 permalink: /repositories/
-title: Repos
+title: 🗃️Repos
 description: GitHub repositories (selected) of X-LANCE
 nav: true
 nav_order: 5

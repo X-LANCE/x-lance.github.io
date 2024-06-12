@@ -2,7 +2,7 @@
 page_id: repositories
 layout: page
 permalink: /repositories/
-title: 仓库
+title: 🗃️仓库
 description: X-LANCE的部分GitHub项目仓库
 nav: true
 nav_order: 5
