@@ -3,7 +3,7 @@ id: under_construction
 layout: page
 title: 🛠️Under Construction
 nav: true
-nav_order: 5
+nav_order: 7
 dropdown: true
 children:
   - title: projects

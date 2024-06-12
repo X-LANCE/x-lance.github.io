@@ -3,7 +3,7 @@ id: under_construction
 layout: page
 title: 🛠️搭建中
 nav: true
-nav_order: 5
+nav_order: 7
 dropdown: true
 children:
   - title: 项目
