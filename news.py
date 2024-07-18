@@ -6,12 +6,12 @@ news_index = 0
 with open(list_file, 'r', encoding='utf-8') as f:
     news_list = f.read()
 
-news_list = news_list.split("\n# 20")
+news_list = news_list.split("\n# ")
 for news in news_list:
     info = news.strip().split("\n\n")
     assert len(info) == 3
     news_index += 1
-    date = "20" + info[0].replace('#','').strip()
+    date = info[0].replace('#','').strip()
     content_en = info[1].strip()
     content_zh = info[2].strip()
 
