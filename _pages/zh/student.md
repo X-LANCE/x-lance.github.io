@@ -52,7 +52,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../../assets/img/members/student/奚彧.jpg" alt=""></a>
         <figcaption><b>奚彧</b><br><b>107-P</b></figcaption>
         </figure>
     </div>
