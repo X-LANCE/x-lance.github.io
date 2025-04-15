@@ -51,7 +51,15 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p align="center"><h3>Associate Researcher Lu Chen</h3>
-      SEIEE 3-223<br>
+      SEIEE 3-341<br>
       chenlusz@sjtu.edu.cn<br>
       <a href="https://coai-sjtu.github.io/">Personal Website</a></p>
+  - align: left
+    image: members/faculty/myq_square.jpg
+    content: members/faculty/maoyiqiong.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p align="center"><h3>Research Assistant Yiqiong Mao</h3>
+      SEIEE 3-341<br>
+      yiqiong.mao@sjtu.edu.cn</a></p>
 ---

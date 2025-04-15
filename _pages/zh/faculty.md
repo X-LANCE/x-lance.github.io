@@ -32,7 +32,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p align="center"><h3>陈谐 副教授</h3>
-      SEIEE 3-501<br>
+      电院3号楼501<br>
       chenxie95@sjtu.edu.cn<br>
       <a href="https://chenxie95.github.io/">个人主页</a></p>
   - align: left
@@ -41,7 +41,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p align="center"><h3>吴梦玥 副研究员</h3>
-      SEIEE 3-524<br>
+      电院3号楼524<br>
       mengyuewu@sjtu.edu.cn<br>
       <a href="https://myw19.github.io/">个人主页</a></p>
   - align: right
@@ -50,7 +50,15 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p align="center"><h3>陈露 副研究员</h3>
-      SEIEE 3-223<br>
+      电院3号楼341<br>
       chenlusz@sjtu.edu.cn<br>
       <a href="https://coai-sjtu.github.io/">个人主页</a></p>
+  - align: left
+    image: members/faculty/myq_square.jpg
+    content: members/faculty/maoyiqiong.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p align="center"><h3>茅懿琼 科研助理</h3>
+      电院3号楼341<br>
+      yiqiong.mao@sjtu.edu.cn</a></p>
 ---
