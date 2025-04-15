@@ -1,1 +1,1 @@
-Yiqiong Mao, Research Assistant
+Yiqiong Mao, the research assistant at the X-LANCE Lab of Shanghai Jiao Tong University, is mainly responsible for the laboratory's research finance work, assisting in the application and fund management of research projects, writing various reports, managing patents, and handling daily laboratory tasks such as equipment maintenance, procurement of consumables, and laboratory safety management. These tasks are of great significance for the efficient operation of the laboratory and the smooth progress of research projects.
