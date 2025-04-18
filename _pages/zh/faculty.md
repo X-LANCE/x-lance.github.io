@@ -2,7 +2,7 @@
 page_id: faculty
 layout: profiles
 permalink: /members/faculty/
-title: 教师
+title: 🧑‍🏫教师
 nav: false
 
 profiles:
