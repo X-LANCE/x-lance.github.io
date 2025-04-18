@@ -33,6 +33,12 @@ nav: false
     </div>
 <div>
         <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陈星宇.jpg" alt=""></a>
+        <figcaption><b>Xingyu Chen</b><br><b>093-MP</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/马达.jpg" alt=""></a>
         <figcaption><b>Da Ma</b><br><b>094-MP</b></figcaption>
         </figure>
@@ -75,13 +81,13 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张思拓.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张思拓.jpg" alt=""></a>
         <figcaption><b>Situo Zhang</b><br><b>140-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王鹏宇.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王鹏宇.jpg" alt=""></a>
         <figcaption><b>Pengyu Wang</b><br><b>145-P</b></figcaption>
         </figure>
     </div>
@@ -99,7 +105,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王瀚坤.jpg" alt=""></a>
         <figcaption><b>Hankun Wang</b><br><b>150-P</b></figcaption>
         </figure>
     </div>
@@ -135,7 +141,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/韩杨.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/韩杨.jpg" alt=""></a>
         <figcaption><b>Yang Han</b><br><b>166-P</b></figcaption>
         </figure>
     </div>
@@ -163,12 +169,6 @@ nav: false
         <figcaption><b>Bo Chen</b><br><b>190-P</b></figcaption>
         </figure>
     </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>HEINRICH DINKEL</b><br><b>027-P</b></figcaption>
-        </figure>
-    </div>
 </div>
 <h2> Master Candidates </h2>
 <div class="mycontainer">
@@ -192,7 +192,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/罗丹宇.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/罗丹宇.jpg" alt=""></a>
         <figcaption><b>Danyu Luo</b><br><b>144-UM</b></figcaption>
         </figure>
     </div>
@@ -363,7 +363,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/靳秉睿.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/靳秉睿.jpg" alt=""></a>
         <figcaption><b>Bingrui Jin</b><br><b>194-U</b></figcaption>
         </figure>
     </div>
@@ -393,7 +393,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张熙灼.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张熙灼.jpg" alt=""></a>
         <figcaption><b>Xizhuo Zhang</b><br><b></b></figcaption>
         </figure>
     </div>
@@ -405,7 +405,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/申振南.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/申振南.jpg" alt=""></a>
         <figcaption><b>Zhennan Shen</b><br><b></b></figcaption>
         </figure>
     </div>
@@ -454,12 +454,6 @@ nav: false
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Zhengshun Xia</b><br><b></b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
         <figcaption><b>Xiquan  Li</b><br><b></b></figcaption>
         </figure>
     </div>
@@ -489,14 +483,8 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/郭思佳.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/郭思佳.jpg" alt=""></a>
         <figcaption><b>Sijia Guo</b><br><b></b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王熠笑.jpg" alt=""></a>
-        <figcaption><b>Yixiao Wang</b><br><b></b></figcaption>
         </figure>
     </div>
 <div>
@@ -569,6 +557,12 @@ nav: false
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陶也.jpg" alt=""></a>
         <figcaption><b>Ye Tao</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <figcaption><b>Jiaying Chi</b><br><b></b></figcaption>
         </figure>
     </div>
 </div>

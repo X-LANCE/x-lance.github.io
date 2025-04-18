@@ -5,17 +5,6 @@ permalink: /members/alumni/
 title: 校友
 description: X-LANCE校友
 nav: false
-
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: members/faculty/qym_square.jpg
-    content: members/faculty/qianyanmin.md
-    image_circular: true # crops the image to make it circular
-    more_info: >
-      <h3>钱彦旻 教授</h3>
-      <p>电院3号楼501<br>qian-ym@sjtu.edu.cn</p>
 ---
 
 <style>
@@ -116,14 +105,14 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/贺天行.jpg" alt=""></a>
         <figcaption><b>贺天行</b><br><b>017-UM</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>符天凡</b><br><b>018-U</b></figcaption>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/符天凡.jpg" alt=""></a>
+        <figcaption><b>符天凡</b><br><b>019-UP</b></figcaption>
         </figure>
     </div>
 <div>
@@ -158,26 +147,20 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/万一.jpg" alt=""></a>
         <figcaption><b>万一</b><br><b>024-U</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/郑达.jpg" alt=""></a>
         <figcaption><b>郑达</b><br><b>025-UM</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陈哲怀.jpg" alt=""></a>
         <figcaption><b>陈哲怀</b><br><b>026-UP</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>Heinrich（丁翰林）</b><br><b>027-MP</b></figcaption>
         </figure>
     </div>
 <div>
@@ -207,7 +190,7 @@ profiles:
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>顾昊</b><br><b>032-U</b></figcaption>
+        <figcaption><b>顾昊</b><br><b>032-UM</b></figcaption>
         </figure>
     </div>
 <div>
@@ -224,7 +207,7 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/谢其哲.jpg" alt=""></a>
         <figcaption><b>谢其哲</b><br><b>035-U</b></figcaption>
         </figure>
     </div>
@@ -266,7 +249,7 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王帅.jpg" alt=""></a>
         <figcaption><b>王帅</b><br><b>042-P</b></figcaption>
         </figure>
     </div>
@@ -308,8 +291,8 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>李翰正</b><br><b>049-U</b></figcaption>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/李翰正.jpg" alt=""></a>
+        <figcaption><b>李翰正</b><br><b>049-UM</b></figcaption>
         </figure>
     </div>
 <div>
@@ -392,7 +375,7 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/胡虎.jpg" alt=""></a>
         <figcaption><b>胡虎</b><br><b>063-U</b></figcaption>
         </figure>
     </div>
@@ -477,12 +460,6 @@ profiles:
 <div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>马娆</b><br><b>079-M</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
         <figcaption><b>李晨达</b><br><b>080-M</b></figcaption>
         </figure>
     </div>
@@ -548,14 +525,8 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/李杰宇.jpg" alt=""></a>
         <figcaption><b>李杰宇</b><br><b>092-UM</b></figcaption>
-        </figure>
-    </div>
-<div>
-        <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>陈星宇</b><br><b>093-M</b></figcaption>
         </figure>
     </div>
 <div>
@@ -776,19 +747,19 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陈思远.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/陈思远.jpg" alt=""></a>
         <figcaption><b>陈思远</b><br><b>149-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/宋哲书.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/宋哲书.jpg" alt=""></a>
         <figcaption><b>宋哲书</b><br><b>154-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/张淳皓.jpg" alt=""></a>
         <figcaption><b>张淳皓</b><br><b>155-M</b></figcaption>
         </figure>
     </div>
@@ -800,7 +771,7 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/黎井漂.jpeg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/黎井漂.jpg" alt=""></a>
         <figcaption><b>黎井漂</b><br><b>168-M</b></figcaption>
         </figure>
     </div>
@@ -848,8 +819,8 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
-        <figcaption><b>任立椋</b><br><b>184-U</b></figcaption>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/任立椋.jpg" alt=""></a>
+        <figcaption><b>任立椋</b><br><b>184-UP</b></figcaption>
         </figure>
     </div>
 <div>
@@ -872,7 +843,43 @@ profiles:
     </div>
 <div>
         <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <figcaption><b>夏钲舜</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/王熠笑.jpg" alt=""></a>
+        <figcaption><b>王熠笑</b><br><b></b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/octocat.png" alt=""></a>
+        <figcaption><b>丁翰林</b><br><b>027-MP</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/殷国航.jpg" alt=""></a>
-        <figcaption><b>殷国航</b><br><b></b></figcaption>
+        <figcaption><b>殷国航</b><br><b>067-U</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/马娆.jpg" alt=""></a>
+        <figcaption><b>马娆</b><br><b>079-M</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/faculty/qym_square.jpg" alt=""></a>
+        <figcaption><b>钱彦旻</b><br><b>011-F</b></figcaption>
+        </figure>
+    </div>
+<div>
+        <figure align="center">
+        <a href=""><img style="border-radius: 50%; width:150px" src="../../assets/img/members/student/杨景凯.jpg" alt=""></a>
+        <figcaption><b>杨景凯</b><br><b></b></figcaption>
         </figure>
     </div>
