@@ -107,7 +107,7 @@ page_id: alumni
 layout: profiles
 permalink: /members/alumni/
 title: 校友
-description: X-LANCE校友
+description: X-LANCE毕业校友
 nav: false
 ---
 
@@ -160,8 +160,8 @@ chi_student_md_P = """---
 page_id: student
 layout: page
 permalink: /members/student/
-title: Students
-description: Students of X-LANCE
+title: 学生
+description: X-LANCE在读学生
 nav: false
 ---
 
