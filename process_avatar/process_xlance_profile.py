@@ -6,25 +6,25 @@ from tqdm import tqdm
 
 default_pic = "../../assets/img/octocat.png"
 eng_alu_format = """<div>
-        <figure align="center">
+        <figure align="center" text-align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
         <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 chi_alu_format = """<div>
-        <figure align="center">
+        <figure align="center" text-align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
         <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 eng_stu_format = """<div>
-        <figure align="center">
+        <figure align="center" text-align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
         <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 chi_stu_format = """<div>
-        <figure align="center">
+        <figure align="center" text-align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
         <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
