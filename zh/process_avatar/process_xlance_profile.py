@@ -5,29 +5,21 @@ from pypinyin import lazy_pinyin, Style
 from tqdm import tqdm
 
 default_pic = "../../assets/img/octocat.png"
-eng_alu_format = """<div>
-        <figure align="center" text-align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
-        </figure>
+eng_alu_format = """<div class="member">
+        <a href="#"><img src="{pic}" alt="{name}"></a>
+        <div><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
-chi_alu_format = """<div>
-        <figure align="center" text-align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
-        </figure>
+chi_alu_format = """<div class="member">
+        <a href="#"><img src="{pic}" alt="{name}"></a>
+        <div><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
-eng_stu_format = """<div>
-        <figure align="center" text-align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
-        </figure>
+eng_stu_format = """<div class="member">
+        <a href="#"><img src="{pic}" alt="{name}"></a>
+        <div><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
-chi_stu_format = """<div>
-        <figure align="center" text-align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
-        </figure>
+chi_stu_format = """<div class="member">
+        <a href="#"><img src="{pic}" alt="{name}"></a>
+        <div><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
 
 
@@ -79,76 +71,94 @@ eng_alumni_md = """---
 page_id: alumni
 layout: profiles
 permalink: /members/alumni/
-title: alumni
+title: 🧑‍🎓Alumni
 description: Alumni of X-LANCE
 nav: false
 ---
 
 <style>
 .mycontainer {
-  width:100%;
-  height: auto;
-  display: flex; /* 使用flex布局 */
-  flex-wrap: wrap; /* 设置子元素自动换行 */
-  overflow:auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 水平居中所有项 */
+  gap: 30px; /* 每项之间的间距 */
+  padding: 20px 0;
 }
-.mycontainer div {
-  margin: 0 10px;
-  float:left;
+
+.member {
+  text-align: center;
+  width: 150px;
+}
+
+.member img {
+  width: 150px;
+  border-radius: 50%;
 }
 </style>
 
-[//]: # (<h2> 博士后 </h2>)
-
-
 <div class="mycontainer">"""
+
 chi_alumni_md = """---
 page_id: alumni
 layout: profiles
 permalink: /members/alumni/
-title: 校友
+title: 🧑‍🎓校友
 description: X-LANCE毕业校友
 nav: false
 ---
 
 <style>
 .mycontainer {
-  width:100%;
-  height: auto;
-  display: flex; /* 使用flex布局 */
-  flex-wrap: wrap; /* 设置子元素自动换行 */
-  overflow:auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 水平居中所有项 */
+  gap: 30px; /* 每项之间的间距 */
+  padding: 20px 0;
 }
-.mycontainer div {
-  margin: 0 10px;
-  float:left;
+
+.member {
+  text-align: center;
+  width: 150px;
+}
+
+.member img {
+  width: 150px;
+  border-radius: 50%;
 }
 </style>
 
-[//]: # (<h2> 博士后 </h2>)
-
 
 <div class="mycontainer">"""
+
 eng_student_md_P = """---
 page_id: student
 layout: page
 permalink: /members/student/
-title: Students
+title: 🧑‍💻Students
 description: Students of X-LANCE
 nav: false
 ---
 
 <style>
 .mycontainer {
-  width:100%;
-  height: auto;
-  display: flex; /* 使用flex布局 */
-  flex-wrap: wrap; /* 设置子元素自动换行 */
-  overflow:auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 水平居中所有项 */
+  gap: 30px; /* 每项之间的间距 */
+  padding: 20px 0;
 }
-.mycontainer div {
-  margin: 0 10px;
-  float:left;
+
+.member {
+  text-align: center;
+  width: 150px;
+}
+
+.member img {
+  width: 150px;
+  border-radius: 50%;
 }
 </style>
 
@@ -156,26 +166,34 @@ nav: false
 [//]: # (<h2> Postdocs </h2>)
 <h2> PhD Candidates </h2>
 <div class="mycontainer">"""
+
 chi_student_md_P = """---
 page_id: student
 layout: page
 permalink: /members/student/
-title: 学生
+title: 🧑‍💻学生
 description: X-LANCE在读学生
 nav: false
 ---
 
 <style>
 .mycontainer {
-  width:100%;
-  height: auto;
-  display: flex; /* 使用flex布局 */
-  flex-wrap: wrap; /* 设置子元素自动换行 */
-  overflow:auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 水平居中所有项 */
+  gap: 30px; /* 每项之间的间距 */
+  padding: 20px 0;
 }
-.mycontainer div {
-  margin: 0 10px;
-  float:left;
+
+.member {
+  text-align: center;
+  width: 150px;
+}
+
+.member img {
+  width: 150px;
+  border-radius: 50%;
 }
 </style>
 
@@ -183,15 +201,19 @@ nav: false
 
 <h2> 博士研究生 </h2>
 <div class="mycontainer">"""
+
 eng_student_md_M = """
 <h2> Master Candidates </h2>
 <div class="mycontainer">"""
+
 chi_student_md_M = """
 <h2> 硕士研究生 </h2>
 <div class="mycontainer">"""
+
 eng_student_md_U = """
 <h2> Undergraduates </h2>
 <div class="mycontainer">"""
+
 chi_student_md_U = """
 <h2> 本科生 </h2>
 <div class="mycontainer">"""
