@@ -8,80 +8,29 @@ default_pic = "../../assets/img/octocat.png"
 eng_alu_format = """<div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}-{degree}</b></figcaption>
+        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 chi_alu_format = """<div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}-{degree}</b></figcaption>
+        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 eng_stu_format = """<div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}-{degree}</b></figcaption>
+        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 chi_stu_format = """<div>
         <figure align="center">
         <a href=""><img style="border-radius: 50%; width:150px" src="{pic}" alt=""></a>
-        <figcaption><b>{name}</b><br><b>{xlanceid}-{degree}</b></figcaption>
+        <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
 pic_file = pd.read_excel('./picfile.xlsx')
-pic_data = pic_file.values
-
-
-def get_degree(text):
-    if '本科' in text:
-        return 'U'
-    if '硕士' in text:
-        return 'M'
-    if '博士' in text:
-        return 'P'
-
-
-def upd_degree(name, origin):
-    for person in pic_data:
-        if person[7] == name:
-            current_degree = get_degree(person[10])
-            if current_degree not in origin:
-                origin += current_degree
-    return origin
-
-
-def default_(name, path):
-    for picname in os.listdir(path):
-        if picname.split('.')[0] == name:
-            return path + '/' + picname
-    return default_pic
-
-
-def down_img(name, path, filename):
-    url = default_pic
-    for person in pic_data:
-        if person[7] == name:
-            print(f"found {name}")
-            url = person[13]
-            if pd.isnull(url):
-                return default_(name, path)
-    if url == default_pic:
-        return default_(name, path)
-    try:
-        print(f"downloading pic of {name}")
-        response = requests.get(url, stream=True)
-        response.raise_for_status()  # 检查请求是否成功
-        pic = path + "/" + filename
-        with open(pic, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-        # print(f"downloaded successfully to {pic}")
-        return '../' + pic
-    
-    except Exception as e:
-        print(f"下载失败：{str(e)}")
-        return None
+qn_dict = pic_file.values  # questionnaire dict
 
 
 def format_filename(name):
@@ -122,27 +71,6 @@ def chi_to_eng(name):
     given_name_py = convert_part(given_name)
     
     return f"{given_name_py} {surname_py}"
-
-
-def format_single(person):
-    name = person[0]
-    # sjtuid = person[8]
-    xlanceid = person[2]
-    degree = upd_degree(name, person[3])
-    typ = 1  # 学生
-    if '离开' in person[4]:
-        typ = 0  # 校友
-    else:
-        if 'M' in degree:
-            typ = 2
-        if 'P' in degree:
-            typ = 3
-    # degree = get_degree(person[10])
-    pic = down_img(name, '../assets/img/members/student', format_filename(name) + '.jpg')
-    if typ == 0:
-        return typ, eng_stu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid, degree=degree), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid, degree=degree)
-    else:
-        return typ, eng_alu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid, degree=degree), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid, degree=degree)
 
 
 eng_alumni_md = """---
@@ -288,44 +216,184 @@ chi_student_md_U = """
 <h2> 本科生 </h2>
 <div class="mycontainer">"""
 
-file = pd.read_excel('./full.xlsx')
+file = pd.read_excel('./final.xlsx')
 data = file.values
+names = []
+ids = []
+degrees = []
+pics = []
+states = []
+for person in data:
+    names.append(person[0])
+    ids.append(person[1])
+    degrees.append(person[2])
+    pics.append(person[3])
+    states.append(person[4])
 
-for person in tqdm(data):
-    if '在职' in person[4]:
-        continue
-    if pd.isnull(person[3]):
-        continue
-    typ, eng, chi = format_single(person)  # type, english_description, chinese_description
-    # print(eng)
-    if typ == 0:
-        eng_alumni_md += '\n' + eng
-        chi_alumni_md += '\n' + chi
+
+def format_single(person):
+    name = person[1]
+    xlanceid = person[2]
+    degree = person[3]
+    
+    if xlanceid >0:
+        xlanceid =int(xlanceid)
+        xlanceid=f"{xlanceid:03d}-{degree}"
     else:
-        if typ == 1:
-            eng_student_md_U += '\n' + eng
-            chi_student_md_U += '\n' + chi
-        if typ == 2:
-            eng_student_md_M += '\n' + eng
-            chi_student_md_M += '\n' + chi
-        if typ == 3:
-            eng_student_md_P += '\n' + eng
-            chi_student_md_P += '\n' + chi
+        xlanceid=f""
+    
+    typ = 1  # 学生
+    if '离开' in person[5]:
+        typ = 0  # 校友
+    else:
+        if 'M' in degree:
+            typ = 2
+        if 'P' in degree:
+            typ = 3
+            
+    pic = person[4]
+    if typ == 0:
+        return typ, eng_stu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid)
+    else:
+        return typ, eng_alu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid)
 
-eng_student_md_P += '\n</div>'
-chi_student_md_P += '\n</div>'
-eng_student_md_M += '\n</div>'
-chi_student_md_M += '\n</div>'
-eng_student_md_U += '\n</div>'
-chi_student_md_U += '\n</div>'
-eng_student_md = eng_student_md_P + eng_student_md_M + eng_student_md_U
-chi_student_md = chi_student_md_P + chi_student_md_M + chi_student_md_U
 
-with open('../_pages/en/alumni.md', 'w', encoding='utf-8') as f:
-    f.write(eng_alumni_md)
-with open('../_pages/zh/alumni.md', 'w', encoding='utf-8') as f:
-    f.write(chi_alumni_md)
-with open('../_pages/en/student.md', 'w', encoding='utf-8') as f:
-    f.write(eng_student_md)
-with open('../_pages/zh/student.md', 'w', encoding='utf-8') as f:
-    f.write(chi_student_md)
+def get_degree_state(curstate):
+    state = '在读'
+    if '毕业' in curstate:
+        state = '离开'
+    if '本科' in curstate:
+        return 'U', state
+    if '硕士' in curstate:
+        return 'M', state
+    if '博士' in curstate:
+        return 'P', state
+
+
+def upd_degree(d1, d2):
+    if d1 == 'U':
+        return d1 + d2
+    if d1 == 'P':
+        return d2 + d1
+    # d1 = 'M'
+    if d2 == 'U':
+        return d2 + d1
+    return d1 + d2
+
+
+def down_pic(url, path, filename):
+    try:
+        print(f"downloading pic of {filename}")
+        response = requests.get(url, stream=True)
+        response.raise_for_status()  # 检查请求是否成功
+        pic = path + '/' + filename
+        with open(pic, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        # print(f"downloaded successfully to {pic}")
+        return '../' + pic
+    
+    except Exception as e:
+        print(f"下载失败：{str(e)}")
+        return None
+
+
+def upd_xlsx():
+    for person in qn_dict:
+        name = person[7]
+        xlanceid = person[9]
+        degree, state = get_degree_state(person[10])
+        pic = person[13]
+        if name in names:
+            po = names.index(name)
+            if xlanceid != 0:
+                ids[po] = xlanceid
+            if not pd.isnull(pic):
+                pics[po] = down_pic(pic, '../assets/img/members/student', format_filename(name) + '.jpg')
+            if degree not in degrees[po]:
+                degrees[po] = upd_degree(degree, degrees[po])
+            states[po] = state
+        else:
+            names.append(name)
+            if xlanceid == 0:
+                ids.append(None)
+            else:
+                ids.append(xlanceid)
+            degrees.append(degree)
+            states.append(state)
+            if pd.isnull(pic):
+                pics.append(default_pic)
+            else:
+                pics.append(down_pic(pic, '../assets/img/members/student', format_filename(name) + '.jpg'))
+    # print(len(names))
+    # print(len(ids))
+    # print(len(degrees))
+    # print(len(pics))
+    # print(len(states))
+    full_dict = {
+        'name': names,
+        'xlanceid': ids,
+        'degree': degrees,
+        'pic': pics,
+        'state': states
+    }
+    
+    writer = pd.ExcelWriter('./final_new.xlsx')
+    sheetNames = full_dict.keys()  # 获取所有sheet的名称
+    # sheets是要写入的excel工作簿名称列表
+    data = pd.DataFrame(full_dict)
+    for sheetName in sheetNames:
+        data.to_excel(writer, sheet_name=sheetName)
+    # 保存writer中的数据至excel
+    writer.close()
+
+
+def generate_md():
+    global eng_alumni_md
+    global chi_alumni_md
+    global eng_student_md_P
+    global chi_student_md_P
+    global eng_student_md_M
+    global chi_student_md_M
+    global eng_student_md_U
+    global chi_student_md_U
+    file = pd.read_excel('./final_new.xlsx')
+    data = file.values
+    for person in tqdm(data):
+        typ, eng, chi = format_single(person)  # type, english_description, chinese_description
+        if typ == 0:
+            eng_alumni_md += '\n' + eng
+            chi_alumni_md += '\n' + chi
+        else:
+            if typ == 1:
+                eng_student_md_U += '\n' + eng
+                chi_student_md_U += '\n' + chi
+            if typ == 2:
+                eng_student_md_M += '\n' + eng
+                chi_student_md_M += '\n' + chi
+            if typ == 3:
+                eng_student_md_P += '\n' + eng
+                chi_student_md_P += '\n' + chi
+    
+    eng_student_md_P += '\n</div>'
+    chi_student_md_P += '\n</div>'
+    eng_student_md_M += '\n</div>'
+    chi_student_md_M += '\n</div>'
+    eng_student_md_U += '\n</div>'
+    chi_student_md_U += '\n</div>'
+    eng_student_md = eng_student_md_P + eng_student_md_M + eng_student_md_U
+    chi_student_md = chi_student_md_P + chi_student_md_M + chi_student_md_U
+    
+    with open('../_pages/en/alumni.md', 'w',encoding= 'utf-8') as f:
+        f.write(eng_alumni_md)
+    with open('../_pages/zh/alumni.md', 'w',encoding= 'utf-8') as f:
+        f.write(chi_alumni_md)
+    with open('../_pages/en/student.md', 'w',encoding= 'utf-8') as f:
+        f.write(eng_student_md)
+    with open('../_pages/zh/student.md', 'w',encoding= 'utf-8') as f:
+        f.write(chi_student_md)
+
+
+if __name__ == '__main__':
+    # upd_xlsx()
+    generate_md()
