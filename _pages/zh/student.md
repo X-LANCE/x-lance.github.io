@@ -2,7 +2,7 @@
 page_id: student
 layout: page
 permalink: /members/student/
-title: Students
+title: 学生
 description: Students of X-LANCE
 nav: false
 ---
