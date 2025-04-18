@@ -162,9 +162,15 @@ nav: false
 }
 </style>
 
+<h2 style="text-align: center"> 🌟Postdocs🌟 </h2>
+<div class="mycontainer">
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
+        <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
+    </div>
+</div>
 
-[//]: # (<h2 style="text-align: center"> Postdocs </h2>)
-<h2 style="text-align: center"> PhD Candidates </h2>
+<h2 style="text-align: center"> 🌟PhD Candidates🌟 </h2>
 <div class="mycontainer">"""
 
 chi_student_md_P = """---
@@ -197,25 +203,31 @@ nav: false
 }
 </style>
 
-[//]: # (<h2 style="text-align: center"> 博士后 </h2>)
+<h2 style="text-align: center"> 🌟博士后🌟 </h2>
+<div class="mycontainer">
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="樊帅"></a>
+        <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
+    </div>
+</div>
 
-<h2 style="text-align: center"> 博士研究生 </h2>
+<h2 style="text-align: center"> 🌟博士研究生🌟 </h2>
 <div class="mycontainer">"""
 
 eng_student_md_M = """
-<h2 style="text-align: center"> Master Candidates </h2>
+<h2 style="text-align: center"> 🌟Master Candidates🌟 </h2>
 <div class="mycontainer">"""
 
 chi_student_md_M = """
-<h2 style="text-align: center"> 硕士研究生 </h2>
+<h2 style="text-align: center"> 🌟硕士研究生🌟 </h2>
 <div class="mycontainer">"""
 
 eng_student_md_U = """
-<h2 style="text-align: center"> Undergraduates </h2>
+<h2 style="text-align: center"> 🌟Undergraduates🌟 </h2>
 <div class="mycontainer">"""
 
 chi_student_md_U = """
-<h2 style="text-align: center"> 本科生 </h2>
+<h2 style="text-align: center"> 🌟本科生🌟 </h2>
 <div class="mycontainer">"""
 
 file = pd.read_excel('./final.xlsx')
@@ -375,6 +387,8 @@ def generate_md():
         file = pd.read_excel('./final.xlsx')
     data = file.values
     for person in tqdm(data):
+        if person[0] == '樊帅':
+            continue
         typ, eng, chi = format_single(person)  # type, english_description, chinese_description
         if typ == 0:
             eng_alumni_md += '\n' + eng

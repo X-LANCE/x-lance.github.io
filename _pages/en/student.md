@@ -28,16 +28,15 @@ nav: false
 }
 </style>
 
-
-<h2 style="text-align: center"> Postdocs </h2>
+<h2 style="text-align: center"> 🌟Postdocs🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <a href="#"><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
+        <a href=""><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
         <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
     </div>
 </div>
 
-<h2 style="text-align: center"> PhD Candidates </h2>
+<h2 style="text-align: center"> 🌟PhD Candidates🌟 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/许洪深.jpg" alt="Hongshen Xu"></a>
@@ -136,7 +135,7 @@ nav: false
         <div style="margin-top: 15px"><b>Bohan Li</b><br><b>200-UP</b></div>
     </div>
 </div>
-<h2 style="text-align: center"> Master Candidates </h2>
+<h2 style="text-align: center"> 🌟Master Candidates🌟 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="Zijian Zhao"></a>
@@ -239,7 +238,7 @@ nav: false
         <div style="margin-top: 15px"><b>Hang Zheng</b><br><b></b></div>
     </div>
 </div>
-<h2 style="text-align: center"> Undergraduates </h2>
+<h2 style="text-align: center"> 🌟Undergraduates🌟 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="Chen Yang"></a>
@@ -252,10 +251,6 @@ nav: false
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/李柏涵.jpg" alt="Baihan Li"></a>
         <div style="margin-top: 15px"><b>Baihan Li</b><br><b>157-U</b></div>
-    </div>
-<div class="member">
-        <a href="#"><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
-        <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
     </div>
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/王辰润.jpg" alt="Chenrun Wang"></a>
