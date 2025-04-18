@@ -28,9 +28,15 @@ nav: false
 }
 </style>
 
-[//]: # (<h2> 博士后 </h2>)
+<h2 style="text-align: center"> 博士后 </h2>
+<div class="mycontainer">
+<div class="member">
+        <a href="#"><img src="/assets/img/octocat.png" alt="樊帅"></a>
+        <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
+    </div>
+</div>
 
-<h2> 博士研究生 </h2>
+<h2 style="text-align: center"> 博士研究生 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/许洪深.jpg" alt="许洪深"></a>
@@ -124,8 +130,12 @@ nav: false
         <a href="#"><img src="/assets/img/octocat.png" alt="周强"></a>
         <div style="margin-top: 15px"><b>周强</b><br><b>183-P</b></div>
     </div>
+<div class="member">
+        <a href="#"><img src="/assets/img/octocat.png" alt="李波含"></a>
+        <div style="margin-top: 15px"><b>李波含</b><br><b>200-UP</b></div>
+    </div>
 </div>
-<h2> 硕士研究生 </h2>
+<h2 style="text-align: center"> 硕士研究生 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="赵子健"></a>
@@ -228,7 +238,7 @@ nav: false
         <div style="margin-top: 15px"><b>郑航</b><br><b></b></div>
     </div>
 </div>
-<h2> 本科生 </h2>
+<h2 style="text-align: center"> 本科生 </h2>
 <div class="mycontainer">
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="杨晨"></a>
@@ -241,10 +251,6 @@ nav: false
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/李柏涵.jpg" alt="李柏涵"></a>
         <div style="margin-top: 15px"><b>李柏涵</b><br><b>157-U</b></div>
-    </div>
-<div class="member">
-        <a href="#"><img src="/assets/img/octocat.png" alt="樊帅"></a>
-        <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
 <div class="member">
         <a href="#"><img src="/assets/img/members/student/王辰润.jpg" alt="王辰润"></a>
@@ -265,10 +271,6 @@ nav: false
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="郑之胜"></a>
         <div style="margin-top: 15px"><b>郑之胜</b><br><b>196-U</b></div>
-    </div>
-<div class="member">
-        <a href="#"><img src="/assets/img/octocat.png" alt="李波含"></a>
-        <div style="margin-top: 15px"><b>李波含</b><br><b>200-U</b></div>
     </div>
 <div class="member">
         <a href="#"><img src="/assets/img/octocat.png" alt="张杭磊"></a>
