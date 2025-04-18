@@ -29,8 +29,10 @@ chi_stu_format = """<div>
         <figcaption><b>{name}</b><br><b>{xlanceid}</b></figcaption>
         </figure>
     </div>"""
-pic_file = pd.read_excel('./picfile.xlsx')
-qn_dict = pic_file.values  # questionnaire dict
+
+
+# pic_file = pd.read_excel('./picfile-20250417-20240418.xlsx')
+# qn_dict = pic_file.values  # questionnaire dict
 
 
 def format_filename(name):
@@ -80,17 +82,6 @@ permalink: /members/alumni/
 title: alumni
 description: Alumni of X-LANCE
 nav: false
-
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: members/faculty/qym_square.jpg
-    content: members/faculty/qianyanmin.md
-    image_circular: true # crops the image to make it circular
-    more_info: >
-      <h3>Professor Yanmin Qian</h3>
-      <p>SEIEE 3-501<br>qian-ym@sjtu.edu.cn</p>
 ---
 
 <style>
@@ -118,17 +109,6 @@ permalink: /members/alumni/
 title: 校友
 description: X-LANCE校友
 nav: false
-
-profiles:
-  # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  - align: right
-    image: members/faculty/qym_square.jpg
-    content: members/faculty/qianyanmin.md
-    image_circular: true # crops the image to make it circular
-    more_info: >
-      <h3>钱彦旻 教授</h3>
-      <p>电院3号楼501<br>qian-ym@sjtu.edu.cn</p>
 ---
 
 <style>
@@ -219,28 +199,33 @@ chi_student_md_U = """
 file = pd.read_excel('./final.xlsx')
 data = file.values
 names = []
+eng_names = []
 ids = []
 degrees = []
 pics = []
 states = []
 for person in data:
     names.append(person[0])
-    ids.append(person[1])
-    degrees.append(person[2])
-    pics.append(person[3])
-    states.append(person[4])
+    eng_names.append(person[1])
+    ids.append(person[2])
+    degrees.append(person[3])
+    pics.append(person[4])
+    states.append(person[5])
 
 
 def format_single(person):
-    name = person[1]
+    name = person[0]
+    eng_name = person[1]
     xlanceid = person[2]
     degree = person[3]
     
-    if xlanceid >0:
-        xlanceid =int(xlanceid)
-        xlanceid=f"{xlanceid:03d}-{degree}"
+    if (isinstance(xlanceid, int) or isinstance(xlanceid, float)) and xlanceid > 0:
+        xlanceid = int(xlanceid)
+        xlanceid = f"{xlanceid:03d}-{degree}"
     else:
-        xlanceid=f""
+        xlanceid = f""
+    
+    pic = person[4]
     
     typ = 1  # 学生
     if '离开' in person[5]:
@@ -250,12 +235,11 @@ def format_single(person):
             typ = 2
         if 'P' in degree:
             typ = 3
-            
-    pic = person[4]
+    
     if typ == 0:
-        return typ, eng_stu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid)
+        return typ, eng_stu_format.format(pic=pic, name=eng_name, xlanceid=xlanceid), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid)
     else:
-        return typ, eng_alu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid)
+        return typ, eng_alu_format.format(pic=pic, name=eng_name, xlanceid=xlanceid), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid)
 
 
 def get_degree_state(curstate):
@@ -299,8 +283,11 @@ def down_pic(url, path, filename):
 
 
 def upd_xlsx():
+    pic_file = pd.read_excel('./picfile-20250417-20240418.xlsx')
+    qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
+        eng_name = chi_to_eng(name)
         xlanceid = person[9]
         degree, state = get_degree_state(person[10])
         pic = person[13]
@@ -315,6 +302,7 @@ def upd_xlsx():
             states[po] = state
         else:
             names.append(name)
+            eng_names.append(eng_name)
             if xlanceid == 0:
                 ids.append(None)
             else:
@@ -332,6 +320,7 @@ def upd_xlsx():
     # print(len(states))
     full_dict = {
         'name': names,
+        'eng_name': eng_names,
         'xlanceid': ids,
         'degree': degrees,
         'pic': pics,
@@ -339,11 +328,12 @@ def upd_xlsx():
     }
     
     writer = pd.ExcelWriter('./final_new.xlsx')
-    sheetNames = full_dict.keys()  # 获取所有sheet的名称
+    # sheetNames = full_dict.keys()  # 获取所有sheet的名称
+    sheetNames = ["Sheet1"]
     # sheets是要写入的excel工作簿名称列表
     data = pd.DataFrame(full_dict)
     for sheetName in sheetNames:
-        data.to_excel(writer, sheet_name=sheetName)
+        data.to_excel(writer, sheet_name=sheetName, index=False)
     # 保存writer中的数据至excel
     writer.close()
 
@@ -357,7 +347,10 @@ def generate_md():
     global chi_student_md_M
     global eng_student_md_U
     global chi_student_md_U
-    file = pd.read_excel('./final_new.xlsx')
+    if os.path.exists('./final_new.xlsx'):
+        file = pd.read_excel('./final_new.xlsx')
+    else:
+        file = pd.read_excel('./final.xlsx')
     data = file.values
     for person in tqdm(data):
         typ, eng, chi = format_single(person)  # type, english_description, chinese_description
@@ -384,13 +377,13 @@ def generate_md():
     eng_student_md = eng_student_md_P + eng_student_md_M + eng_student_md_U
     chi_student_md = chi_student_md_P + chi_student_md_M + chi_student_md_U
     
-    with open('../_pages/en/alumni.md', 'w',encoding= 'utf-8') as f:
+    with open('../_pages/en/alumni.md', 'w', encoding='utf-8') as f:
         f.write(eng_alumni_md)
-    with open('../_pages/zh/alumni.md', 'w',encoding= 'utf-8') as f:
+    with open('../_pages/zh/alumni.md', 'w', encoding='utf-8') as f:
         f.write(chi_alumni_md)
-    with open('../_pages/en/student.md', 'w',encoding= 'utf-8') as f:
+    with open('../_pages/en/student.md', 'w', encoding='utf-8') as f:
         f.write(eng_student_md)
-    with open('../_pages/zh/student.md', 'w',encoding= 'utf-8') as f:
+    with open('../_pages/zh/student.md', 'w', encoding='utf-8') as f:
         f.write(chi_student_md)
 
 
