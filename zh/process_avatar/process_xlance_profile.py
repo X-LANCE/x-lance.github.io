@@ -163,8 +163,8 @@ nav: false
 </style>
 
 
-[//]: # (<h2> Postdocs </h2>)
-<h2> PhD Candidates </h2>
+[//]: # (<h2 style="text-align: center"> Postdocs </h2>)
+<h2 style="text-align: center"> PhD Candidates </h2>
 <div class="mycontainer">"""
 
 chi_student_md_P = """---
@@ -197,25 +197,25 @@ nav: false
 }
 </style>
 
-[//]: # (<h2> 博士后 </h2>)
+[//]: # (<h2 style="text-align: center"> 博士后 </h2>)
 
-<h2> 博士研究生 </h2>
+<h2 style="text-align: center"> 博士研究生 </h2>
 <div class="mycontainer">"""
 
 eng_student_md_M = """
-<h2> Master Candidates </h2>
+<h2 style="text-align: center"> Master Candidates </h2>
 <div class="mycontainer">"""
 
 chi_student_md_M = """
-<h2> 硕士研究生 </h2>
+<h2 style="text-align: center"> 硕士研究生 </h2>
 <div class="mycontainer">"""
 
 eng_student_md_U = """
-<h2> Undergraduates </h2>
+<h2 style="text-align: center"> Undergraduates </h2>
 <div class="mycontainer">"""
 
 chi_student_md_U = """
-<h2> 本科生 </h2>
+<h2 style="text-align: center"> 本科生 </h2>
 <div class="mycontainer">"""
 
 file = pd.read_excel('./final.xlsx')
