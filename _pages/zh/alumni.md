@@ -67,6 +67,10 @@ nav: false
         <div style="margin-top: 15px"><b>王佩璐</b><br><b>010-MI</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/faculty/qym_square.jpg" alt="钱彦旻"></a>
+        <div style="margin-top: 15px"><b>钱彦旻</b><br><b>011-F</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="刘亚雄"></a>
         <div style="margin-top: 15px"><b>刘亚雄</b><br><b>012-U</b></div>
     </div>
@@ -87,12 +91,12 @@ nav: false
         <div style="margin-top: 15px"><b>贺天行</b><br><b>017-UM</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/符天凡.jpg" alt="符天凡"></a>
-        <div style="margin-top: 15px"><b>符天凡</b><br><b>019-UP</b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/陈博.jpg" alt="陈博"></a>
         <div style="margin-top: 15px"><b>陈博</b><br><b>019-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/符天凡.jpg" alt="符天凡"></a>
+        <div style="margin-top: 15px"><b>符天凡</b><br><b>019-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="孙锴"></a>
@@ -121,6 +125,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/陈哲怀.jpg" alt="陈哲怀"></a>
         <div style="margin-top: 15px"><b>陈哲怀</b><br><b>026-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="丁翰林"></a>
+        <div style="margin-top: 15px"><b>丁翰林</b><br><b>027-MP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/毕梦霄.jpg" alt="毕梦霄"></a>
@@ -279,6 +287,10 @@ nav: false
         <div style="margin-top: 15px"><b>殷国航</b><br><b>067-U</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/殷国航.jpg" alt="殷国航"></a>
+        <div style="margin-top: 15px"><b>殷国航</b><br><b>067-U</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="陈志"></a>
         <div style="margin-top: 15px"><b>陈志</b><br><b>068-UP</b></div>
     </div>
@@ -317,6 +329,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杜晨鹏.jpg" alt="杜晨鹏"></a>
         <div style="margin-top: 15px"><b>杜晨鹏</b><br><b>078-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/马娆.jpg" alt="马娆"></a>
+        <div style="margin-top: 15px"><b>马娆</b><br><b>079-M</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="李晨达"></a>
@@ -579,28 +595,12 @@ nav: false
         <div style="margin-top: 15px"><b>张怡天</b><br><b>199-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="夏钲舜"></a>
-        <div style="margin-top: 15px"><b>夏钲舜</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/王熠笑.jpg" alt="王熠笑"></a>
         <div style="margin-top: 15px"><b>王熠笑</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="丁翰林"></a>
-        <div style="margin-top: 15px"><b>丁翰林</b><br><b>027-MP</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/殷国航.jpg" alt="殷国航"></a>
-        <div style="margin-top: 15px"><b>殷国航</b><br><b>067-U</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/马娆.jpg" alt="马娆"></a>
-        <div style="margin-top: 15px"><b>马娆</b><br><b>079-M</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/faculty/qym_square.jpg" alt="钱彦旻"></a>
-        <div style="margin-top: 15px"><b>钱彦旻</b><br><b>011-F</b></div>
+        <a href=""><img src="/assets/img/octocat.png" alt="夏钲舜"></a>
+        <div style="margin-top: 15px"><b>夏钲舜</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨景凯.jpg" alt="杨景凯"></a>

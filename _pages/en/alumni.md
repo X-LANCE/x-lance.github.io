@@ -66,6 +66,10 @@ nav: false
         <div style="margin-top: 15px"><b>Peilu Wang</b><br><b>010-MI</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/faculty/qym_square.jpg" alt="Yanmin Qian"></a>
+        <div style="margin-top: 15px"><b>Yanmin Qian</b><br><b>011-F</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Yaxiong Liu"></a>
         <div style="margin-top: 15px"><b>Yaxiong Liu</b><br><b>012-U</b></div>
     </div>
@@ -86,12 +90,12 @@ nav: false
         <div style="margin-top: 15px"><b>Tianxing He</b><br><b>017-UM</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/符天凡.jpg" alt="Tianfan Fu"></a>
-        <div style="margin-top: 15px"><b>Tianfan Fu</b><br><b>019-UP</b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/陈博.jpg" alt="Bo Chen"></a>
         <div style="margin-top: 15px"><b>Bo Chen</b><br><b>019-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/符天凡.jpg" alt="Tianfan Fu"></a>
+        <div style="margin-top: 15px"><b>Tianfan Fu</b><br><b>019-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Kai Sun"></a>
@@ -120,6 +124,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/陈哲怀.jpg" alt="Zhehuai Chen"></a>
         <div style="margin-top: 15px"><b>Zhehuai Chen</b><br><b>026-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Heinrich Dinkel"></a>
+        <div style="margin-top: 15px"><b>Heinrich Dinkel</b><br><b>027-MP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/毕梦霄.jpg" alt="Mengxiao Bi"></a>
@@ -278,6 +286,10 @@ nav: false
         <div style="margin-top: 15px"><b>Guohang Yin</b><br><b>067-U</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/殷国航.jpg" alt="Guohang Yin"></a>
+        <div style="margin-top: 15px"><b>Guohang Yin</b><br><b>067-U</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Zhi Chen"></a>
         <div style="margin-top: 15px"><b>Zhi Chen</b><br><b>068-UP</b></div>
     </div>
@@ -316,6 +328,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杜晨鹏.jpg" alt="Chenpeng Du"></a>
         <div style="margin-top: 15px"><b>Chenpeng Du</b><br><b>078-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/马娆.jpg" alt="Rao Ma"></a>
+        <div style="margin-top: 15px"><b>Rao Ma</b><br><b>079-M</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Chenda Li"></a>
@@ -578,28 +594,12 @@ nav: false
         <div style="margin-top: 15px"><b>Yitian Zhang</b><br><b>199-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Zhengshun Xia"></a>
-        <div style="margin-top: 15px"><b>Zhengshun Xia</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/王熠笑.jpg" alt="Yixiao Wang"></a>
         <div style="margin-top: 15px"><b>Yixiao Wang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Heinrich Dinkel"></a>
-        <div style="margin-top: 15px"><b>Heinrich Dinkel</b><br><b>027-MP</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/殷国航.jpg" alt="Guohang Yin"></a>
-        <div style="margin-top: 15px"><b>Guohang Yin</b><br><b>067-U</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/马娆.jpg" alt="Rao Ma"></a>
-        <div style="margin-top: 15px"><b>Rao Ma</b><br><b>079-M</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/faculty/qym_square.jpg" alt="Yanmin Qian"></a>
-        <div style="margin-top: 15px"><b>Yanmin Qian</b><br><b>011-F</b></div>
+        <a href=""><img src="/assets/img/octocat.png" alt="Zhengshun Xia"></a>
+        <div style="margin-top: 15px"><b>Zhengshun Xia</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨景凯.jpg" alt="Jingkai Yang"></a>
