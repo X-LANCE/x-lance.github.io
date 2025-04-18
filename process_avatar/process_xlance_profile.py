@@ -7,19 +7,19 @@ from tqdm import tqdm
 default_pic = "../../assets/img/octocat.png"
 eng_alu_format = """<div class="member">
         <a href="#"><img src="{pic}" alt="{name}"></a>
-        <div><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_alu_format = """<div class="member">
         <a href="#"><img src="{pic}" alt="{name}"></a>
-        <div><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
 eng_stu_format = """<div class="member">
         <a href="#"><img src="{pic}" alt="{name}"></a>
-        <div><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_stu_format = """<div class="member">
         <a href="#"><img src="{pic}" alt="{name}"></a>
-        <div><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
     </div>"""
 
 
