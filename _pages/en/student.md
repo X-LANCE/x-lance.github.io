@@ -214,7 +214,7 @@ nav: false
         <div style="margin-top: 15px"><b>Yijie Luo</b><br><b>187-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Dingye Liu"></a>
+        <a href=""><img src="/assets/img/members/student/刘丁烨.jpg" alt="Dingye Liu"></a>
         <div style="margin-top: 15px"><b>Dingye Liu</b><br><b>189-M</b></div>
     </div>
 <div class="member">

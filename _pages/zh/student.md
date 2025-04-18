@@ -214,7 +214,7 @@ nav: false
         <div style="margin-top: 15px"><b>罗逸杰</b><br><b>187-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="刘丁烨"></a>
+        <a href=""><img src="/assets/img/members/student/刘丁烨.jpg" alt="刘丁烨"></a>
         <div style="margin-top: 15px"><b>刘丁烨</b><br><b>189-M</b></div>
     </div>
 <div class="member">
