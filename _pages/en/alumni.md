@@ -1,6 +1,6 @@
 ---
 page_id: alumni
-layout: profiles
+layout: page
 permalink: /members/alumni/
 title: 🧑‍🎓Alumni
 description: Alumni of X-LANCE
