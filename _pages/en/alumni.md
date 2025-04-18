@@ -770,19 +770,19 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\谢泽宇.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/谢泽宇.jpg" alt=""></a>
         <figcaption><b>Zeyu Xie</b><br><b>138-U</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\陈思远.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/陈思远.jpg" alt=""></a>
         <figcaption><b>Siyuan Chen</b><br><b>149-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\宋哲书.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/宋哲书.jpg" alt=""></a>
         <figcaption><b>Zheshu Song</b><br><b>154-M</b></figcaption>
         </figure>
     </div>
@@ -794,13 +794,13 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\张晗翀.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/张晗翀.jpg" alt=""></a>
         <figcaption><b>Hanchong Zhang</b><br><b>165-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\黎井漂.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/黎井漂.jpg" alt=""></a>
         <figcaption><b>Jingpiao Li</b><br><b>168-M</b></figcaption>
         </figure>
     </div>
@@ -812,19 +812,19 @@ profiles:
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\何朝帆.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/何朝帆.jpg" alt=""></a>
         <figcaption><b>Chaofan He</b><br><b>172-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\曾泓川.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/曾泓川.jpg" alt=""></a>
         <figcaption><b>Hongchuan Ceng</b><br><b>176-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\曾泓川.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/曾泓川.jpg" alt=""></a>
         <figcaption><b>Hongchuan Ceng</b><br><b>176-M</b></figcaption>
         </figure>
     </div>

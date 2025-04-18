@@ -41,19 +41,22 @@ def get_degree(text):
     if '博士' in text:
         return 'P'
 
+
 def upd_degree(name, origin):
     for person in pic_data:
         if person[7] == name:
-            current_degree= get_degree(person[10])
+            current_degree = get_degree(person[10])
             if current_degree not in origin:
                 origin += current_degree
     return origin
 
+
 def default_(name, path):
     for picname in os.listdir(path):
         if picname.split('.')[0] == name:
-            return os.path.join(path, picname)
+            return path + '/' + picname
     return default_pic
+
 
 def down_img(name, path, filename):
     url = default_pic
@@ -69,26 +72,25 @@ def down_img(name, path, filename):
         print(f"downloading pic of {name}")
         response = requests.get(url, stream=True)
         response.raise_for_status()  # 检查请求是否成功
-        pic = path+"/"+filename
+        pic = path + "/" + filename
         with open(pic, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
         # print(f"downloaded successfully to {pic}")
         return '../' + pic
-        
+    
     except Exception as e:
         print(f"下载失败：{str(e)}")
         return None
 
+
 def format_filename(name):
     return name.replace(' ', '_')
 
-COMPOUND_SURNAMES = [
-    '欧阳', '司马', '诸葛', '西门', '上官',
-    '令狐', '宇文', '慕容', '端木', '东方',
-    '独孤', '尉迟', '司徒', '申屠', '夏侯',
-    '南宫', '澹台', '皇甫', '长孙', '轩辕'
-]
+
+COMPOUND_SURNAMES = ['欧阳', '司马', '诸葛', '西门', '上官', '令狐', '宇文', '慕容', '端木', '东方', '独孤', '尉迟', '司徒', '申屠', '夏侯', '南宫', '澹台', '皇甫', '长孙', '轩辕']
+
+
 def chi_to_eng(name):
     is_chi_name = False
     for c in name:
@@ -96,7 +98,7 @@ def chi_to_eng(name):
             is_chi_name = True
     if not is_chi_name:
         return name
-
+    
     surname = None
     for cs in COMPOUND_SURNAMES:
         if name.startswith(cs):
@@ -110,25 +112,26 @@ def chi_to_eng(name):
             return ""  # 处理空输入
         surname = name[0]
         given_name = name[1:]
-
+    
     # 转换拼音
     def convert_part(chars):
         return ''.join(lazy_pinyin(chars, style=Style.NORMAL)).capitalize()
-
+    
     # 处理姓氏和名字
     surname_py = convert_part(surname)
     given_name_py = convert_part(given_name)
-
+    
     return f"{given_name_py} {surname_py}"
+
 
 def format_single(person):
     name = person[0]
     # sjtuid = person[8]
     xlanceid = person[2]
     degree = upd_degree(name, person[3])
-    typ = 1 # 学生
+    typ = 1  # 学生
     if '离开' in person[4]:
-        typ = 0 # 校友
+        typ = 0  # 校友
     else:
         if 'M' in degree:
             typ = 2
@@ -137,10 +140,9 @@ def format_single(person):
     # degree = get_degree(person[10])
     pic = down_img(name, '../assets/img/members/student', format_filename(name) + '.jpg')
     if typ == 0:
-        return typ, eng_stu_format.format(pic = pic, name = chi_to_eng(name), xlanceid = xlanceid, degree = degree), chi_stu_format.format(pic = pic, name = name, xlanceid = xlanceid, degree = degree)
+        return typ, eng_stu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid, degree=degree), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid, degree=degree)
     else:
-        return typ, eng_alu_format.format(pic = pic, name = chi_to_eng(name), xlanceid = xlanceid, degree = degree), chi_alu_format.format(pic = pic, name = name, xlanceid = xlanceid, degree = degree)
-
+        return typ, eng_alu_format.format(pic=pic, name=chi_to_eng(name), xlanceid=xlanceid, degree=degree), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid, degree=degree)
 
 
 eng_alumni_md = """---
@@ -294,7 +296,7 @@ for person in tqdm(data):
         continue
     if pd.isnull(person[3]):
         continue
-    typ, eng, chi = format_single(person) # type, english_description, chinese_description
+    typ, eng, chi = format_single(person)  # type, english_description, chinese_description
     # print(eng)
     if typ == 0:
         eng_alumni_md += '\n' + eng

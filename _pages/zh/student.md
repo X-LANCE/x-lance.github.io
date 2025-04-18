@@ -45,19 +45,19 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\赵梓涵.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/赵梓涵.jpg" alt=""></a>
         <figcaption><b>赵梓涵</b><br><b>106-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\奚彧.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/奚彧.jpg" alt=""></a>
         <figcaption><b>奚彧</b><br><b>107-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\张丹阳.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/张丹阳.jpg" alt=""></a>
         <figcaption><b>张丹阳</b><br><b>112-P</b></figcaption>
         </figure>
     </div>
@@ -69,19 +69,19 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\张思拓.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/张思拓.jpg" alt=""></a>
         <figcaption><b>张思拓</b><br><b>140-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\王鹏宇.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/王鹏宇.jpg" alt=""></a>
         <figcaption><b>王鹏宇</b><br><b>145-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\朱梓臣.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/朱梓臣.jpg" alt=""></a>
         <figcaption><b>朱梓臣</b><br><b>146-P</b></figcaption>
         </figure>
     </div>
@@ -105,7 +105,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\杨冠柔.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/杨冠柔.jpg" alt=""></a>
         <figcaption><b>杨冠柔</b><br><b>153-MP</b></figcaption>
         </figure>
     </div>
@@ -123,13 +123,13 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\宋秀杰.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/宋秀杰.jpg" alt=""></a>
         <figcaption><b>宋秀杰</b><br><b>164-P</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\韩杨.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/韩杨.jpg" alt=""></a>
         <figcaption><b>韩杨</b><br><b>166-P</b></figcaption>
         </figure>
     </div>
@@ -150,31 +150,31 @@ nav: false
 <div class="mycontainer">
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\马达.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/马达.jpg" alt=""></a>
         <figcaption><b>马达</b><br><b>94-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\兰焜耀.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/兰焜耀.jpg" alt=""></a>
         <figcaption><b>兰焜耀</b><br><b>131-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\徐晓航.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/徐晓航.jpg" alt=""></a>
         <figcaption><b>徐晓航</b><br><b>139-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\卢葛威.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/卢葛威.jpg" alt=""></a>
         <figcaption><b>卢葛威</b><br><b>143-M</b></figcaption>
         </figure>
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\罗丹宇.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/罗丹宇.jpg" alt=""></a>
         <figcaption><b>罗丹宇</b><br><b>144-M</b></figcaption>
         </figure>
     </div>
@@ -198,7 +198,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\李浩宇.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/李浩宇.jpg" alt=""></a>
         <figcaption><b>李浩宇</b><br><b>159-M</b></figcaption>
         </figure>
     </div>
@@ -234,7 +234,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\杨飞.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/杨飞.jpg" alt=""></a>
         <figcaption><b>杨飞</b><br><b>173-M</b></figcaption>
         </figure>
     </div>
@@ -246,7 +246,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\李星源.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/李星源.jpg" alt=""></a>
         <figcaption><b>李星源</b><br><b>175-M</b></figcaption>
         </figure>
     </div>
@@ -273,7 +273,7 @@ nav: false
     </div>
 <div>
         <figure align="center">
-        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student\李柏涵.jpg" alt=""></a>
+        <a href=""><img style="border-radius: 50%; width:150px" src="../assets/img/members/student/李柏涵.jpg" alt=""></a>
         <figcaption><b>李柏涵</b><br><b>157-U</b></figcaption>
         </figure>
     </div>
