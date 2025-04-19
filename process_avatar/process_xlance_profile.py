@@ -168,6 +168,10 @@ nav: false
         <a href=""><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
         <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Qingliang Miao"></a>
+        <div style="margin-top: 15px"><b>Qingliang Miao</b><br><b></b></div>
+    </div>
 </div>
 
 <h2 style="text-align: center"> 🌟PhD Candidates🌟 </h2>
@@ -208,6 +212,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="樊帅"></a>
         <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="缪庆亮"></a>
+        <div style="margin-top: 15px"><b>缪庆亮</b><br><b>185-F</b></div>
     </div>
 </div>
 
