@@ -34,6 +34,10 @@ nav: false
         <a href=""><img src="/assets/img/octocat.png" alt="樊帅"></a>
         <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="缪庆亮"></a>
+        <div style="margin-top: 15px"><b>缪庆亮</b><br><b>185-F</b></div>
+    </div>
 </div>
 
 <h2 style="text-align: center"> 🌟博士研究生🌟 </h2>
@@ -134,6 +138,10 @@ nav: false
         <a href=""><img src="/assets/img/octocat.png" alt="李波含"></a>
         <div style="margin-top: 15px"><b>李波含</b><br><b>200-UP</b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="陈禹伸"></a>
+        <div style="margin-top: 15px"><b>陈禹伸</b><br><b></b></div>
+    </div>
 </div>
 <h2 style="text-align: center"> 🌟硕士研究生🌟 </h2>
 <div class="mycontainer">
@@ -220,10 +228,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/周鼎.jpg" alt="周鼎"></a>
         <div style="margin-top: 15px"><b>周鼎</b><br><b>197-UM</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="陈禹伸"></a>
-        <div style="margin-top: 15px"><b>陈禹伸</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="黄甘雨"></a>

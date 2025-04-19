@@ -34,6 +34,10 @@ nav: false
         <a href=""><img src="/assets/img/octocat.png" alt="Shuai Fan"></a>
         <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Qingliang Miao"></a>
+        <div style="margin-top: 15px"><b>Qingliang Miao</b><br><b></b></div>
+    </div>
 </div>
 
 <h2 style="text-align: center"> 🌟PhD Candidates🌟 </h2>
@@ -134,6 +138,10 @@ nav: false
         <a href=""><img src="/assets/img/octocat.png" alt="Bohan Li"></a>
         <div style="margin-top: 15px"><b>Bohan Li</b><br><b>200-UP</b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Yushen Chen"></a>
+        <div style="margin-top: 15px"><b>Yushen Chen</b><br><b></b></div>
+    </div>
 </div>
 <h2 style="text-align: center"> 🌟Master Candidates🌟 </h2>
 <div class="mycontainer">
@@ -220,10 +228,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/周鼎.jpg" alt="Ding Zhou"></a>
         <div style="margin-top: 15px"><b>Ding Zhou</b><br><b>197-UM</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Yushen Chen"></a>
-        <div style="margin-top: 15px"><b>Yushen Chen</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Ganyu Huang"></a>
