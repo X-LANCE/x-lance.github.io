@@ -313,11 +313,11 @@ def down_pic(url, path, filename):
         response = requests.get(url, stream=True)
         response.raise_for_status()  # 检查请求是否成功
         pic = path + '/' + filename
-        with open(pic, 'wb') as f:
+        with open('..'+pic, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
         # print(f"downloaded successfully to {pic}")
-        return '../' + pic
+        return pic
     
     except Exception as e:
         print(f"下载失败：{str(e)}")
@@ -325,22 +325,31 @@ def down_pic(url, path, filename):
 
 
 def upd_xlsx():
-    pic_file = pd.read_excel('./picfile-20250417-20240418.xlsx')
+    pic_file = pd.read_excel('./old/picfile_2025_04_21_17_01_33.xlsx')
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
-        eng_name = chi_to_eng(name)
+        eng_name = person[8]
+        if pd.isnull(eng_name):
+            eng_name = chi_to_eng(name)
         xlanceid = person[9]
-        degree, state = get_degree_state(person[10])
-        pic = person[13]
+        xlanceid_degree = person[10]
+        degree, state = get_degree_state(person[11])
+        pic = person[14]
         if name in names:
             po = names.index(name)
+            if eng_name != eng_names[po]:
+                print(f"eng_name: {eng_names[po]} != {eng_name}")
+                eng_names[po] = eng_name
             if xlanceid != 0:
                 ids[po] = xlanceid
             if not pd.isnull(pic):
-                pics[po] = down_pic(pic, '../assets/img/members/student', format_filename(name) + '.jpg')
+                pics[po] = down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg')
             if degree not in degrees[po]:
                 degrees[po] = upd_degree(degree, degrees[po])
+            if degrees[po] != xlanceid_degree:
+                print(f"xlanceid_degree: {xlanceid_degree} != degree: {degrees[po]}")
+                degrees[po] = xlanceid_degree
             states[po] = state
         else:
             names.append(name)
@@ -350,11 +359,15 @@ def upd_xlsx():
             else:
                 ids.append(xlanceid)
             degrees.append(degree)
+            if degrees[-1] != xlanceid_degree:
+                print(f"xlanceid_degree: {xlanceid_degree} != degree: {degree}")
+                degrees[-1] = xlanceid_degree
             states.append(state)
             if pd.isnull(pic):
                 pics.append(default_pic)
             else:
-                pics.append(down_pic(pic, '../assets/img/members/student', format_filename(name) + '.jpg'))
+                pics.append(down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg'))
+        
     # print(len(names))
     # print(len(ids))
     # print(len(degrees))
