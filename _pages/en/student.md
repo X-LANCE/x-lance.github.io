@@ -127,6 +127,10 @@ nav: false
         <div style="margin-top: 15px"><b>Yang Han</b><br><b>166-P</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/李翰奇.jpg" alt="Hanqi Li"></a>
+        <div style="margin-top: 15px"><b>Hanqi Li</b><br><b>169-UP</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/杨亦凡.jpg" alt="Yifan Yang"></a>
         <div style="margin-top: 15px"><b>Yifan Yang</b><br><b>171-P</b></div>
     </div>
@@ -139,7 +143,7 @@ nav: false
         <div style="margin-top: 15px"><b>Qiang Zhou</b><br><b>183-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Bohan Li"></a>
+        <a href=""><img src="/assets/img/members/student/李波含.jpg" alt="Bohan Li"></a>
         <div style="margin-top: 15px"><b>Bohan Li</b><br><b>200-UP</b></div>
     </div>
 <div class="member">
@@ -192,10 +196,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/韩森宇.jpg" alt="Senyu Han"></a>
         <div style="margin-top: 15px"><b>Senyu Han</b><br><b>167-M</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Hanqi Li"></a>
-        <div style="margin-top: 15px"><b>Hanqi Li</b><br><b>169-M</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨飞.jpg" alt="Fei Yang"></a>

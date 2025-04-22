@@ -127,6 +127,10 @@ nav: false
         <div style="margin-top: 15px"><b>韩杨</b><br><b>166-P</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/李翰奇.jpg" alt="李翰奇"></a>
+        <div style="margin-top: 15px"><b>李翰奇</b><br><b>169-UP</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/杨亦凡.jpg" alt="杨亦凡"></a>
         <div style="margin-top: 15px"><b>杨亦凡</b><br><b>171-P</b></div>
     </div>
@@ -139,7 +143,7 @@ nav: false
         <div style="margin-top: 15px"><b>周强</b><br><b>183-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="李波含"></a>
+        <a href=""><img src="/assets/img/members/student/李波含.jpg" alt="李波含"></a>
         <div style="margin-top: 15px"><b>李波含</b><br><b>200-UP</b></div>
     </div>
 <div class="member">
@@ -192,10 +196,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/韩森宇.jpg" alt="韩森宇"></a>
         <div style="margin-top: 15px"><b>韩森宇</b><br><b>167-M</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="李翰奇"></a>
-        <div style="margin-top: 15px"><b>李翰奇</b><br><b>169-M</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨飞.jpg" alt="杨飞"></a>
