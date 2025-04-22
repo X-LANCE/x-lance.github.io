@@ -47,10 +47,6 @@ nav: false
         <div style="margin-top: 15px"><b>许洪深</b><br><b>091-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/陈星宇.jpg" alt="陈星宇"></a>
-        <div style="margin-top: 15px"><b>陈星宇</b><br><b>093-MP</b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/马达.jpg" alt="马达"></a>
         <div style="margin-top: 15px"><b>马达</b><br><b>094-MP</b></div>
     </div>
@@ -67,10 +63,6 @@ nav: false
         <div style="margin-top: 15px"><b>奚彧</b><br><b>107-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/韩冰.jpg" alt="韩冰"></a>
-        <div style="margin-top: 15px"><b>韩冰</b><br><b>109-MP</b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/张丹阳.jpg" alt="张丹阳"></a>
         <div style="margin-top: 15px"><b>张丹阳</b><br><b>112-P</b></div>
     </div>
@@ -85,6 +77,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/张思拓.jpg" alt="张思拓"></a>
         <div style="margin-top: 15px"><b>张思拓</b><br><b>140-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/陈琦.jpg" alt="陈琦"></a>
+        <div style="margin-top: 15px"><b>陈琦</b><br><b>142-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/王鹏宇.jpg" alt="王鹏宇"></a>
@@ -108,7 +104,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨冠柔.jpg" alt="杨冠柔"></a>
-        <div style="margin-top: 15px"><b>杨冠柔</b><br><b>153-MP</b></div>
+        <div style="margin-top: 15px"><b>杨冠柔</b><br><b>153-P</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/郭奕玮.jpg" alt="郭奕玮"></a>
@@ -251,10 +247,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="杨晨"></a>
         <div style="margin-top: 15px"><b>杨晨</b><br><b>141-U</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="陈琦"></a>
-        <div style="margin-top: 15px"><b>陈琦</b><br><b>142-U</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/李柏涵.jpg" alt="李柏涵"></a>
