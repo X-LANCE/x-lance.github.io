@@ -31,7 +31,7 @@ nav: false
 <h2 style="text-align: center"> 🌟博士后🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="樊帅"></a>
+        <a href=""><img src="/assets/img/members/student/樊帅.jpg" alt="樊帅"></a>
         <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
 <div class="member">
