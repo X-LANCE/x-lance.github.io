@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-7-3
+date: 2024-10-9
 inline: true
 related_posts: false
 ---
 
-🧑‍💻[Xmart] The second episode of **Xmart Student Forum** was released on Bilibili. <a href="https://www.bilibili.com/video/BV1qihreEE6L"> [video] </a>
+🤗 [Anniversary] A review of the **12th Anniversary** celebration of the Cross-Media Language Intelligence Laboratory <a href="https://mp.weixin.qq.com/s/syblD6Brt-y1gdaWm6Cv4A"> 【公众号推送】</a>

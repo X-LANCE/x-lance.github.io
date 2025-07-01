@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-6-12
+date: 2024-7-2
 inline: true
 related_posts: false
 ---
 
-🧑‍💻【Xmart】 **Xmart学生论坛**第一期上线B站。 <a href="https://www.bilibili.com/video/BV1FJ4m137ZB"> 【视频】 </a>
+💪 李强总理在江苏苏州思必驰调研，X-LANCE俞凯教授再登新闻联播，向总理汇报研发进展。 <a href="https://mp.weixin.qq.com/s/wUpLnrBs9W1TfxuqMclCLw"> 【视频/公众号推送】</a>

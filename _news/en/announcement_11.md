@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-6-12
+date: 2024-7-2
 inline: true
 related_posts: false
 ---
 
-🧑‍💻[Xmart] The first episode of **Xmart Student Forum** was released on Bilibili. <a href="https://www.bilibili.com/video/BV1FJ4m137ZB"> [video] </a>
+💪 Premier Li Qiang conducted a visit to AISpeech in Suzhou, Jiangsu. Professor Yu Kai from X-LANCE made another appearance on the *Xinwen Lianbo*, reporting to the Premier about the progress in research and development. <a href="https://mp.weixin.qq.com/s/wUpLnrBs9W1TfxuqMclCLw"> [Video/Post] </a>

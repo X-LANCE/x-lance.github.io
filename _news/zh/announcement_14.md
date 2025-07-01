@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-7-10
+date: 2024-11-18
 inline: true
 related_posts: false
 ---
 
-📃【论文+1】X-LANCE 实验室的**一篇**论文被 **COLM 2024** 接收。 <a href="https://mp.weixin.qq.com/s/RDm-KWKaa0KOSawedDoRxQ"> 【公众号推送】</a>
+📃【最佳论文+1】X-LANCE实验室工作**ProSide**获评**NLPCC 2024**最佳学生论文 <a href="https://mp.weixin.qq.com/s/gf6TLILwVN8nwYv8kgZdkQ"> 【公众号推送】</a>
