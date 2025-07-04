@@ -16,7 +16,7 @@ profiles:
       <p align="right"><h3>俞凯 特聘教授</h3>
       电院3号楼539<br>
       kai.yu@sjtu.edu.cn<br>
-      <a href="https://x-lance.github.io/kaiyu/">个人主页</a></p>
+      <a href="https://x-lance.github.io/kaiyu/index_zh.html">个人主页</a></p>
   - align: left
     image: members/faculty/slp_square.jpg
     content: members/faculty/shenliping.md
