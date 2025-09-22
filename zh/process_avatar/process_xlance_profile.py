@@ -307,25 +307,31 @@ def upd_degree(d1, d2):
     return d1 + d2
 
 
-def down_pic(url, path, filename):
-    try:
-        print(f"downloading pic of {filename}")
-        response = requests.get(url, stream=True)
-        response.raise_for_status()  # 检查请求是否成功
-        pic = path + '/' + filename
-        with open('..'+pic, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-        # print(f"downloaded successfully to {pic}")
-        return pic
-    
-    except Exception as e:
-        print(f"下载失败：{str(e)}")
-        return None
+def down_pic(url, path, filename,OVER_WRITE_PICS=False):
+    if not os.path.exists('..'+path):
+        try:
+            print(f"downloading pic of {filename}")
+            response = requests.get(url, stream=True)
+            response.raise_for_status()  # 检查请求是否成功
+            pic = path + '/' + filename
+            with open('..'+pic, 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            # print(f"downloaded successfully to {pic}")
+            return pic
+        
+        except Exception as e:
+            print(f"下载失败：{str(e)}")
+            return None
+    else:
+        print('..'+path + '/' + filename+' exists')
+        return path + '/' + filename
 
 
 def upd_xlsx():
-    pic_file = pd.read_excel('./old/picfile_2025_04_21_17_01_33.xlsx')
+    # 请先手动将先前已经导入的行删掉
+    pic_file = pd.read_excel('./old/picfile_2025_09_22_14_09_54.xlsx')
+    OVER_WRITE_PICS=False
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
@@ -382,7 +388,7 @@ def upd_xlsx():
         'state': states
     }
     
-    writer = pd.ExcelWriter('./final_new.xlsx')
+    writer = pd.ExcelWriter('final.xlsx')
     # sheetNames = full_dict.keys()  # 获取所有sheet的名称
     sheetNames = ["Sheet1"]
     # sheets是要写入的excel工作簿名称列表
@@ -402,7 +408,7 @@ def generate_md():
     global chi_student_md_M
     global eng_student_md_U
     global chi_student_md_U
-    if os.path.exists('./final_new.xlsx'):
+    if os.path.exists('final.xlsx'):
         file = pd.read_excel('./final_new.xlsx')
     else:
         file = pd.read_excel('./final.xlsx')
