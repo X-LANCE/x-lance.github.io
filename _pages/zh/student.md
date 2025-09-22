@@ -146,6 +146,18 @@ nav: false
         <a href=""><img src="/assets/img/members/student/陈禹伸.jpg" alt="陈禹伸"></a>
         <div style="margin-top: 15px"><b>陈禹伸</b><br><b></b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/涂文明.jpg" alt="涂文明"></a>
+        <div style="margin-top: 15px"><b>涂文明</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/吴媚.jpg" alt="吴媚"></a>
+        <div style="margin-top: 15px"><b>吴媚</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/朱轩宇.jpg" alt="朱轩宇"></a>
+        <div style="margin-top: 15px"><b>朱轩宇</b><br><b></b></div>
+    </div>
 </div>
 <h2 style="text-align: center"> 🌟硕士研究生🌟 </h2>
 <div class="mycontainer">
@@ -234,12 +246,32 @@ nav: false
         <div style="margin-top: 15px"><b>黄甘雨</b><br><b></b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/苗语洵.jpg" alt="苗语洵"></a>
+        <div style="margin-top: 15px"><b>苗语洵</b><br><b></b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/彭阅章.jpg" alt="彭阅章"></a>
         <div style="margin-top: 15px"><b>彭阅章</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/郑航.jpg" alt="郑航"></a>
         <div style="margin-top: 15px"><b>郑航</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/梅嘉豪.jpg" alt="梅嘉豪"></a>
+        <div style="margin-top: 15px"><b>梅嘉豪</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/王哲祥.jpg" alt="王哲祥"></a>
+        <div style="margin-top: 15px"><b>王哲祥</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/蔡崇皓.jpg" alt="蔡崇皓"></a>
+        <div style="margin-top: 15px"><b>蔡崇皓</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/陈冠豫.jpg" alt="陈冠豫"></a>
+        <div style="margin-top: 15px"><b>陈冠豫</b><br><b></b></div>
     </div>
 </div>
 <h2 style="text-align: center"> 🌟本科生🌟 </h2>
@@ -329,10 +361,6 @@ nav: false
         <div style="margin-top: 15px"><b>刘轩丞</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/苗语洵.jpg" alt="苗语洵"></a>
-        <div style="margin-top: 15px"><b>苗语洵</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/彭景.jpg" alt="彭景"></a>
         <div style="margin-top: 15px"><b>彭景</b><br><b></b></div>
     </div>
@@ -419,5 +447,9 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/江楠.jpg" alt="江楠"></a>
         <div style="margin-top: 15px"><b>江楠</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/刘峻希.jpg" alt="刘峻希"></a>
+        <div style="margin-top: 15px"><b>刘峻希</b><br><b></b></div>
     </div>
 </div>
