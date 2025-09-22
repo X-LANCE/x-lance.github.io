@@ -40,7 +40,7 @@ profiles:
     content: members/faculty/wumengyue.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p align="center"><h3>吴梦玥 副研究员</h3>
+      <p align="center"><h3>吴梦玥 副教授</h3>
       电院3号楼524<br>
       mengyuewu@sjtu.edu.cn<br>
       <a href="https://myw19.github.io/">个人主页</a></p>
@@ -49,7 +49,7 @@ profiles:
     content: members/faculty/chenlu.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p align="center"><h3>陈露 副研究员</h3>
+      <p align="center"><h3>陈露 副教授</h3>
       电院3号楼341<br>
       chenlusz@sjtu.edu.cn<br>
       <a href="https://coai-sjtu.github.io/">个人主页</a></p>

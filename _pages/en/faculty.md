@@ -42,7 +42,7 @@ profiles:
     content: members/faculty/wumengyue.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p align="center"><h3>Associate Researcher Mengyue Wu</h3>SEIEE 3-524<br>
+      <p align="center"><h3>Associate Professor Mengyue Wu</h3>SEIEE 3-524<br>
       mengyuewu@sjtu.edu.cn<br>
       <a href="https://myw19.github.io/">Personal Website</a></p>
   - align: right
@@ -50,7 +50,7 @@ profiles:
     content: members/faculty/chenlu.md
     image_circular: true # crops the image to make it circular
     more_info: >
-      <p align="center"><h3>Associate Researcher Lu Chen</h3>
+      <p align="center"><h3>Associate Professor Lu Chen</h3>
       SEIEE 3-341<br>
       chenlusz@sjtu.edu.cn<br>
       <a href="https://coai-sjtu.github.io/">Personal Website</a></p>
