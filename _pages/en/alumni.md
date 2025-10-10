@@ -613,3 +613,7 @@ nav: false
         <a href=""><img src="/assets/img/members/student/马英梓.jpg" alt="Yingzi Ma"></a>
         <div style="margin-top: 15px"><b>Yingzi Ma</b><br><b></b></div>
     </div>
+<div class="member">
+        <a href=""><img src="../../assets/img/octocat.png" alt="Zhilong Zhang"></a>
+        <div style="margin-top: 15px"><b>Zhilong Zhang</b><br><b>220-M</b></div>
+    </div>

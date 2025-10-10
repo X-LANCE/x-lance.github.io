@@ -143,20 +143,60 @@ nav: false
         <div style="margin-top: 15px"><b>Bohan Li</b><br><b>200-UP</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/杨子旭.jpg" alt="Zixu Yang"></a>
+        <div style="margin-top: 15px"><b>Zixu Yang</b><br><b>202-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/梁宇哲.jpg" alt="Yuzhe Liang"></a>
+        <div style="margin-top: 15px"><b>Yuzhe Liang</b><br><b>203-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/孙文杰.jpg" alt="Wenjie Sun "></a>
+        <div style="margin-top: 15px"><b>Wenjie Sun </b><br><b>205-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/陈文熙.jpg" alt="Wenxi Chen"></a>
+        <div style="margin-top: 15px"><b>Wenxi Chen</b><br><b>206-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/杨子董.jpg" alt="Zidong Yang"></a>
+        <div style="margin-top: 15px"><b>Zidong Yang</b><br><b>209-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/孙天翼.jpg" alt="Tianyi Sun"></a>
+        <div style="margin-top: 15px"><b>Tianyi Sun</b><br><b>210-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/朱轩宇.jpg" alt="Zhu Xuanyu"></a>
+        <div style="margin-top: 15px"><b>Zhu Xuanyu</b><br><b>213-P</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/吴媚.jpg" alt="Mei Wu"></a>
+        <div style="margin-top: 15px"><b>Mei Wu</b><br><b>218-P</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/陈禹伸.jpg" alt="Yushen Chen"></a>
         <div style="margin-top: 15px"><b>Yushen Chen</b><br><b></b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/彭景.jpg" alt="Jing Peng"></a>
+        <div style="margin-top: 15px"><b>Jing Peng</b><br><b>212-UP</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/谢睿.jpg" alt="Rui Xie"></a>
+        <div style="margin-top: 15px"><b>Rui Xie</b><br><b>201-UP</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/涂文明.jpg" alt="Wenming Tu"></a>
-        <div style="margin-top: 15px"><b>Wenming Tu</b><br><b></b></div>
+        <div style="margin-top: 15px"><b>Wenming Tu</b><br><b>207-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/吴媚.jpg" alt="WuMei"></a>
-        <div style="margin-top: 15px"><b>WuMei</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/刘展勋.jpg" alt="Zhanxun Liu"></a>
+        <div style="margin-top: 15px"><b>Zhanxun Liu</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/朱轩宇.jpg" alt="Xuanyu Zhu"></a>
-        <div style="margin-top: 15px"><b>Xuanyu Zhu</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/韩晨烨.jpg" alt="Chenye Han"></a>
+        <div style="margin-top: 15px"><b>Chenye Han</b><br><b></b></div>
     </div>
 </div>
 <h2 style="text-align: center"> 🌟Master Candidates🌟 </h2>
@@ -234,6 +274,10 @@ nav: false
         <div style="margin-top: 15px"><b>Dingye Liu</b><br><b>189-M</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/members/student/文雯.jpg" alt="Wen Wen"></a>
+        <div style="margin-top: 15px"><b>Wen Wen</b><br><b>195-M</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/周鼎.jpg" alt="Ding Zhou"></a>
         <div style="margin-top: 15px"><b>Ding Zhou</b><br><b>197-UM</b></div>
     </div>
@@ -242,36 +286,56 @@ nav: false
         <div style="margin-top: 15px"><b>Zhihan Li</b><br><b>198-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Ganyu Huang"></a>
-        <div style="margin-top: 15px"><b>Ganyu Huang</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/冯草林.jpg" alt="Caolin Feng"></a>
+        <div style="margin-top: 15px"><b>Caolin Feng</b><br><b>204-UM</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/蔡崇皓.jpg" alt="Chonghao Cai"></a>
+        <div style="margin-top: 15px"><b>Chonghao Cai</b><br><b>208-M</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/郑航.jpg" alt="Hang Zheng"></a>
+        <div style="margin-top: 15px"><b>Hang Zheng</b><br><b>214-UM</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/苗语洵.jpg" alt="Yuxun Miao"></a>
-        <div style="margin-top: 15px"><b>Yuxun Miao</b><br><b></b></div>
+        <div style="margin-top: 15px"><b>Yuxun Miao</b><br><b>215-UM</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/渡边翔太.jpg" alt="WATANABE SHOTA"></a>
+        <div style="margin-top: 15px"><b>WATANABE SHOTA</b><br><b>216-UM</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/梅嘉豪.jpg" alt="Jiahao Mei"></a>
+        <div style="margin-top: 15px"><b>Jiahao Mei</b><br><b>217-M</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/郑棋曦.jpg" alt="Qixi Zheng"></a>
+        <div style="margin-top: 15px"><b>Qixi Zheng</b><br><b>219-M</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Ganyu Huang"></a>
+        <div style="margin-top: 15px"><b>Ganyu Huang</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/彭阅章.jpg" alt="Yuezhang Peng"></a>
         <div style="margin-top: 15px"><b>Yuezhang Peng</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/郑航.jpg" alt="Hang Zheng"></a>
-        <div style="margin-top: 15px"><b>Hang Zheng</b><br><b></b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/梅嘉豪.jpg" alt="Jiahao Mei"></a>
-        <div style="margin-top: 15px"><b>Jiahao Mei</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/康张奕.jpg" alt="Zhangyi Kang"></a>
+        <div style="margin-top: 15px"><b>Zhangyi Kang</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/王哲祥.jpg" alt="Zhexiang Wang"></a>
         <div style="margin-top: 15px"><b>Zhexiang Wang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/蔡崇皓.jpg" alt="Chonghao Cai"></a>
-        <div style="margin-top: 15px"><b>Chonghao Cai</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/陈冠豫.jpg" alt="Guanyu Chen"></a>
+        <div style="margin-top: 15px"><b>Guanyu Chen</b><br><b>211-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/陈冠豫.jpg" alt="Guanyu Chen"></a>
-        <div style="margin-top: 15px"><b>Guanyu Chen</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/顾笑与.jpg" alt="Xiaoyu Gu"></a>
+        <div style="margin-top: 15px"><b>Xiaoyu Gu</b><br><b></b></div>
     </div>
 </div>
 <h2 style="text-align: center"> 🌟Undergraduates🌟 </h2>
@@ -297,10 +361,6 @@ nav: false
         <div style="margin-top: 15px"><b>Bingrui Jin</b><br><b>194-U</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/文雯.jpg" alt="Wen Wen"></a>
-        <div style="margin-top: 15px"><b>Wen Wen</b><br><b>195-U</b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Zhisheng Zheng"></a>
         <div style="margin-top: 15px"><b>Zhisheng Zheng</b><br><b>196-U</b></div>
     </div>
@@ -313,10 +373,6 @@ nav: false
         <div style="margin-top: 15px"><b>Baocai Chen</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/陈文熙.jpg" alt="Wenxi Chen"></a>
-        <div style="margin-top: 15px"><b>Wenxi Chen</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/陈逸恒.jpg" alt="Yiheng Chen"></a>
         <div style="margin-top: 15px"><b>Yiheng Chen</b><br><b></b></div>
     </div>
@@ -327,10 +383,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/单奕佳.jpg" alt="Yijia Shan"></a>
         <div style="margin-top: 15px"><b>Yijia Shan</b><br><b></b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/冯草林.jpg" alt="Caolin Feng"></a>
-        <div style="margin-top: 15px"><b>Caolin Feng</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/郭思佳.jpg" alt="Sijia Guo"></a>
@@ -353,16 +405,8 @@ nav: false
         <div style="margin-top: 15px"><b>Yixuan Li</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Yuzhe Liang"></a>
-        <div style="margin-top: 15px"><b>Yuzhe Liang</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Xuancheng Liu"></a>
         <div style="margin-top: 15px"><b>Xuancheng Liu</b><br><b></b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/彭景.jpg" alt="Jing Peng"></a>
-        <div style="margin-top: 15px"><b>Jing Peng</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/申振南.jpg" alt="Zhennan Shen"></a>
@@ -383,10 +427,6 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/汪子翔.jpg" alt="Zixiang Wang"></a>
         <div style="margin-top: 15px"><b>Zixiang Wang</b><br><b></b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/谢睿.jpg" alt="Rui Xie"></a>
-        <div style="margin-top: 15px"><b>Rui Xie</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/徐瑞阳.jpg" alt="Ruiyang Xu"></a>
@@ -413,10 +453,6 @@ nav: false
         <div style="margin-top: 15px"><b>Yifan Zhang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/郑棋曦.jpg" alt="Qixi Zheng"></a>
-        <div style="margin-top: 15px"><b>Qixi Zheng</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="Yanqiao Zhu"></a>
         <div style="margin-top: 15px"><b>Yanqiao Zhu</b><br><b></b></div>
     </div>
@@ -433,10 +469,6 @@ nav: false
         <div style="margin-top: 15px"><b>Yi Yang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/康张奕.jpg" alt="Zhangyi Kang"></a>
-        <div style="margin-top: 15px"><b>Zhangyi Kang</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/刘筠彤.jpg" alt="JunTong Liu"></a>
         <div style="margin-top: 15px"><b>JunTong Liu</b><br><b></b></div>
     </div>
@@ -451,5 +483,65 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/刘峻希.jpg" alt="Junxi Liu"></a>
         <div style="margin-top: 15px"><b>Junxi Liu</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/李师萌.jpg" alt="Shimeng Li"></a>
+        <div style="margin-top: 15px"><b>Shimeng Li</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/涂宇清.jpg" alt="Yuqing Tu"></a>
+        <div style="margin-top: 15px"><b>Yuqing Tu</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/张锦维.jpg" alt="Jinwei Zhang"></a>
+        <div style="margin-top: 15px"><b>Jinwei Zhang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/黄文宾.jpg" alt="Wenbin Huang"></a>
+        <div style="margin-top: 15px"><b>Wenbin Huang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/徐世奇.jpg" alt="Shiqi Xu"></a>
+        <div style="margin-top: 15px"><b>Shiqi Xu</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/尹志强.jpg" alt="zhiqiangyin"></a>
+        <div style="margin-top: 15px"><b>zhiqiangyin</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/张书畅.jpg" alt="Shuchang Zhang"></a>
+        <div style="margin-top: 15px"><b>Shuchang Zhang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/陈沛宁.jpg" alt="Peining Chen"></a>
+        <div style="margin-top: 15px"><b>Peining Chen</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="../../assets/img/octocat.png" alt="Xiang Liu"></a>
+        <div style="margin-top: 15px"><b>Xiang Liu</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/王金文.jpg" alt="JinWen Wang"></a>
+        <div style="margin-top: 15px"><b>JinWen Wang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/姜振宇.jpg" alt="Zhenyi Jiang"></a>
+        <div style="margin-top: 15px"><b>Zhenyi Jiang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/王梓鉴.jpg" alt="Zijian Wang"></a>
+        <div style="margin-top: 15px"><b>Zijian Wang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/罗予.jpg" alt="Yu Luo"></a>
+        <div style="margin-top: 15px"><b>Yu Luo</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/凤鹏超.jpg" alt="Pengchao Feng"></a>
+        <div style="margin-top: 15px"><b>Pengchao Feng</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/李亚霖.jpg" alt="Yalin Li"></a>
+        <div style="margin-top: 15px"><b>Yalin Li</b><br><b></b></div>
     </div>
 </div>
