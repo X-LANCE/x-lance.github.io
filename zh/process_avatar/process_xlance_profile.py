@@ -330,7 +330,7 @@ def down_pic(url, path, filename,OVER_WRITE_PICS=False):
 
 def upd_xlsx():
     # 请先手动将先前已经导入的行删掉
-    pic_file = pd.read_excel('./old/picfile_2025_09_22_14_09_54.xlsx')
+    pic_file = pd.read_excel('./old/picfile-20251010.xlsx')
     OVER_WRITE_PICS=False
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
@@ -341,7 +341,7 @@ def upd_xlsx():
         xlanceid = person[9]
         xlanceid_degree = person[10]
         degree, state = get_degree_state(person[11])
-        pic = person[14]
+        pic = person[15]
         if name in names:
             po = names.index(name)
             if eng_name != eng_names[po]:
@@ -408,7 +408,7 @@ def generate_md():
     global chi_student_md_M
     global eng_student_md_U
     global chi_student_md_U
-    if os.path.exists('final.xlsx'):
+    if os.path.exists('final_new.xlsx'):
         file = pd.read_excel('./final_new.xlsx')
     else:
         file = pd.read_excel('./final.xlsx')
