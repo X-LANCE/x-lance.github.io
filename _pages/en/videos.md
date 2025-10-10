@@ -11,6 +11,9 @@ nav_order: 6
 <div align="center">
 <h3> Xmart Student Forum </h3>
 
+<h4> Session 15 Heinrich Dinkel: Scalable Methods for General Audio Understanding</h4>
+<iframe src="https://player.bilibili.com/player.html?bvid=/BV1qQpKzHEKY&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" loading="lazy" allowfullscreen="true" width="100%" height="500"></iframe>
+
 <h4> Session 14 Yuancheng Wang: Towards Natural and Efficient Speech Synthesis — Perspectives on Modeling, Alignment, and Representation</h4>
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1FuKzzGEq3&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" loading="lazy" allowfullscreen="true" width="100%" height="500"></iframe>
 

@@ -12,6 +12,9 @@ nav_order: 6
 <div align="center">
 <h3> Xmart学生论坛 </h3>
 
+<h4> 第十五期 丁翰林：用于通用音频理解的可扩展方法</h4>
+<iframe src="https://player.bilibili.com/player.html?bvid=/BV1qQpKzHEKY&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" loading="lazy" allowfullscreen="true" width="100%" height="500"></iframe>
+
 <h4> 第十四期 王远程：Towards Natural and Efficient Speech Synthesis: Perspectives on Modeling, Alignment, and Representation</h4>
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1FuKzzGEq3&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" loading="lazy" allowfullscreen="true" width="100%" height="500"></iframe>
 
