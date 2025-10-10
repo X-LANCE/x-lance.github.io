@@ -308,7 +308,7 @@ def upd_degree(d1, d2):
 
 
 def down_pic(url, path, filename,OVER_WRITE_PICS=False):
-    if not os.path.exists('..'+path):
+    if not os.path.exists('..'+path) or OVER_WRITE_PICS:
         try:
             print(f"downloading pic of {filename}")
             response = requests.get(url, stream=True)
@@ -350,7 +350,7 @@ def upd_xlsx():
             if xlanceid != 0:
                 ids[po] = xlanceid
             if not pd.isnull(pic):
-                pics[po] = down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg')
+                pics[po] = down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg',OVER_WRITE_PICS=True)
             if degree not in degrees[po]:
                 degrees[po] = upd_degree(degree, degrees[po])
             if degrees[po] != xlanceid_degree:
@@ -372,7 +372,7 @@ def upd_xlsx():
             if pd.isnull(pic):
                 pics.append(default_pic)
             else:
-                pics.append(down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg'))
+                pics.append(down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg',OVER_WRITE_PICS=True))
         
     # print(len(names))
     # print(len(ids))
@@ -388,7 +388,7 @@ def upd_xlsx():
         'state': states
     }
     
-    writer = pd.ExcelWriter('final.xlsx')
+    writer = pd.ExcelWriter('final_new.xlsx')
     # sheetNames = full_dict.keys()  # 获取所有sheet的名称
     sheetNames = ["Sheet1"]
     # sheets是要写入的excel工作簿名称列表
@@ -451,5 +451,5 @@ def generate_md():
 
 
 if __name__ == '__main__':
-    # upd_xlsx()
-    generate_md()
+    upd_xlsx()
+    # generate_md()
