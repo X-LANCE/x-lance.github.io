@@ -148,7 +148,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/梁宇哲.jpg" alt="Yuzhe Liang"></a>
-        <div style="margin-top: 15px"><b>Yuzhe Liang</b><br><b>203-P</b></div>
+        <div style="margin-top: 15px"><b>Yuzhe Liang</b><br><b>203-P203</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/孙文杰.jpg" alt="Wenjie Sun "></a>
@@ -525,8 +525,8 @@ nav: false
         <div style="margin-top: 15px"><b>JinWen Wang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/姜振宇.jpg" alt="Zhenyi Jiang"></a>
-        <div style="margin-top: 15px"><b>Zhenyi Jiang</b><br><b></b></div>
+        <a href=""><img src="/assets/img/members/student/姜振宇.jpg" alt="Zhenyi JIANG"></a>
+        <div style="margin-top: 15px"><b>Zhenyi JIANG</b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/王梓鉴.jpg" alt="Zijian Wang"></a>

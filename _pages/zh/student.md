@@ -148,7 +148,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/梁宇哲.jpg" alt="梁宇哲"></a>
-        <div style="margin-top: 15px"><b>梁宇哲</b><br><b>203-P</b></div>
+        <div style="margin-top: 15px"><b>梁宇哲</b><br><b>203-P203</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/孙文杰.jpg" alt="孙文杰"></a>

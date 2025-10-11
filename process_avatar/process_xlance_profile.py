@@ -451,5 +451,5 @@ def generate_md():
 
 
 if __name__ == '__main__':
-    upd_xlsx()
-    # generate_md()
+    # upd_xlsx()
+    generate_md()
