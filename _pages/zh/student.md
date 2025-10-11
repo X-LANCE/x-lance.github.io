@@ -493,7 +493,7 @@ nav: false
         <div style="margin-top: 15px"><b>陈沛宁</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="../../assets/img/octocat.png" alt="刘翔"></a>
+        <a href=""><img src="/assets/img/octocat.png" alt="刘翔"></a>
         <div style="margin-top: 15px"><b>刘翔</b><br><b></b></div>
     </div>
 <div class="member">

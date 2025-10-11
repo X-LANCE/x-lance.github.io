@@ -493,7 +493,7 @@ nav: false
         <div style="margin-top: 15px"><b>Peining Chen</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="../../assets/img/octocat.png" alt="Xiang Liu"></a>
+        <a href=""><img src="/assets/img/octocat.png" alt="Xiang Liu"></a>
         <div style="margin-top: 15px"><b>Xiang Liu</b><br><b></b></div>
     </div>
 <div class="member">

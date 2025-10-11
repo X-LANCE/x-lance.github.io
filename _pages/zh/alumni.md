@@ -639,7 +639,7 @@ nav: false
         <div style="margin-top: 15px"><b>马英梓</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="../../assets/img/octocat.png" alt="张志龙"></a>
+        <a href=""><img src="/assets/img/octocat.png" alt="张志龙"></a>
         <div style="margin-top: 15px"><b>张志龙</b><br><b>220-M</b></div>
     </div>
 <div class="member">
