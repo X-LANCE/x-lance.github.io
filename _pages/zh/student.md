@@ -35,7 +35,7 @@ nav: false
         <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="缪庆亮"></a>
+        <a href=""><img src="/assets/img/members/student/缪庆亮.jpg" alt="缪庆亮"></a>
         <div style="margin-top: 15px"><b>缪庆亮</b><br><b>185-F</b></div>
     </div>
 </div>
