@@ -55,6 +55,15 @@ profiles:
       chenlusz@sjtu.edu.cn<br>
       <a href="https://coai-sjtu.github.io/">Personal Website</a></p>
   - align: left
+    image: members/faculty/wxb_square.jpg
+    content: members/faculty/wuxiaobao.md
+    image_circular: true # crops the image to make it circular
+    more_info: >
+      <p align="center"><h3>Assistant Professor Xiaobao Wu</h3>
+      - <br>
+      xiaobaowu@sjtu.edu.cn<br>
+      <a href="https://bobxwu.github.io/">Personal Website</a></p>
+  - align: right
     image: members/faculty/myq_square.jpg
     content: members/faculty/maoyiqiong.md
     image_circular: true # crops the image to make it circular
