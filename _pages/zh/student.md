@@ -60,7 +60,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/张丹阳.jpg" alt="张丹阳"></a>
-        <div style="margin-top: 15px"><b>张丹阳</b><br><b>112-P</b></div>
+        <div style="margin-top: 15px"><b><a href="https://zdy023.github.io" style="color: inherit; text-decoration: underline;">张丹阳</a></b><br><b>112-P</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/刘涛.jpg" alt="刘涛"></a>
@@ -84,7 +84,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/朱梓臣.jpg" alt="朱梓臣"></a>
-        <div style="margin-top: 15px"><b>朱梓臣</b><br><b>146-UP</b></div>
+        <div style="margin-top: 15px"><b><a href="https://JamesZhutheThird.github.io" style="color: inherit; text-decoration: underline;">朱梓臣</a></b><br><b>146-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/罗嘉鸣.jpg" alt="罗嘉鸣"></a>
@@ -104,14 +104,14 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/郭奕玮.jpg" alt="郭奕玮"></a>
-        <div style="margin-top: 15px"><b>郭奕玮</b><br><b>158-P</b></div>
+        <div style="margin-top: 15px"><b><a href="https://cantabile-kwok.github.io" style="color: inherit; text-decoration: underline;">郭奕玮</a></b><br><b>158-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/刘浚哲.jpg" alt="刘浚哲"></a>
         <div style="margin-top: 15px"><b>刘浚哲</b><br><b>160-P</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/宋秀杰.jpg" alt="宋秀杰"></a>
+        <a href=""><img src="/assets/img/members/student/宋秀杰_2.jpg" alt="宋秀杰"></a>
         <div style="margin-top: 15px"><b>宋秀杰</b><br><b>164-P</b></div>
     </div>
 <div class="member">
@@ -124,11 +124,11 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/杨亦凡.jpg" alt="杨亦凡"></a>
-        <div style="margin-top: 15px"><b>杨亦凡</b><br><b>171-P</b></div>
+        <div style="margin-top: 15px"><b><a href="https://yfyeung.github.io" style="color: inherit; text-decoration: underline;">杨亦凡</a></b><br><b>171-P</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/牛志康.jpg" alt="牛志康"></a>
-        <div style="margin-top: 15px"><b>牛志康</b><br><b>177-UP</b></div>
+        <div style="margin-top: 15px"><b><a href="https://zhikangniu.github.io" style="color: inherit; text-decoration: underline;">牛志康</a></b><br><b>177-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/周强.jpg" alt="周强"></a>
@@ -180,7 +180,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/彭景.jpg" alt="彭景"></a>
-        <div style="margin-top: 15px"><b>彭景</b><br><b>212-UP</b></div>
+        <div style="margin-top: 15px"><b><a href="https://pigeondan1.github.io/about" style="color: inherit; text-decoration: underline;">彭景</a></b><br><b>212-UP</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/谢睿.jpg" alt="谢睿"></a>
@@ -197,6 +197,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/韩晨烨.jpg" alt="韩晨烨"></a>
         <div style="margin-top: 15px"><b>韩晨烨</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/王梓鉴.jpg" alt="王梓鉴"></a>
+        <div style="margin-top: 15px"><b><a href="https://kotohanon.github.io" style="color: inherit; text-decoration: underline;">王梓鉴</a></b><br><b></b></div>
     </div>
 </div>
 <h2 style="text-align: center"> 🌟硕士研究生🌟 </h2>
@@ -220,6 +224,10 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/金豪桉.jpg" alt="金豪桉"></a>
         <div style="margin-top: 15px"><b>金豪桉</b><br><b>156-M</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/李柏涵.jpg" alt="李柏涵"></a>
+        <div style="margin-top: 15px"><b>李柏涵</b><br><b>157-UM</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/李浩宇.jpg" alt="李浩宇"></a>
@@ -254,8 +262,8 @@ nav: false
         <div style="margin-top: 15px"><b>李星源</b><br><b>175-M</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="赵宇翔"></a>
-        <div style="margin-top: 15px"><b>赵宇翔</b><br><b>178-M</b></div>
+        <a href=""><img src="/assets/img/members/student/赵宇翔.jpg" alt="赵宇翔"></a>
+        <div style="margin-top: 15px"><b><a href="https://zhaoyx239.github.io" style="color: inherit; text-decoration: underline;">赵宇翔</a></b><br><b>178-M</b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/王浩然.jpg" alt="王浩然"></a>
@@ -353,17 +361,21 @@ nav: false
         <a href=""><img src="/assets/img/members/student/顾笑与.jpg" alt="顾笑与"></a>
         <div style="margin-top: 15px"><b>顾笑与</b><br><b></b></div>
     </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/朱海纳.jpg" alt="朱海纳"></a>
+        <div style="margin-top: 15px"><b><a href="https://juhayna-zh.github.io/profile" style="color: inherit; text-decoration: underline;">朱海纳</a></b><br><b>196-M</b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/李希泉.jpg" alt="李希泉"></a>
+        <div style="margin-top: 15px"><b><a href="https://xiquan-li.github.io" style="color: inherit; text-decoration: underline;">李希泉</a></b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/张昊天.jpg" alt="张昊天"></a>
+        <div style="margin-top: 15px"><b>张昊天</b><br><b></b></div>
+    </div>
 </div>
 <h2 style="text-align: center"> 🌟本科生🌟 </h2>
 <div class="mycontainer">
-<div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="杨晨"></a>
-        <div style="margin-top: 15px"><b>杨晨</b><br><b>141-U</b></div>
-    </div>
-<div class="member">
-        <a href=""><img src="/assets/img/members/student/李柏涵.jpg" alt="李柏涵"></a>
-        <div style="margin-top: 15px"><b>李柏涵</b><br><b>157-U</b></div>
-    </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/曹义路.jpg" alt="曹义路"></a>
         <div style="margin-top: 15px"><b>曹义路</b><br><b></b></div>
@@ -382,7 +394,7 @@ nav: false
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/members/student/黄天呈.jpg" alt="黄天呈"></a>
-        <div style="margin-top: 15px"><b>黄天呈</b><br><b></b></div>
+        <div style="margin-top: 15px"><b><a href="https://htc981.github.io" style="color: inherit; text-decoration: underline;">黄天呈</a></b><br><b></b></div>
     </div>
 <div class="member">
         <a href=""><img src="/assets/img/octocat.png" alt="姜皓翔"></a>
@@ -505,10 +517,6 @@ nav: false
         <div style="margin-top: 15px"><b>姜振宇</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/王梓鉴.jpg" alt="王梓鉴"></a>
-        <div style="margin-top: 15px"><b>王梓鉴</b><br><b></b></div>
-    </div>
-<div class="member">
         <a href=""><img src="/assets/img/members/student/罗予.jpg" alt="罗予"></a>
         <div style="margin-top: 15px"><b>罗予</b><br><b></b></div>
     </div>
@@ -519,5 +527,33 @@ nav: false
 <div class="member">
         <a href=""><img src="/assets/img/members/student/李亚霖.jpg" alt="李亚霖"></a>
         <div style="margin-top: 15px"><b>李亚霖</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/邱雨航.jpg" alt="邱雨航"></a>
+        <div style="margin-top: 15px"><b>邱雨航</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/吴恒涛.jpg" alt="吴恒涛"></a>
+        <div style="margin-top: 15px"><b>吴恒涛</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/肖嘉熠.jpg" alt="肖嘉熠"></a>
+        <div style="margin-top: 15px"><b>肖嘉熠</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="../../assets/img/octocat.png" alt="朱明瑄"></a>
+        <div style="margin-top: 15px"><b>朱明瑄</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/郑时捷.jpg" alt="郑时捷"></a>
+        <div style="margin-top: 15px"><b>郑时捷</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/秦昊楠.jpg" alt="秦昊楠"></a>
+        <div style="margin-top: 15px"><b>秦昊楠</b><br><b></b></div>
+    </div>
+<div class="member">
+        <a href=""><img src="/assets/img/members/student/邢笑宇.jpg" alt="邢笑宇"></a>
+        <div style="margin-top: 15px"><b>邢笑宇</b><br><b></b></div>
     </div>
 </div>

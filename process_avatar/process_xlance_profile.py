@@ -1,25 +1,53 @@
 import pandas as pd
 import requests
 import os
+import re
+import time
 from pypinyin import lazy_pinyin, Style
 from tqdm import tqdm
 
 default_pic = "../../assets/img/octocat.png"
+
+
+def format_webpage(url):
+    """格式化webpage，去掉https://、http://、www.等前缀"""
+    if pd.isnull(url) or url == '':
+        return None
+    url = str(url).strip()
+    # 去掉协议前缀
+    url = re.sub(r'^https?://', '', url)
+    # 去掉www.前缀
+    url = re.sub(r'^www\.', '', url)
+    # 去掉末尾的斜杠
+    url = url.rstrip('/')
+    return url
+
+
+def format_name_with_link(name, webpage):
+    """为名字添加超链接，仅增加下划线不改变颜色"""
+    if webpage and not pd.isnull(webpage):
+        # 确保链接有协议前缀
+        link = webpage if webpage.startswith('http') else f'https://{webpage}'
+        # 使用 style 设置下划线但不改变颜色
+        return f'<a href="{link}" style="color: inherit; text-decoration: underline;">{name}</a>'
+    return name
+
+
 eng_alu_format = """<div class="member">
         <a href=""><img src="{pic}" alt="{name}"></a>
-        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_alu_format = """<div class="member">
         <a href=""><img src="{pic}" alt="{name}"></a>
-        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 eng_stu_format = """<div class="member">
         <a href=""><img src="{pic}" alt="{name}"></a>
-        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_stu_format = """<div class="member">
         <a href=""><img src="{pic}" alt="{name}"></a>
-        <div style="margin-top: 15px"><b>{name}</b><br><b>{xlanceid}</b></div>
+        <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 
 
@@ -246,6 +274,7 @@ ids = []
 degrees = []
 pics = []
 states = []
+webpages = []
 for person in data:
     names.append(person[0])
     eng_names.append(person[1])
@@ -253,6 +282,7 @@ for person in data:
     degrees.append(person[3])
     pics.append(person[4])
     states.append(person[5])
+    webpages.append(person[6] if len(person) > 6 else None)
 
 
 def format_single(person):
@@ -268,6 +298,11 @@ def format_single(person):
         xlanceid = f""
     
     pic = person[4]
+    webpage = person[6] if len(person) > 6 else None
+    
+    # 生成带链接的名字显示（如果有webpage）
+    eng_name_display = format_name_with_link(eng_name, webpage)
+    chi_name_display = format_name_with_link(name, webpage)
     
     typ = 1  # 学生
     if '离开' in person[5]:
@@ -279,9 +314,9 @@ def format_single(person):
             typ = 3
     
     if typ == 0:
-        return typ, eng_stu_format.format(pic=pic, name=eng_name, xlanceid=xlanceid), chi_stu_format.format(pic=pic, name=name, xlanceid=xlanceid)
+        return typ, eng_stu_format.format(pic=pic, name=eng_name, name_display=eng_name_display, xlanceid=xlanceid), chi_stu_format.format(pic=pic, name=name, name_display=chi_name_display, xlanceid=xlanceid)
     else:
-        return typ, eng_alu_format.format(pic=pic, name=eng_name, xlanceid=xlanceid), chi_alu_format.format(pic=pic, name=name, xlanceid=xlanceid)
+        return typ, eng_alu_format.format(pic=pic, name=eng_name, name_display=eng_name_display, xlanceid=xlanceid), chi_alu_format.format(pic=pic, name=name, name_display=chi_name_display, xlanceid=xlanceid)
 
 
 def get_degree_state(curstate):
@@ -307,31 +342,91 @@ def upd_degree(d1, d2):
     return d1 + d2
 
 
-def down_pic(url, path, filename,OVER_WRITE_PICS=False):
-    if not os.path.exists('..'+path) or OVER_WRITE_PICS:
+def down_pic(url, path, filename, OVER_WRITE_PICS=False):
+    """
+    下载照片，支持后缀逻辑：
+    - 初次出现的照片不需要替换
+    - 修改时间小于24小时的照片直接覆盖
+    - 否则使用 _2, _3 等后缀
+    """
+    base_name, ext = os.path.splitext(filename)
+    full_path = '..' + path + '/' + filename
+    
+    if not os.path.exists(full_path):
+        # 文件不存在，直接下载（初次出现）
         try:
-            print(f"downloading pic of {filename}")
+            print(f"downloading pic of {filename} (first time)")
             response = requests.get(url, stream=True)
-            response.raise_for_status()  # 检查请求是否成功
+            response.raise_for_status()
             pic = path + '/' + filename
-            with open('..'+pic, 'wb') as f:
+            with open(full_path, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
-            # print(f"downloaded successfully to {pic}")
             return pic
-        
+        except Exception as e:
+            print(f"下载失败：{str(e)}")
+            return None
+    elif OVER_WRITE_PICS:
+        # 文件存在且需要覆盖
+        try:
+            # 检查文件修改时间
+            file_mtime = os.path.getmtime(full_path)
+            current_time = time.time()
+            hours_since_modified = (current_time - file_mtime) / 3600
+            
+            if hours_since_modified < 24:
+                # 修改时间小于24小时，直接覆盖
+                print(f"downloading pic of {filename} (overwriting, last modified {hours_since_modified:.1f}h ago)")
+                response = requests.get(url, stream=True)
+                response.raise_for_status()
+                pic = path + '/' + filename
+                with open(full_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+                return pic
+            else:
+                # 修改时间超过24小时，使用后缀
+                suffix_num = 2
+                while True:
+                    new_filename = f"{base_name}_{suffix_num}{ext}"
+                    new_full_path = '..' + path + '/' + new_filename
+                    if not os.path.exists(new_full_path):
+                        break
+                    # 检查现有后缀文件是否在24小时内修改过
+                    existing_mtime = os.path.getmtime(new_full_path)
+                    if (current_time - existing_mtime) / 3600 < 24:
+                        # 直接覆盖这个后缀文件
+                        print(f"downloading pic of {new_filename} (overwriting suffix file)")
+                        response = requests.get(url, stream=True)
+                        response.raise_for_status()
+                        pic = path + '/' + new_filename
+                        with open(new_full_path, 'wb') as f:
+                            for chunk in response.iter_content(chunk_size=8192):
+                                f.write(chunk)
+                        return pic
+                    suffix_num += 1
+                
+                # 使用新后缀下载
+                print(f"downloading pic of {new_filename} (new suffix)")
+                response = requests.get(url, stream=True)
+                response.raise_for_status()
+                pic = path + '/' + new_filename
+                with open(new_full_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+                return pic
+                
         except Exception as e:
             print(f"下载失败：{str(e)}")
             return None
     else:
-        print('..'+path + '/' + filename+' exists')
+        print('..' + path + '/' + filename + ' exists')
         return path + '/' + filename
 
 
 def upd_xlsx():
     # 请先手动将先前已经导入的行删掉
-    pic_file = pd.read_excel('./old/picfile-20251010.xlsx')
-    OVER_WRITE_PICS=False
+    pic_file = pd.read_excel('./old/实验室网站个人信息维护【2026年2月更新】_答卷数据_2026_02_11_14_59_26.xlsx')
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
@@ -342,6 +437,10 @@ def upd_xlsx():
         xlanceid_degree = person[10]
         degree, state = get_degree_state(person[11])
         pic = person[15]
+        webpage_raw = person[16]
+        # 格式化 webpage，去掉 https 等前缀
+        webpage = format_webpage(webpage_raw)
+        
         if name in names:
             po = names.index(name)
             if eng_name != eng_names[po]:
@@ -350,13 +449,16 @@ def upd_xlsx():
             if xlanceid != 0:
                 ids[po] = xlanceid
             if not pd.isnull(pic):
-                pics[po] = down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg',OVER_WRITE_PICS=True)
+                pics[po] = down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg', OVER_WRITE_PICS=True)
             if degree not in degrees[po]:
                 degrees[po] = upd_degree(degree, degrees[po])
             if degrees[po] != xlanceid_degree:
                 print(f"xlanceid_degree: {xlanceid_degree} != degree: {degrees[po]}")
                 degrees[po] = xlanceid_degree
             states[po] = state
+            # 更新 webpage（如果问卷中提供了新的）
+            if webpage:
+                webpages[po] = webpage
         else:
             names.append(name)
             eng_names.append(eng_name)
@@ -369,10 +471,12 @@ def upd_xlsx():
                 print(f"xlanceid_degree: {xlanceid_degree} != degree: {degree}")
                 degrees[-1] = xlanceid_degree
             states.append(state)
+            # 添加 webpage
+            webpages.append(webpage)
             if pd.isnull(pic):
                 pics.append(default_pic)
             else:
-                pics.append(down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg',OVER_WRITE_PICS=True))
+                pics.append(down_pic(pic, '/assets/img/members/student', format_filename(name) + '.jpg', OVER_WRITE_PICS=True))
         
     # print(len(names))
     # print(len(ids))
@@ -385,10 +489,11 @@ def upd_xlsx():
         'xlanceid': ids,
         'degree': degrees,
         'pic': pics,
-        'state': states
+        'state': states,
+        'webpage': webpages
     }
     
-    writer = pd.ExcelWriter('final_new.xlsx')
+    writer = pd.ExcelWriter('final.xlsx')
     # sheetNames = full_dict.keys()  # 获取所有sheet的名称
     sheetNames = ["Sheet1"]
     # sheets是要写入的excel工作簿名称列表

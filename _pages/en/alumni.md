@@ -538,6 +538,10 @@ nav: false
         <div style="margin-top: 15px"><b>Zeyu Xie</b><br><b>138-UM</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="Chen Yang"></a>
+        <div style="margin-top: 15px"><b>Chen Yang</b><br><b>141-U</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/卓建衡.jpg" alt="Jianheng Zhuo"></a>
         <div style="margin-top: 15px"><b>Jianheng Zhuo</b><br><b>148-M</b></div>
     </div>
@@ -594,7 +598,7 @@ nav: false
         <div style="margin-top: 15px"><b>Liliang Ren</b><br><b>184-UP</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/陈博2.jpg" alt="Bo Chen"></a>
+        <a href=""><img src="/assets/img/members/student/陈博_2.jpg" alt="Bo Chen"></a>
         <div style="margin-top: 15px"><b>Bo Chen</b><br><b>190-P</b></div>
     </div>
 <div class="member">
@@ -626,7 +630,7 @@ nav: false
         <div style="margin-top: 15px"><b>Jingkai Yang</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="Hanglei Zhang"></a>
+        <a href=""><img src="/assets/img/members/student/张杭磊.jpg" alt="Hanglei Zhang"></a>
         <div style="margin-top: 15px"><b>Hanglei Zhang</b><br><b></b></div>
     </div>
 <div class="member">

@@ -539,6 +539,10 @@ nav: false
         <div style="margin-top: 15px"><b>谢泽宇</b><br><b>138-UM</b></div>
     </div>
 <div class="member">
+        <a href=""><img src="/assets/img/octocat.png" alt="杨晨"></a>
+        <div style="margin-top: 15px"><b>杨晨</b><br><b>141-U</b></div>
+    </div>
+<div class="member">
         <a href=""><img src="/assets/img/members/student/卓建衡.jpg" alt="卓建衡"></a>
         <div style="margin-top: 15px"><b>卓建衡</b><br><b>148-M</b></div>
     </div>
@@ -595,7 +599,7 @@ nav: false
         <div style="margin-top: 15px"><b>任立椋</b><br><b>184-UP</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/陈博2.jpg" alt="陈博"></a>
+        <a href=""><img src="/assets/img/members/student/陈博_2.jpg" alt="陈博"></a>
         <div style="margin-top: 15px"><b>陈博</b><br><b>190-P</b></div>
     </div>
 <div class="member">
@@ -627,7 +631,7 @@ nav: false
         <div style="margin-top: 15px"><b>杨景凯</b><br><b></b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/octocat.png" alt="张杭磊"></a>
+        <a href=""><img src="/assets/img/members/student/张杭磊.jpg" alt="张杭磊"></a>
         <div style="margin-top: 15px"><b>张杭磊</b><br><b></b></div>
     </div>
 <div class="member">
