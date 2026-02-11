@@ -24,29 +24,29 @@ def format_webpage(url):
 
 
 def format_name_with_link(name, webpage):
-    """为名字添加超链接，仅增加下划线不改变颜色"""
+    """为名字添加超链接，在名字后增加🏠emoji"""
     if webpage and not pd.isnull(webpage):
         # 确保链接有协议前缀
         link = webpage if webpage.startswith('http') else f'https://{webpage}'
-        # 使用 style 设置下划线但不改变颜色
-        return f'<a href="{link}" style="color: inherit; text-decoration: underline;">{name}</a>'
+        # 在名字后增加可点击的🏠emoji
+        return f'<a href="{link}" style="color: inherit; text-decoration: none;">{name}🏠</a>'
     return name
 
 
 eng_alu_format = """<div class="member">
-        <a href=""><img src="{pic}" alt="{name}"></a>
+        <img src="{pic}" alt="{name}">
         <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_alu_format = """<div class="member">
-        <a href=""><img src="{pic}" alt="{name}"></a>
+        <img src="{pic}" alt="{name}">
         <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 eng_stu_format = """<div class="member">
-        <a href=""><img src="{pic}" alt="{name}"></a>
+        <img src="{pic}" alt="{name}">
         <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 chi_stu_format = """<div class="member">
-        <a href=""><img src="{pic}" alt="{name}"></a>
+        <img src="{pic}" alt="{name}">
         <div style="margin-top: 15px"><b>{name_display}</b><br><b>{xlanceid}</b></div>
     </div>"""
 
@@ -193,11 +193,11 @@ nav: false
 <h2 style="text-align: center"> 🌟Postdocs🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/樊帅.jpg" alt="Shuai Fan"></a>
+        <img src="/assets/img/members/student/樊帅.jpg" alt="Shuai Fan">
         <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/缪庆亮.jpg" alt="Qingliang Miao"></a>
+        <img src="/assets/img/members/student/缪庆亮.jpg" alt="Qingliang Miao">
         <div style="margin-top: 15px"><b>Qingliang Miao</b><br><b></b></div>
     </div>
 </div>
@@ -238,11 +238,11 @@ nav: false
 <h2 style="text-align: center"> 🌟博士后🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/樊帅.jpg" alt="樊帅"></a>
+        <img src="/assets/img/members/student/樊帅.jpg" alt="樊帅">
         <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
 <div class="member">
-        <a href=""><img src="/assets/img/members/student/缪庆亮.jpg" alt="缪庆亮"></a>
+        <img src="/assets/img/members/student/缪庆亮.jpg" alt="缪庆亮">
         <div style="margin-top: 15px"><b>缪庆亮</b><br><b>185-F</b></div>
     </div>
 </div>
