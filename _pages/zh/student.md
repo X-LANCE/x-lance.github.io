@@ -198,10 +198,6 @@ nav: false
         <img src="/assets/img/members/student/韩晨烨.jpg" alt="韩晨烨">
         <div style="margin-top: 15px"><b>韩晨烨</b><br><b></b></div>
     </div>
-<div class="member">
-        <img src="/assets/img/members/student/王梓鉴.jpg" alt="王梓鉴">
-        <div style="margin-top: 15px"><b><a href="https://kotohanon.github.io" style="color: inherit; text-decoration: none;">王梓鉴🏠</a></b><br><b></b></div>
-    </div>
 </div>
 <h2 style="text-align: center"> 🌟硕士研究生🌟 </h2>
 <div class="mycontainer">
@@ -515,6 +511,10 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/姜振宇.jpg" alt="姜振宇">
         <div style="margin-top: 15px"><b>姜振宇</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/王梓鉴.jpg" alt="王梓鉴">
+        <div style="margin-top: 15px"><b><a href="https://kotohanon.github.io" style="color: inherit; text-decoration: none;">王梓鉴🏠</a></b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/罗予.jpg" alt="罗予">

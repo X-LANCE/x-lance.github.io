@@ -198,10 +198,6 @@ nav: false
         <img src="/assets/img/members/student/韩晨烨.jpg" alt="Chenye Han">
         <div style="margin-top: 15px"><b>Chenye Han</b><br><b></b></div>
     </div>
-<div class="member">
-        <img src="/assets/img/members/student/王梓鉴.jpg" alt="Zijian Wang">
-        <div style="margin-top: 15px"><b><a href="https://kotohanon.github.io" style="color: inherit; text-decoration: none;">Zijian Wang🏠</a></b><br><b></b></div>
-    </div>
 </div>
 <h2 style="text-align: center"> 🌟Master Candidates🌟 </h2>
 <div class="mycontainer">
@@ -515,6 +511,10 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/姜振宇.jpg" alt="Zhenyi Jiang">
         <div style="margin-top: 15px"><b>Zhenyi Jiang</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/王梓鉴.jpg" alt="Zijian Wang">
+        <div style="margin-top: 15px"><b><a href="https://kotohanon.github.io" style="color: inherit; text-decoration: none;">Zijian Wang🏠</a></b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/罗予.jpg" alt="Yu Luo">
