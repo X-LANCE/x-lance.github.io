@@ -7,7 +7,7 @@ contact_note: >
   Welcome follow our works and contact us for any questions.
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Maintained by ZC Zhu, KY Lan, JK Yang, and DY Luo.
+  Hosted by <a href="https://github.com/X-LANCE/x-lance.github.io" target="_blank">GitHub Pages</a>. Maintained by ZC Zhu, KY Lan, JK Yang, and DY Luo.
 latest_posts: latest posts
 news: 🔥News
 selected_publications: 📑Selected Papers
