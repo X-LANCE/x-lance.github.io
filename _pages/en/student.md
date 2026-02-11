@@ -43,10 +43,6 @@ nav: false
 <h2 style="text-align: center"> 🌟PhD Candidates🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <img src="/assets/img/members/student/许洪深.jpg" alt="Hongshen Xu">
-        <div style="margin-top: 15px"><b>Hongshen Xu</b><br><b>091-P</b></div>
-    </div>
-<div class="member">
         <img src="/assets/img/members/student/马达.jpg" alt="Da Ma">
         <div style="margin-top: 15px"><b>Da Ma</b><br><b>094-MP</b></div>
     </div>
@@ -61,10 +57,6 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/张丹阳.jpg" alt="Danyang Zhang">
         <div style="margin-top: 15px"><b><a href="https://zdy023.github.io" style="color: inherit; text-decoration: none;">Danyang Zhang🏠</a></b><br><b>112-P</b></div>
-    </div>
-<div class="member">
-        <img src="/assets/img/members/student/刘涛.jpg" alt="Tao Liu">
-        <div style="margin-top: 15px"><b>Tao Liu</b><br><b>129-P</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/兰焜耀.jpg" alt="Kunyao Lan">
@@ -243,7 +235,7 @@ nav: false
     </div>
 <div class="member">
         <img src="/assets/img/members/student/韩森宇.jpg" alt="Senyu Han">
-        <div style="margin-top: 15px"><b>Senyu Han</b><br><b>167-M</b></div>
+        <div style="margin-top: 15px"><b>Senyu Han</b><br><b>167-UM</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/杨飞.jpg" alt="Fei Yang">
@@ -328,10 +320,6 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/郭思佳.jpg" alt="Sijia Guo">
         <div style="margin-top: 15px"><b>Sijia Guo</b><br><b></b></div>
-    </div>
-<div class="member">
-        <img src="/assets/img/octocat.png" alt="Ganyu Huang">
-        <div style="margin-top: 15px"><b>Ganyu Huang</b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/octocat.png" alt="Xiquan  Li">
@@ -541,7 +529,7 @@ nav: false
         <div style="margin-top: 15px"><b>Jiayi Xiao </b><br><b></b></div>
     </div>
 <div class="member">
-        <img src="../../assets/img/octocat.png" alt="Mingxuan Zhu">
+        <img src="/assets/img/octocat.png" alt="Mingxuan Zhu">
         <div style="margin-top: 15px"><b>Mingxuan Zhu</b><br><b></b></div>
     </div>
 <div class="member">

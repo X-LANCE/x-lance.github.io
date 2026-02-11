@@ -6,7 +6,7 @@ import time
 from pypinyin import lazy_pinyin, Style
 from tqdm import tqdm
 
-default_pic = "../../assets/img/octocat.png"
+default_pic = "/assets/img/octocat.png"
 
 
 def format_webpage(url):

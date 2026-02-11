@@ -43,10 +43,6 @@ nav: false
 <h2 style="text-align: center"> 🌟博士研究生🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <img src="/assets/img/members/student/许洪深.jpg" alt="许洪深">
-        <div style="margin-top: 15px"><b>许洪深</b><br><b>091-P</b></div>
-    </div>
-<div class="member">
         <img src="/assets/img/members/student/马达.jpg" alt="马达">
         <div style="margin-top: 15px"><b>马达</b><br><b>094-MP</b></div>
     </div>
@@ -61,10 +57,6 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/张丹阳.jpg" alt="张丹阳">
         <div style="margin-top: 15px"><b><a href="https://zdy023.github.io" style="color: inherit; text-decoration: none;">张丹阳🏠</a></b><br><b>112-P</b></div>
-    </div>
-<div class="member">
-        <img src="/assets/img/members/student/刘涛.jpg" alt="刘涛">
-        <div style="margin-top: 15px"><b>刘涛</b><br><b>129-P</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/兰焜耀.jpg" alt="兰焜耀">
@@ -243,7 +235,7 @@ nav: false
     </div>
 <div class="member">
         <img src="/assets/img/members/student/韩森宇.jpg" alt="韩森宇">
-        <div style="margin-top: 15px"><b>韩森宇</b><br><b>167-M</b></div>
+        <div style="margin-top: 15px"><b>韩森宇</b><br><b>167-UM</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/杨飞.jpg" alt="杨飞">
@@ -328,10 +320,6 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/郭思佳.jpg" alt="郭思佳">
         <div style="margin-top: 15px"><b>郭思佳</b><br><b></b></div>
-    </div>
-<div class="member">
-        <img src="/assets/img/octocat.png" alt="黄甘雨">
-        <div style="margin-top: 15px"><b>黄甘雨</b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/octocat.png" alt="李希泉 ">
@@ -541,7 +529,7 @@ nav: false
         <div style="margin-top: 15px"><b>肖嘉熠</b><br><b></b></div>
     </div>
 <div class="member">
-        <img src="../../assets/img/octocat.png" alt="朱明瑄">
+        <img src="/assets/img/octocat.png" alt="朱明瑄">
         <div style="margin-top: 15px"><b>朱明瑄</b><br><b></b></div>
     </div>
 <div class="member">
