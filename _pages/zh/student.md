@@ -322,10 +322,6 @@ nav: false
         <div style="margin-top: 15px"><b>郭思佳</b><br><b></b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/octocat.png" alt="李希泉 ">
-        <div style="margin-top: 15px"><b>李希泉 </b><br><b></b></div>
-    </div>
-<div class="member">
         <img src="/assets/img/members/student/彭阅章.jpg" alt="彭阅章">
         <div style="margin-top: 15px"><b>彭阅章</b><br><b></b></div>
     </div>

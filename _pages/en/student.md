@@ -322,10 +322,6 @@ nav: false
         <div style="margin-top: 15px"><b>Sijia Guo</b><br><b></b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/octocat.png" alt="Xiquan  Li">
-        <div style="margin-top: 15px"><b>Xiquan  Li</b><br><b></b></div>
-    </div>
-<div class="member">
         <img src="/assets/img/members/student/彭阅章.jpg" alt="Yuezhang Peng">
         <div style="margin-top: 15px"><b>Yuezhang Peng</b><br><b></b></div>
     </div>
