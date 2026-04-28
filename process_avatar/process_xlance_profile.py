@@ -193,12 +193,16 @@ nav: false
 <h2 style="text-align: center"> 🌟Postdocs🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <img src="/assets/img/members/student/樊帅.jpg" alt="Shuai Fan">
-        <div style="margin-top: 15px"><b>Shuai Fan</b><br><b>185-F</b></div>
-    </div>
-<div class="member">
         <img src="/assets/img/members/student/缪庆亮.jpg" alt="Qingliang Miao">
         <div style="margin-top: 15px"><b>Qingliang Miao</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/octocat.png" alt="Kunyang Peng">
+        <div style="margin-top: 15px"><b>Kunyang Peng</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/octocat.png" alt="Beiyi Liu">
+        <div style="margin-top: 15px"><b>Beiyi Liu</b><br><b></b></div>
     </div>
 </div>
 
@@ -238,12 +242,16 @@ nav: false
 <h2 style="text-align: center"> 🌟博士后🌟 </h2>
 <div class="mycontainer">
 <div class="member">
-        <img src="/assets/img/members/student/樊帅.jpg" alt="樊帅">
-        <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
+        <img src="/assets/img/members/student/缪庆亮.jpg" alt="缪庆亮">
+        <div style="margin-top: 15px"><b>缪庆亮</b><br><b></b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/members/student/缪庆亮.jpg" alt="缪庆亮">
-        <div style="margin-top: 15px"><b>缪庆亮</b><br><b>185-F</b></div>
+        <img src="/assets/img/octocat.png" alt="彭坤杨">
+        <div style="margin-top: 15px"><b>彭坤杨</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/octocat.png" alt="刘贝易">
+        <div style="margin-top: 15px"><b>刘贝易</b><br><b></b></div>
     </div>
 </div>
 
@@ -426,7 +434,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
 
 def upd_xlsx():
     # 请先手动将先前已经导入的行删掉
-    pic_file = pd.read_excel('./old/实验室网站个人信息维护【2026年2月更新】_答卷数据_2026_02_11_14_59_26.xlsx')
+    pic_file = pd.read_excel('./old/实验室网站个人信息维护【2026年2月更新】_答卷数据_2026_04_28_16_34_35.xlsx')
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
@@ -518,8 +526,10 @@ def generate_md():
     else:
         file = pd.read_excel('./final.xlsx')
     data = file.values
+    current_postdoc_names = {'缪庆亮', '彭坤杨', '刘贝易'}
     for person in tqdm(data):
-        if person[0] == '樊帅':
+        state = '' if pd.isnull(person[5]) else str(person[5])
+        if person[0] in current_postdoc_names and '离开' not in state:
             continue
         typ, eng, chi = format_single(person)  # type, english_description, chinese_description
         if typ == 0:
