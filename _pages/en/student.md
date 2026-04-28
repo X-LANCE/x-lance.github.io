@@ -123,7 +123,7 @@ nav: false
         <div style="margin-top: 15px"><b>Senyu Han</b><br><b>167-UMP</b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/members/student/李翰奇.jpg" alt="Hanqi Li">
+        <img src="/assets/img/members/student/李翰奇_2.jpg" alt="Hanqi Li">
         <div style="margin-top: 15px"><b>Hanqi Li</b><br><b>169-UP</b></div>
     </div>
 <div class="member">

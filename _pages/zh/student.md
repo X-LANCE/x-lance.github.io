@@ -123,7 +123,7 @@ nav: false
         <div style="margin-top: 15px"><b>韩森宇</b><br><b>167-UMP</b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/members/student/李翰奇.jpg" alt="李翰奇">
+        <img src="/assets/img/members/student/李翰奇_2.jpg" alt="李翰奇">
         <div style="margin-top: 15px"><b>李翰奇</b><br><b>169-UP</b></div>
     </div>
 <div class="member">
