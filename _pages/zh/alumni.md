@@ -432,7 +432,7 @@ nav: false
     </div>
 <div class="member">
         <img src="/assets/img/octocat.png" alt="张平越">
-        <div style="margin-top: 15px"><b>张平越</b><br><b>104-U</b></div>
+        <div style="margin-top: 15px"><b>张平越</b><br><b>104-UM</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/徐子涵.jpg" alt="徐子涵">
@@ -547,8 +547,16 @@ nav: false
         <div style="margin-top: 15px"><b>谢泽宇</b><br><b>138-UM</b></div>
     </div>
 <div class="member">
+        <img src="/assets/img/members/student/徐晓航.jpg" alt="徐晓航">
+        <div style="margin-top: 15px"><b>徐晓航</b><br><b>139-M</b></div>
+    </div>
+<div class="member">
         <img src="/assets/img/octocat.png" alt="杨晨">
         <div style="margin-top: 15px"><b>杨晨</b><br><b>141-U</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/卢葛威.jpg" alt="卢葛威">
+        <div style="margin-top: 15px"><b>卢葛威</b><br><b>143-M</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/卓建衡.jpg" alt="卓建衡">
@@ -559,12 +567,32 @@ nav: false
         <div style="margin-top: 15px"><b>陈思远</b><br><b>149-M</b></div>
     </div>
 <div class="member">
+        <img src="/assets/img/octocat.png" alt="李俊杰">
+        <div style="margin-top: 15px"><b>李俊杰</b><br><b>152-M</b></div>
+    </div>
+<div class="member">
         <img src="/assets/img/members/student/宋哲书.jpg" alt="宋哲书">
         <div style="margin-top: 15px"><b>宋哲书</b><br><b>154-M</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/张淳皓.jpg" alt="张淳皓">
         <div style="margin-top: 15px"><b>张淳皓</b><br><b>155-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/金豪桉.jpg" alt="金豪桉">
+        <div style="margin-top: 15px"><b>金豪桉</b><br><b>156-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/李浩宇.jpg" alt="李浩宇">
+        <div style="margin-top: 15px"><b>李浩宇</b><br><b>159-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/张耀匀.jpg" alt="张耀匀">
+        <div style="margin-top: 15px"><b>张耀匀</b><br><b>161-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/肖云冲.jpg" alt="肖云冲">
+        <div style="margin-top: 15px"><b>肖云冲</b><br><b>162-M</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/张晗翀.jpg" alt="张晗翀">
@@ -581,6 +609,14 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/何朝帆.jpg" alt="何朝帆">
         <div style="margin-top: 15px"><b>何朝帆</b><br><b>172-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/杨飞.jpg" alt="杨飞">
+        <div style="margin-top: 15px"><b>杨飞</b><br><b>173-M</b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/李星源.jpg" alt="李星源">
+        <div style="margin-top: 15px"><b>李星源</b><br><b>175-M</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/曾泓川.JPG" alt="曾泓川">
@@ -607,8 +643,8 @@ nav: false
         <div style="margin-top: 15px"><b>任立椋</b><br><b>184-UP</b></div>
     </div>
 <div class="member">
-        <img src="/assets/img/members/student/陈博_2.jpg" alt="陈博">
-        <div style="margin-top: 15px"><b>陈博</b><br><b>190-P</b></div>
+        <img src="/assets/img/members/student/樊帅.jpg" alt="樊帅">
+        <div style="margin-top: 15px"><b>樊帅</b><br><b>185-F</b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/李梓源.jpg" alt="李梓源">
@@ -625,6 +661,10 @@ nav: false
 <div class="member">
         <img src="/assets/img/octocat.png" alt="黄甘雨">
         <div style="margin-top: 15px"><b>黄甘雨</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/彭阅章.jpg" alt="彭阅章">
+        <div style="margin-top: 15px"><b>彭阅章</b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/members/student/申振南.jpg" alt="申振南">
@@ -652,7 +692,7 @@ nav: false
     </div>
 <div class="member">
         <img src="/assets/img/members/student/马英梓.jpg" alt="马英梓">
-        <div style="margin-top: 15px"><b>马英梓</b><br><b></b></div>
+        <div style="margin-top: 15px"><b><a href="https://gray311.github.io" style="color: inherit; text-decoration: none;">马英梓🏠</a></b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/octocat.png" alt="张志龙">
@@ -661,6 +701,10 @@ nav: false
 <div class="member">
         <img src="/assets/img/members/student/马文杰.jpg" alt="马文杰">
         <div style="margin-top: 15px"><b>马文杰</b><br><b></b></div>
+    </div>
+<div class="member">
+        <img src="/assets/img/members/student/郑时捷.jpg" alt="郑时捷">
+        <div style="margin-top: 15px"><b>郑时捷</b><br><b></b></div>
     </div>
 <div class="member">
         <img src="/assets/img/octocat.png" alt="王宇飞">
