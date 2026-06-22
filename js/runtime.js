@@ -383,21 +383,22 @@
     if (sameImageSrc(image.getAttribute("src") || "", webp) && image.complete) finish();
   }
 
-  function viewportRangeImages(images) {
+  function orderedImagesForViewport(images) {
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-    const upper = 0;
-    const lower = viewportHeight * 2;
-    const local = [];
-    const rest = [];
+    const current = [];
+    const below = [];
+    const above = [];
     images.forEach((image) => {
       const rect = image.getBoundingClientRect();
-      if (rect.bottom >= upper && rect.top <= lower) {
-        local.push(image);
+      if (rect.bottom >= 0 && rect.top <= viewportHeight) {
+        current.push(image);
+      } else if (rect.top > viewportHeight) {
+        below.push(image);
       } else {
-        rest.push(image);
+        above.push(image);
       }
     });
-    return { local, rest };
+    return current.concat(below, above);
   }
 
   function runProgressiveImageStage(batch, images, concurrency, loadImage, done) {
@@ -431,13 +432,9 @@
   }
 
   function startProgressiveImageStages(batch, images) {
-    const { local, rest } = viewportRangeImages(images);
-    runProgressiveImageStage(batch, local, WEBP_CONCURRENCY, loadWebpImage, () => {
-      runProgressiveImageStage(batch, local, HIGH_RES_CONCURRENCY, upgradeProgressiveImage, () => {
-        runProgressiveImageStage(batch, rest, WEBP_CONCURRENCY, loadWebpImage, () => {
-          runProgressiveImageStage(batch, rest, HIGH_RES_CONCURRENCY, upgradeProgressiveImage, () => {});
-        });
-      });
+    const ordered = orderedImagesForViewport(images);
+    runProgressiveImageStage(batch, ordered, WEBP_CONCURRENCY, loadWebpImage, () => {
+      runProgressiveImageStage(batch, ordered, HIGH_RES_CONCURRENCY, upgradeProgressiveImage, () => {});
     });
   }
 
