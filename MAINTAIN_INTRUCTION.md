@@ -23,6 +23,8 @@
 - `js/members-data.js`：教师与成员基础数据。
 - `assets/data/members.json`：自动生成的成员数据。
 - `assets/data/papers.json`：自动生成的论文数据。
+- `assets/img/`：原始图片资源。
+- `assets/img-webp/`：脚本生成的 WebP 图片资源，页面会优先加载这里的图片。
 - `site-build/`：成员与论文数据构建脚本及维护表。
 
 ## 常规更新流程
@@ -44,11 +46,12 @@
    运行：
 
    ```bash
-   python site-build/papers/build_papers_excel.py
-   python site-build/build_site_json.py
+   /home/james/miniconda3/envs/BASE3.14/bin/python site-build/papers/build_papers_excel.py
+   /home/james/miniconda3/envs/BASE3.14/bin/python site-build/build_site_json.py
+   /home/james/miniconda3/envs/BASE3.14/bin/python site-build/convert_images_to_webp.py --clean --force
    ```
 
-   第一条命令会从论文列表生成或更新 `site-build/papers/papers.xlsx`。第二条命令会生成 `assets/data/members.json`、`assets/data/papers.json`，并同步更新浏览器直开时使用的 JS 兜底数据。
+   第一条命令会从论文列表生成或更新 `site-build/papers/papers.xlsx`。第二条命令会生成 `assets/data/members.json`、`assets/data/papers.json`，并同步更新浏览器直开时使用的 JS 兜底数据。第三条命令会把 `assets/img/` 中的栅格图片转换到 `assets/img-webp/`，其中成员头像最长边为 500px，合照和视频封面最大宽度为 1000px，WebP 质量为 75。
 
 4. 本地预览
 

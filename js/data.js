@@ -26,13 +26,13 @@ window.XLANCE_SITE = {
       { href: "https://space.bilibili.com/3546698550872462", kind: "bilibili", label: { zh: "BiliBili", en: "BiliBili" } }
     ],
     assets: {
-      logo: "assets/img/logo/xlance-logo-red.png",
-      logoZh: "assets/img/logo/xlance-logo-red.png",
-      logoEn: "assets/img/logo/xlance-logo-blue.png",
-      logoName: "assets/img/logo/xlance-logo-v3-zh-red.png",
-      heroLogo: "assets/img/logo/xlance-logo-v3-zh-red.png",
-      heroLogoZh: "assets/img/logo/xlance-logo-v3-zh-red.png",
-      heroLogoEn: "assets/img/logo/xlance-logo-v3-zh-blue.png",
+      logo: "assets/img/logo/xlance-logo-red.svg",
+      logoZh: "assets/img/logo/xlance-logo-red.svg",
+      logoEn: "assets/img/logo/xlance-logo-blue.svg",
+      logoName: "assets/img/logo/xlance-logo-v3-zh-red.svg",
+      heroLogo: "assets/img/logo/xlance-logo-v3-zh-red.svg",
+      heroLogoZh: "assets/img/logo/xlance-logo-v3-zh-red.svg",
+      heroLogoEn: "assets/img/logo/xlance-logo-v3-en-blue.svg",
       hero: "assets/img/group/2025-1.jpg",
       footerAerial: "assets/img/group/combine.jpg",
       wechat: "assets/img/wechat-qrcode.jpg"

@@ -139,6 +139,204 @@
     return result ? [result] : [];
   }
 
+  const IMAGE_PREFIX = "assets/img/";
+  const WEBP_IMAGE_PREFIX = "assets/img-webp/";
+  const RASTER_IMAGE_RE = /\.(?:png|jpe?g)$/i;
+  const HIGH_RES_CACHE_KEY = "xlance_high_res_images_v1";
+  const HIGH_RES_CACHE_LIMIT = 500;
+  let highResImageCache;
+  let progressiveImageObserver;
+
+  function optimizedImageSrc(src) {
+    const value = String(src || "");
+    if (!value.startsWith(IMAGE_PREFIX) || !RASTER_IMAGE_RE.test(value)) return value;
+    return value.replace(IMAGE_PREFIX, WEBP_IMAGE_PREFIX).replace(RASTER_IMAGE_RE, ".webp");
+  }
+
+  function isOptimizableImage(src) {
+    const value = String(src || "");
+    return value.startsWith(IMAGE_PREFIX) && RASTER_IMAGE_RE.test(value);
+  }
+
+  function absoluteImageSrc(src) {
+    try {
+      return new URL(String(src || ""), document.baseURI).href;
+    } catch (_error) {
+      return String(src || "");
+    }
+  }
+
+  function sameImageSrc(left, right) {
+    return absoluteImageSrc(left) === absoluteImageSrc(right);
+  }
+
+  function highResCache() {
+    if (highResImageCache) return highResImageCache;
+    try {
+      const saved = JSON.parse(localStorage.getItem(HIGH_RES_CACHE_KEY) || "[]");
+      highResImageCache = new Set(Array.isArray(saved) ? saved : []);
+    } catch (_error) {
+      highResImageCache = new Set();
+    }
+    return highResImageCache;
+  }
+
+  function highResCached(src) {
+    return highResCache().has(absoluteImageSrc(src));
+  }
+
+  function markHighResCached(src) {
+    const key = absoluteImageSrc(src);
+    const cache = highResCache();
+    cache.delete(key);
+    cache.add(key);
+    try {
+      const items = Array.from(cache).slice(-HIGH_RES_CACHE_LIMIT);
+      highResImageCache = new Set(items);
+      localStorage.setItem(HIGH_RES_CACHE_KEY, JSON.stringify(items));
+    } catch (_error) {
+      // Private browsing or quota limits should not affect image rendering.
+    }
+  }
+
+  function jsArg(value) {
+    return escapeHtml(JSON.stringify(String(value || "")));
+  }
+
+  function attrsWithClass(attrs, extraClass) {
+    const value = String(attrs || "").trim();
+    if (!value) return `class="${extraClass}"`;
+    if (/\bclass\s*=/.test(value)) {
+      return value.replace(/\bclass=(["'])(.*?)\1/, (_match, quote, existing) => `class=${quote}${existing} ${extraClass}${quote}`);
+    }
+    return `${value} class="${extraClass}"`;
+  }
+
+  function imageTag(src, alt = "", attrs = "", fallbackSrc = "") {
+    const original = String(src || "");
+    if (!isOptimizableImage(original)) {
+      const attrText = attrs ? ` ${attrs}` : "";
+      return `<img src="${escapeHtml(original)}" alt="${escapeHtml(alt)}"${attrText} />`;
+    }
+    const optimized = optimizedImageSrc(original);
+    const useOriginal = highResCached(original);
+    const initialSrc = useOriginal ? original : optimized;
+    const stateClass = useOriginal ? "progressive-image is-highres" : "progressive-image is-preview";
+    const attrText = attrsWithClass(attrs, stateClass);
+    return `<img src="${escapeHtml(initialSrc)}" alt="${escapeHtml(alt)}" ${attrText} data-webp-src="${escapeHtml(optimized)}" data-original-src="${escapeHtml(original)}" data-fallback-src="${escapeHtml(fallbackSrc)}" onload="window.xlanceImageLoaded(this)" onerror="window.xlanceImageFallback(this)" />`;
+  }
+
+  window.xlanceImageLoaded = function xlanceImageLoaded(image) {
+    const original = image.dataset.originalSrc || "";
+    const current = image.getAttribute("src") || "";
+    if (original && sameImageSrc(current, original)) {
+      markHighResCached(original);
+      image.classList.remove("is-preview", "is-upgrading");
+      image.classList.add("is-highres");
+    }
+  };
+
+  window.xlanceImageFallback = function xlanceImageFallback(image) {
+    const original = image.dataset.originalSrc || "";
+    const webp = image.dataset.webpSrc || "";
+    const fallback = image.dataset.fallbackSrc || "";
+    const current = image.getAttribute("src") || "";
+
+    if (webp && !sameImageSrc(current, webp) && image.dataset.webpFallbackTried !== "1") {
+      image.dataset.webpFallbackTried = "1";
+      image.src = webp;
+      return;
+    }
+
+    if (original && !sameImageSrc(current, original) && image.dataset.originalFallbackTried !== "1") {
+      image.dataset.originalFallbackTried = "1";
+      image.src = original;
+      return;
+    }
+
+    if (fallback && image.dataset.webpFinalFallbackTried !== "1") {
+      const optimizedFallback = optimizedImageSrc(fallback);
+      image.dataset.webpFinalFallbackTried = "1";
+      if (optimizedFallback && current !== optimizedFallback) {
+        image.src = optimizedFallback;
+        return;
+      }
+    }
+
+    if (fallback && image.dataset.originalFinalFallbackTried !== "1" && current !== fallback) {
+      image.dataset.originalFinalFallbackTried = "1";
+      image.src = fallback;
+      return;
+    }
+
+    image.onerror = null;
+  };
+
+  function upgradeProgressiveImage(image) {
+    const original = image.dataset.originalSrc || "";
+    if (!original || image.dataset.highResRequested === "1" || sameImageSrc(image.getAttribute("src") || "", original)) return;
+
+    image.dataset.highResRequested = "1";
+    const highRes = new Image();
+    highRes.decoding = "async";
+    highRes.onload = () => {
+      markHighResCached(original);
+      const decoded = highRes.decode ? highRes.decode().catch(() => {}) : Promise.resolve();
+      decoded.then(() => {
+        if (!image.isConnected || sameImageSrc(image.getAttribute("src") || "", original)) return;
+        image.classList.add("is-upgrading");
+        window.setTimeout(() => {
+          if (!image.isConnected) return;
+          image.src = original;
+          requestAnimationFrame(() => {
+            image.classList.remove("is-preview", "is-upgrading");
+            image.classList.add("is-highres");
+          });
+        }, 140);
+      });
+    };
+    highRes.onerror = () => {
+      image.dataset.highResRequested = "0";
+    };
+    highRes.src = original;
+  }
+
+  function getProgressiveImageObserver() {
+    if (progressiveImageObserver || !("IntersectionObserver" in window)) return progressiveImageObserver;
+    progressiveImageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        progressiveImageObserver.unobserve(entry.target);
+        upgradeProgressiveImage(entry.target);
+      });
+    }, { rootMargin: "520px 0px" });
+    return progressiveImageObserver;
+  }
+
+  function scheduleProgressiveImageUpgrades(root = document) {
+    const images = root.querySelectorAll("img[data-original-src][data-webp-src]");
+    const observer = getProgressiveImageObserver();
+    images.forEach((image) => {
+      if (sameImageSrc(image.getAttribute("src") || "", image.dataset.originalSrc || "")) {
+        markHighResCached(image.dataset.originalSrc);
+        image.classList.add("is-highres");
+        return;
+      }
+      if (image.dataset.progressiveObserved === "1") return;
+      image.dataset.progressiveObserved = "1";
+      if (observer) {
+        observer.observe(image);
+      } else {
+        const run = () => upgradeProgressiveImage(image);
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(run, { timeout: 1200 });
+        } else {
+          window.setTimeout(run, 300);
+        }
+      }
+    });
+  }
+
   function applyMembersData(data) {
     if (data && typeof data === "object") window.XLANCE_MEMBERS = data;
   }
@@ -303,7 +501,7 @@
       <header class="site-header">
         <div class="wrap nav-bar">
           <a class="brand" href="index.html" aria-label="X-LANCE home">
-            <img src="${escapeHtml(logoAsset(lang))}" alt="X-LANCE" />
+            ${imageTag(logoAsset(lang), "X-LANCE")}
             <span>
               <strong>${escapeHtml(DATA.lab.shortName)}</strong>
               <small>${escapeHtml(tr(DATA.lab.subtitle, lang))}</small>
@@ -336,7 +534,7 @@
     footer.innerHTML = `
       <footer class="site-footer">
         <div class="footer-aerial">
-          <img class="footer-aerial-image" src="${escapeHtml(DATA.lab.assets.footerAerial)}" alt="" />
+          ${imageTag(DATA.lab.assets.footerAerial, "", 'class="footer-aerial-image" loading="lazy" decoding="async"')}
           <div class="wrap footer-content">
             <div class="footer-copy">
               <h2>${lang === "zh" ? "上海交通大学X-LANCE实验室" : "X-LANCE Lab, SJTU"}</h2>
@@ -351,7 +549,7 @@
               </div>
             </div>
             <div class="footer-qr">
-              <img src="${escapeHtml(DATA.lab.assets.wechat)}" alt="${escapeHtml(UI[lang].followWechat)}" />
+              ${imageTag(DATA.lab.assets.wechat, UI[lang].followWechat, 'loading="lazy" decoding="async"')}
               <span>${escapeHtml(UI[lang].followWechat)}</span>
             </div>
           </div>
@@ -406,7 +604,7 @@
     return `
       <section class="hero-section">
         <div class="hero-copy">
-          <img class="hero-logo" src="${escapeHtml(heroLogoAsset(lang))}" alt="X-LANCE" />
+          ${imageTag(heroLogoAsset(lang), "X-LANCE", 'class="hero-logo"')}
           ${renderHeroTitle(lang)}
           <p class="lead">${escapeHtml(tr(DATA.lab.intro, lang))}</p>
           <div class="hero-actions">
@@ -414,7 +612,7 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="${escapeHtml(heroImage)}" alt="X-LANCE" />
+          ${imageTag(heroImage, "X-LANCE", 'decoding="async"')}
         </div>
       </section>
       <section class="stats-strip">${stats}</section>
@@ -425,7 +623,7 @@
     const heroImage = pageHeroImage();
     return `
       <section class="page-hero">
-        <img class="page-hero-image" src="${escapeHtml(heroImage)}" alt="" />
+        ${imageTag(heroImage, "", 'class="page-hero-image" decoding="async"')}
         <div class="page-hero-content wrap">
           <h1>${escapeHtml(title)}</h1>
           ${description ? `<p>${escapeHtml(description)}</p>` : ""}
@@ -605,7 +803,7 @@
             ${list.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
           </div>
           <aside class="home-about-qr">
-            <img src="${escapeHtml(DATA.lab.assets.wechat)}" alt="${escapeHtml(UI[lang].followWechat)}" />
+            ${imageTag(DATA.lab.assets.wechat, UI[lang].followWechat, 'loading="lazy" decoding="async"')}
             <span>${escapeHtml(UI[lang].followWechat)}</span>
           </aside>
         </div>
@@ -830,7 +1028,7 @@
   function renderHomepageMemberPreview(lang) {
     return currentFaculty().slice(0, 4).map((person) => `
       <article class="person-card compact-person">
-        <img src="${escapeHtml(person.image)}" alt="${escapeHtml(tr(person.name, lang))}" onerror="this.src='assets/img/members/octocat-placeholder.png'" />
+        ${imageTag(person.image, tr(person.name, lang), 'loading="lazy" decoding="async"', "assets/img/members/octocat-placeholder.png")}
         <div>
           <h3>${escapeHtml(tr(person.name, lang))}</h3>
           <p class="role">${escapeHtml(tr(person.role, lang))}</p>
@@ -850,7 +1048,7 @@
     const facultyId = options.bio && person.id ? ` <span class="faculty-name-id">${escapeHtml(person.id)}</span>` : "";
     return `
       <article class="member-card ${options.bio ? "faculty-member" : ""}">
-        <img src="${escapeHtml(person.image)}" alt="${escapeHtml(tr(person.name, lang))}" onerror="this.src='assets/img/members/octocat-placeholder.png'" />
+        ${imageTag(person.image, tr(person.name, lang), 'loading="lazy" decoding="async"', "assets/img/members/octocat-placeholder.png")}
         <div>
           <h3>${linkedName}${facultyId}</h3>
           ${title ? `<p class="role">${title}</p>` : ""}
@@ -998,7 +1196,7 @@
     return list.map((video) => `
       <a class="video-card" href="${escapeHtml(video.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(`${UI[lang].watchVideo}: ${tr(video.title, lang)}`)}">
         <div class="video-thumb">
-          <img src="${escapeHtml(video.cover)}" alt="" loading="lazy" />
+          ${imageTag(video.cover, "", 'loading="lazy" decoding="async"')}
           <span>${escapeHtml(UI[lang].watchVideo)}</span>
         </div>
         <div>
@@ -1246,6 +1444,7 @@
       render();
     });
     bindPaperFilter();
+    scheduleProgressiveImageUpgrades(document);
     requestAnimationFrame(animateStats);
     requestAnimationFrame(() => {
       syncHeaderHeight();
