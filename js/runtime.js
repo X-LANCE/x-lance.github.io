@@ -144,8 +144,11 @@
   const RASTER_IMAGE_RE = /\.(?:png|jpe?g)$/i;
   const HIGH_RES_CACHE_KEY = "xlance_high_res_images_v1";
   const HIGH_RES_CACHE_LIMIT = 500;
+  const WEBP_CONCURRENCY = 6;
+  const HIGH_RES_CONCURRENCY = 2;
+  const IMAGE_PLACEHOLDER_SRC = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   let highResImageCache;
-  let progressiveImageObserver;
+  let progressiveImageBatch = 0;
 
   function optimizedImageSrc(src) {
     const value = String(src || "");
@@ -181,10 +184,6 @@
     return highResImageCache;
   }
 
-  function highResCached(src) {
-    return highResCache().has(absoluteImageSrc(src));
-  }
-
   function markHighResCached(src) {
     const key = absoluteImageSrc(src);
     const cache = highResCache();
@@ -212,6 +211,15 @@
     return `${value} class="${extraClass}"`;
   }
 
+  function eagerImageAttrs(attrs) {
+    const value = String(attrs || "").trim();
+    if (!value) return 'loading="eager"';
+    if (/\bloading\s*=/.test(value)) {
+      return value.replace(/\bloading=(["'])(.*?)\1/, (_match, quote) => `loading=${quote}eager${quote}`);
+    }
+    return `${value} loading="eager"`;
+  }
+
   function imageTag(src, alt = "", attrs = "", fallbackSrc = "") {
     const original = String(src || "");
     if (!isOptimizableImage(original)) {
@@ -219,11 +227,8 @@
       return `<img src="${escapeHtml(original)}" alt="${escapeHtml(alt)}"${attrText} />`;
     }
     const optimized = optimizedImageSrc(original);
-    const useOriginal = highResCached(original);
-    const initialSrc = useOriginal ? original : optimized;
-    const stateClass = useOriginal ? "progressive-image is-highres" : "progressive-image is-preview";
-    const attrText = attrsWithClass(attrs, stateClass);
-    return `<img src="${escapeHtml(initialSrc)}" alt="${escapeHtml(alt)}" ${attrText} data-webp-src="${escapeHtml(optimized)}" data-original-src="${escapeHtml(original)}" data-fallback-src="${escapeHtml(fallbackSrc)}" onload="window.xlanceImageLoaded(this)" onerror="window.xlanceImageFallback(this)" />`;
+    const attrText = attrsWithClass(eagerImageAttrs(attrs), "progressive-image is-preview");
+    return `<img src="${IMAGE_PLACEHOLDER_SRC}" alt="${escapeHtml(alt)}" ${attrText} data-webp-src="${escapeHtml(optimized)}" data-original-src="${escapeHtml(original)}" data-fallback-src="${escapeHtml(fallbackSrc)}" onload="window.xlanceImageLoaded(this)" onerror="window.xlanceImageFallback(this)" />`;
   }
 
   window.xlanceImageLoaded = function xlanceImageLoaded(image) {
@@ -272,9 +277,53 @@
     image.onerror = null;
   };
 
-  function upgradeProgressiveImage(image) {
+  function settleHighResLoad(done) {
+    if (typeof done === "function") done();
+  }
+
+  function waitForCurrentImage(image, done) {
+    if (image.complete) {
+      settleHighResLoad(done);
+      return;
+    }
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      image.removeEventListener("load", finish);
+      image.removeEventListener("error", finish);
+      settleHighResLoad(done);
+    };
+    image.addEventListener("load", finish);
+    image.addEventListener("error", finish);
+  }
+
+  function upgradeProgressiveImage(image, done) {
     const original = image.dataset.originalSrc || "";
-    if (!original || image.dataset.highResRequested === "1" || sameImageSrc(image.getAttribute("src") || "", original)) return;
+    if (!original || image.dataset.highResRequested === "1") {
+      settleHighResLoad(done);
+      return;
+    }
+    if (sameImageSrc(image.getAttribute("src") || "", original)) {
+      if (image.complete) {
+        if (image.naturalWidth > 0) {
+          markHighResCached(original);
+          image.classList.remove("is-preview", "is-upgrading");
+          image.classList.add("is-highres");
+        }
+        settleHighResLoad(done);
+      } else {
+        waitForCurrentImage(image, () => {
+          if (image.complete && image.naturalWidth > 0) {
+            markHighResCached(original);
+            image.classList.remove("is-preview", "is-upgrading");
+            image.classList.add("is-highres");
+          }
+          settleHighResLoad(done);
+        });
+      }
+      return;
+    }
 
     image.dataset.highResRequested = "1";
     const highRes = new Image();
@@ -283,57 +332,128 @@
       markHighResCached(original);
       const decoded = highRes.decode ? highRes.decode().catch(() => {}) : Promise.resolve();
       decoded.then(() => {
-        if (!image.isConnected || sameImageSrc(image.getAttribute("src") || "", original)) return;
+        if (!image.isConnected || sameImageSrc(image.getAttribute("src") || "", original)) {
+          settleHighResLoad(done);
+          return;
+        }
         image.classList.add("is-upgrading");
         window.setTimeout(() => {
-          if (!image.isConnected) return;
+          if (!image.isConnected) {
+            settleHighResLoad(done);
+            return;
+          }
           image.src = original;
           requestAnimationFrame(() => {
             image.classList.remove("is-preview", "is-upgrading");
             image.classList.add("is-highres");
+            settleHighResLoad(done);
           });
         }, 140);
       });
     };
     highRes.onerror = () => {
       image.dataset.highResRequested = "0";
+      settleHighResLoad(done);
     };
     highRes.src = original;
   }
 
-  function getProgressiveImageObserver() {
-    if (progressiveImageObserver || !("IntersectionObserver" in window)) return progressiveImageObserver;
-    progressiveImageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        progressiveImageObserver.unobserve(entry.target);
-        upgradeProgressiveImage(entry.target);
+  function loadWebpImage(image, done) {
+    const webp = image.dataset.webpSrc || "";
+    const original = image.dataset.originalSrc || "";
+    const current = image.getAttribute("src") || "";
+    if (!webp || !image.isConnected || sameImageSrc(current, webp) || sameImageSrc(current, original)) {
+      settleHighResLoad(done);
+      return;
+    }
+
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      image.removeEventListener("load", finish);
+      image.removeEventListener("error", finish);
+      settleHighResLoad(done);
+    };
+
+    image.addEventListener("load", finish);
+    image.addEventListener("error", finish);
+    image.dataset.webpRequested = "1";
+    image.src = webp;
+    if (sameImageSrc(image.getAttribute("src") || "", webp) && image.complete) finish();
+  }
+
+  function viewportRangeImages(images) {
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    const upper = 0;
+    const lower = viewportHeight * 2;
+    const local = [];
+    const rest = [];
+    images.forEach((image) => {
+      const rect = image.getBoundingClientRect();
+      if (rect.bottom >= upper && rect.top <= lower) {
+        local.push(image);
+      } else {
+        rest.push(image);
+      }
+    });
+    return { local, rest };
+  }
+
+  function runProgressiveImageStage(batch, images, concurrency, loadImage, done) {
+    let index = 0;
+    let active = 0;
+    let finished = false;
+
+    const pump = () => {
+      if (batch !== progressiveImageBatch || finished) return;
+      while (active < concurrency && index < images.length) {
+        const image = images[index];
+        index += 1;
+        if (!image.isConnected) continue;
+        active += 1;
+        let settled = false;
+        loadImage(image, () => {
+          if (settled) return;
+          settled = true;
+          active = Math.max(0, active - 1);
+          pump();
+        });
+      }
+
+      if (active === 0 && index >= images.length) {
+        finished = true;
+        done();
+      }
+    };
+
+    pump();
+  }
+
+  function startProgressiveImageStages(batch, images) {
+    const { local, rest } = viewportRangeImages(images);
+    runProgressiveImageStage(batch, local, WEBP_CONCURRENCY, loadWebpImage, () => {
+      runProgressiveImageStage(batch, local, HIGH_RES_CONCURRENCY, upgradeProgressiveImage, () => {
+        runProgressiveImageStage(batch, rest, WEBP_CONCURRENCY, loadWebpImage, () => {
+          runProgressiveImageStage(batch, rest, HIGH_RES_CONCURRENCY, upgradeProgressiveImage, () => {});
+        });
       });
-    }, { rootMargin: "520px 0px" });
-    return progressiveImageObserver;
+    });
   }
 
   function scheduleProgressiveImageUpgrades(root = document) {
-    const images = root.querySelectorAll("img[data-original-src][data-webp-src]");
-    const observer = getProgressiveImageObserver();
+    const images = Array.from(root.querySelectorAll("img[data-original-src][data-webp-src]"));
+    progressiveImageBatch += 1;
+    const batch = progressiveImageBatch;
     images.forEach((image) => {
       if (sameImageSrc(image.getAttribute("src") || "", image.dataset.originalSrc || "")) {
         markHighResCached(image.dataset.originalSrc);
         image.classList.add("is-highres");
-        return;
       }
-      if (image.dataset.progressiveObserved === "1") return;
-      image.dataset.progressiveObserved = "1";
-      if (observer) {
-        observer.observe(image);
-      } else {
-        const run = () => upgradeProgressiveImage(image);
-        if ("requestIdleCallback" in window) {
-          requestIdleCallback(run, { timeout: 1200 });
-        } else {
-          window.setTimeout(run, 300);
-        }
-      }
+    });
+    requestAnimationFrame(() => {
+      if (batch !== progressiveImageBatch) return;
+      startProgressiveImageStages(batch, images);
     });
   }
 
