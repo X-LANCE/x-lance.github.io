@@ -61,6 +61,10 @@
       themeLight: "浅色",
       themeDark: "暗色",
       followWechat: "关注实验室公众号",
+      uniqueVisitorCount: "独立访客",
+      pageViewCount: "本页访问",
+      siteVisitCount: "全站访问",
+      visitorCountLoading: "加载中",
       footer: ""
     },
     en: {
@@ -113,6 +117,10 @@
       themeLight: "Light",
       themeDark: "Dark",
       followWechat: "Follow us on WeChat",
+      uniqueVisitorCount: "Visitors",
+      pageViewCount: "Page Views",
+      siteVisitCount: "Total Visits",
+      visitorCountLoading: "Loading",
       footer: ""
     }
   };
@@ -147,8 +155,17 @@
   const WEBP_CONCURRENCY = 6;
   const HIGH_RES_CONCURRENCY = 2;
   const IMAGE_PLACEHOLDER_SRC = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+  const VERCOUNT_SCRIPT_SRC = "https://events.vercount.one/js";
+  const VERCOUNT_FIELDS = [
+    { key: "pagePv", id: "vercount_value_page_pv", containerId: "vercount_container_page_pv", labelKey: "pageViewCount" },
+    { key: "sitePv", id: "vercount_value_site_pv", containerId: "vercount_container_site_pv", labelKey: "siteVisitCount" },
+    { key: "siteUv", id: "vercount_value_site_uv", containerId: "vercount_container_site_uv", labelKey: "uniqueVisitorCount" }
+  ];
   let highResImageCache;
   let progressiveImageBatch = 0;
+  let vercountLoaded = false;
+  let vercountValues = {};
+  let vercountObservers = [];
 
   function optimizedImageSrc(src) {
     const value = String(src || "");
@@ -637,11 +654,40 @@
   function socialIcon(kind) {
     const icons = {
       github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.48.09.65-.2.65-.46v-1.7c-2.65.58-3.2-1.12-3.2-1.12-.43-1.1-1.05-1.4-1.05-1.4-.86-.58.07-.57.07-.57.95.07 1.45.97 1.45.97.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.12-.24-4.35-1.06-4.35-4.72 0-1.04.37-1.9.98-2.57-.1-.24-.43-1.21.09-2.52 0 0 .8-.26 2.62.98A9.1 9.1 0 0 1 12 7.1c.82 0 1.65.11 2.42.33 1.82-1.24 2.61-.98 2.61-.98.53 1.31.2 2.28.1 2.52.6.67.97 1.53.97 2.57 0 3.67-2.24 4.48-4.37 4.71.34.3.65.9.65 1.82v2.7c0 .27.17.56.66.46A9.5 9.5 0 0 0 12 2.5Z" fill="currentColor"/></svg>',
-      huggingface: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/><path d="M8.2 14.1c1.1 1.4 2.1 2 3.8 2s2.7-.6 3.8-2M7.2 7.6 5.7 6.2M16.8 7.6l1.5-1.4" fill="none"/></svg>',
-      bilibili: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="7.2" width="17.6" height="11.2" rx="3" fill="none"/><path d="m9.2 11 4.8 2-4.8 2v-4ZM8.2 4.7 6.5 3.2M15.8 4.7l1.7-1.5" fill="none"/></svg>',
+      huggingface: '<img class="footer-brand-img footer-brand-img-huggingface" src="assets/img/logo/huggingface_logo-noborder.svg" alt="" aria-hidden="true" />',
+      bilibili: '<img class="footer-brand-img footer-brand-img-bilibili" src="assets/img/logo/bilibili-favicon.ico" alt="" aria-hidden="true" />',
       external: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" fill="none"/></svg>'
     };
     return icons[kind] || icons.external;
+  }
+
+  function cacheVercountValue(field) {
+    const value = document.getElementById(field.id)?.textContent?.trim();
+    if (value && value !== UI.zh.visitorCountLoading && value !== UI.en.visitorCountLoading) {
+      vercountValues[field.key] = value;
+    }
+  }
+
+  function observeVercountValues() {
+    vercountObservers.forEach((observer) => observer.disconnect());
+    vercountObservers = [];
+    VERCOUNT_FIELDS.forEach((field) => {
+      const valueNode = document.getElementById(field.id);
+      if (!valueNode) return;
+      cacheVercountValue(field);
+      const observer = new MutationObserver(() => cacheVercountValue(field));
+      observer.observe(valueNode, { childList: true, characterData: true, subtree: true });
+      vercountObservers.push(observer);
+    });
+  }
+
+  function loadVercount() {
+    if (vercountLoaded) return;
+    vercountLoaded = true;
+    const script = document.createElement("script");
+    script.defer = true;
+    script.src = VERCOUNT_SCRIPT_SRC;
+    document.head.appendChild(script);
   }
 
   function renderFooter(lang) {
@@ -669,10 +715,20 @@
               ${imageTag(DATA.lab.assets.wechat, UI[lang].followWechat, 'loading="lazy" decoding="async"')}
               <span>${escapeHtml(UI[lang].followWechat)}</span>
             </div>
+            <div class="footer-visitor" aria-label="${escapeHtml(lang === "zh" ? "访问统计" : "Visit statistics")}">
+              ${VERCOUNT_FIELDS.map((field) => `
+                <div class="footer-visitor-item" id="${field.containerId}">
+                  <span>${escapeHtml(UI[lang][field.labelKey])}</span>
+                  <strong id="${field.id}">${escapeHtml(vercountValues[field.key] || UI[lang].visitorCountLoading)}</strong>
+                </div>
+              `).join("")}
+            </div>
           </div>
         </div>
       </footer>
     `;
+    observeVercountValues();
+    loadVercount();
   }
 
   function pageHeroImage(page = pageId()) {

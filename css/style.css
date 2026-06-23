@@ -1853,6 +1853,19 @@ h3 {
   stroke-linejoin: round;
 }
 
+.footer-links svg.footer-brand-icon {
+  fill: none;
+  stroke: none;
+}
+
+.footer-links img.footer-brand-img {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
 .footer-links svg path[fill] {
   stroke: none;
 }
@@ -1913,6 +1926,53 @@ h3 {
   border: 8px solid #fff;
   border-radius: 10px;
   background: #fff;
+}
+
+.footer-visitor {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 620px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(5, 11, 15, 0.3);
+  line-height: 1.35;
+}
+
+.footer-visitor-item {
+  min-height: 38px;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 2px;
+  padding: 5px 12px;
+  text-align: center;
+}
+
+.footer-visitor-item + .footer-visitor-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-visitor-item span {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.footer-visitor strong {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 html[data-theme="dark"] {
@@ -2458,6 +2518,29 @@ html[data-theme="light"] {
   .footer-qr {
     justify-items: start;
     text-align: left;
+  }
+
+  .footer-visitor {
+    justify-self: start;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-visitor-item {
+    min-height: 38px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .footer-visitor-item + .footer-visitor-item {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-visitor-item span {
+    white-space: normal;
   }
 
   .home-bottom-link a {
