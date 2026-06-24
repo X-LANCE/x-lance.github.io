@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="5; url=/" />
+    <meta name="description" content="Page not found - X-LANCE" />
+    <title>404 - X-LANCE</title>
+    <script src="/js/preferences.js?v=20260624-161727"></script>
+    <link rel="stylesheet" href="/css/style.css?v=20260623-191223" />
+    <style>
+      body {
+        min-height: 100vh;
+        padding-top: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .not-found {
+        width: min(720px, calc(100vw - 36px));
+        padding: 56px 0;
+        text-align: center;
+      }
+
+      .not-found-logo {
+        width: min(260px, 72vw);
+        height: auto;
+        margin-bottom: 34px;
+      }
+
+      .not-found-code {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: clamp(72px, 17vw, 136px);
+        font-weight: 800;
+        line-height: 0.92;
+      }
+
+      .not-found h1 {
+        margin: 0 0 12px;
+        font-size: clamp(26px, 5vw, 42px);
+        line-height: 1.18;
+      }
+
+      .not-found p {
+        margin: 0 auto 28px;
+        max-width: 520px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .not-found-actions {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found" aria-labelledby="not-found-title">
+      <img class="not-found-logo" src="/assets/img/logo/xlance-logo-v3-zh-red.svg" alt="X-LANCE" />
+      <p class="not-found-code">404</p>
+      <h1 id="not-found-title">页面未找到</h1>
+      <p><span id="redirect-message">将在</span> <span id="redirect-countdown">5</span> <span id="redirect-suffix">秒后返回主页。</span></p>
+      <div class="not-found-actions">
+        <a class="button primary" href="/" id="home-link">立即返回主页</a>
+      </div>
+    </main>
+    <script>
+      (() => {
+        const copy = {
+          zh: {
+            title: "404 - X-LANCE",
+            heading: "页面未找到",
+            message: "将在",
+            suffix: "秒后返回主页。",
+            home: "立即返回主页"
+          },
+          en: {
+            title: "404 - X-LANCE",
+            heading: "Page Not Found",
+            message: "Redirecting to the homepage in",
+            suffix: "seconds.",
+            home: "Back to Home"
+          }
+        };
+        const lang = document.documentElement.dataset.lang === "en" ? "en" : "zh";
+        const text = copy[lang];
+        document.title = text.title;
+        document.getElementById("not-found-title").textContent = text.heading;
+        document.getElementById("redirect-message").textContent = text.message;
+        document.getElementById("redirect-suffix").textContent = text.suffix;
+        document.getElementById("home-link").textContent = text.home;
+
+        const target = document.getElementById("redirect-countdown");
+        let remaining = 5;
+        const timer = window.setInterval(() => {
+          remaining -= 1;
+          if (target) target.textContent = String(Math.max(remaining, 0));
+          if (remaining <= 0) {
+            window.clearInterval(timer);
+            window.location.replace("/");
+          }
+        }, 1000);
+      })();
+    </script>
+  </body>
+</html>

@@ -52,13 +52,13 @@ window.XLANCE_SITE = {
     }
   },
   nav: [
-    { id: "home", href: "index.html", label: { zh: "首页", en: "Home" } },
-    { id: "news", href: "news.html", label: { zh: "动态", en: "News" } },
-    { id: "papers", href: "papers.html", label: { zh: "论文", en: "Papers" } },
-    { id: "members", href: "members.html", label: { zh: "成员", en: "Members" } },
-    { id: "projects", href: "repositories.html", label: { zh: "项目", en: "Projects" } },
-    { id: "xmart", href: "videos.html", label: { zh: "Xmart", en: "Xmart" } },
-    { id: "join", href: "join.html", label: { zh: "加入我们", en: "Join Us" } }
+    { id: "home", href: "/", label: { zh: "首页", en: "Home" } },
+    { id: "news", href: "/news", label: { zh: "动态", en: "News" } },
+    { id: "papers", href: "/papers", label: { zh: "论文", en: "Papers" } },
+    { id: "members", href: "/members", label: { zh: "成员", en: "Members" } },
+    { id: "projects", href: "/repositories", label: { zh: "项目", en: "Projects" } },
+    { id: "xmart", href: "/videos", label: { zh: "Xmart", en: "Xmart" } },
+    { id: "join", href: "/join", label: { zh: "加入我们", en: "Join Us" } }
   ],
   stats: [
     { key: "research", value: 5, label: { zh: "个研究方向", en: "Research Areas" } },

@@ -10,6 +10,18 @@
     news: "assets/data/news.json"
   };
 
+  function canonicalizeHtmlPath() {
+    if (!/^https?:$/.test(window.location.protocol)) return;
+    const { pathname, search, hash } = window.location;
+    if (!pathname.endsWith(".html")) return;
+    const cleanPath = pathname.endsWith("/index.html")
+      ? pathname.slice(0, -"index.html".length) || "/"
+      : pathname.slice(0, -".html".length);
+    window.history.replaceState(null, "", `${cleanPath}${search}${hash}`);
+  }
+
+  canonicalizeHtmlPath();
+
   const UI = {
     zh: {
       langName: "中文",
@@ -634,7 +646,7 @@
     header.innerHTML = `
       <header class="site-header">
         <div class="wrap nav-bar">
-          <a class="brand" href="index.html" aria-label="X-LANCE home">
+          <a class="brand" href="/" aria-label="X-LANCE home">
             ${imageTag(logoAsset(lang), "X-LANCE")}
             <span>
               <strong>${escapeHtml(DATA.lab.shortName)}</strong>
@@ -781,7 +793,7 @@
           ${renderHeroTitle(lang)}
           <p class="lead">${escapeHtml(tr(DATA.lab.intro, lang))}</p>
           <div class="hero-actions">
-            <a class="button primary" href="join.html">${escapeHtml(UI[lang].homeCtaJoin)}</a>
+            <a class="button primary" href="/join">${escapeHtml(UI[lang].homeCtaJoin)}</a>
           </div>
         </div>
         <div class="hero-media">
@@ -829,11 +841,11 @@
     const people = memberData();
     return [
       { key: "research", value: DATA.research.length, label: statLabel("research", { zh: "个研究方向", en: "Research Areas" }), href: "#research" },
-      { key: "faculty", value: (people.faculty || []).length || numericStatFallback("faculty", 7), label: statLabel("faculty", { zh: "位老师", en: "Faculty" }), href: "members.html#members-faculty" },
-      { key: "students", value: studentCount() || numericStatFallback("students", 130), label: statLabel("students", { zh: "位学生", en: "Students" }), href: "members.html#members-postdoc", plus: true },
-      { key: "alumni", value: alumniLists().total || numericStatFallback("alumni", 166), label: statLabel("alumni", { zh: "位校友", en: "Alumni" }), href: "members.html#members-alumni", plus: true },
-      { key: "papers", value: paperPublicationCount(), label: statLabel("papers", { zh: "篇论文", en: "Papers" }), href: "papers.html", plus: true },
-      { key: "xmart", value: DATA.videos.length, label: statLabel("xmart", { zh: "场Xmart论坛", en: "Xmart Lectures" }), href: "videos.html" }
+      { key: "faculty", value: (people.faculty || []).length || numericStatFallback("faculty", 7), label: statLabel("faculty", { zh: "位老师", en: "Faculty" }), href: "/members#members-faculty" },
+      { key: "students", value: studentCount() || numericStatFallback("students", 130), label: statLabel("students", { zh: "位学生", en: "Students" }), href: "/members#members-postdoc", plus: true },
+      { key: "alumni", value: alumniLists().total || numericStatFallback("alumni", 166), label: statLabel("alumni", { zh: "位校友", en: "Alumni" }), href: "/members#members-alumni", plus: true },
+      { key: "papers", value: paperPublicationCount(), label: statLabel("papers", { zh: "篇论文", en: "Papers" }), href: "/papers", plus: true },
+      { key: "xmart", value: DATA.videos.length, label: statLabel("xmart", { zh: "场Xmart论坛", en: "Xmart Lectures" }), href: "/videos" }
     ].map((item) => ({ ...item, label: tr(item.label, lang) }));
   }
 
