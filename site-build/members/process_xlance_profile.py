@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import requests
 import os
@@ -7,6 +8,8 @@ from pypinyin import lazy_pinyin, Style
 from tqdm import tqdm
 
 default_pic = "/assets/img/members/octocat-placeholder.png"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SITE_DIR = os.path.dirname(os.path.dirname(SCRIPT_DIR))
 
 
 def format_webpage(url):
@@ -274,7 +277,7 @@ chi_student_md_U = """
 <h2 style="text-align: center"> 🌟本科生🌟 </h2>
 <div class="mycontainer">"""
 
-file = pd.read_excel('./final.xlsx')
+file = pd.read_excel(os.path.join(SCRIPT_DIR, 'final.xlsx'))
 data = file.values
 names = []
 eng_names = []
@@ -358,13 +361,13 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
     - 否则使用 _2, _3 等后缀
     """
     base_name, ext = os.path.splitext(filename)
-    full_path = '..' + path + '/' + filename
+    full_path = os.path.join(SITE_DIR, path.lstrip('/'), filename)
     
     if not os.path.exists(full_path):
         # 文件不存在，直接下载（初次出现）
         try:
             print(f"downloading pic of {filename} (first time)")
-            response = requests.get(url, stream=True)
+            response = requests.get(url, stream=True, timeout=30)
             response.raise_for_status()
             pic = path + '/' + filename
             with open(full_path, 'wb') as f:
@@ -373,7 +376,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
             return pic
         except Exception as e:
             print(f"下载失败：{str(e)}")
-            return None
+            raise
     elif OVER_WRITE_PICS:
         # 文件存在且需要覆盖
         try:
@@ -385,7 +388,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
             if hours_since_modified < 24:
                 # 修改时间小于24小时，直接覆盖
                 print(f"downloading pic of {filename} (overwriting, last modified {hours_since_modified:.1f}h ago)")
-                response = requests.get(url, stream=True)
+                response = requests.get(url, stream=True, timeout=30)
                 response.raise_for_status()
                 pic = path + '/' + filename
                 with open(full_path, 'wb') as f:
@@ -397,7 +400,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
                 suffix_num = 2
                 while True:
                     new_filename = f"{base_name}_{suffix_num}{ext}"
-                    new_full_path = '..' + path + '/' + new_filename
+                    new_full_path = os.path.join(SITE_DIR, path.lstrip('/'), new_filename)
                     if not os.path.exists(new_full_path):
                         break
                     # 检查现有后缀文件是否在24小时内修改过
@@ -405,7 +408,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
                     if (current_time - existing_mtime) / 3600 < 24:
                         # 直接覆盖这个后缀文件
                         print(f"downloading pic of {new_filename} (overwriting suffix file)")
-                        response = requests.get(url, stream=True)
+                        response = requests.get(url, stream=True, timeout=30)
                         response.raise_for_status()
                         pic = path + '/' + new_filename
                         with open(new_full_path, 'wb') as f:
@@ -416,7 +419,7 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
                 
                 # 使用新后缀下载
                 print(f"downloading pic of {new_filename} (new suffix)")
-                response = requests.get(url, stream=True)
+                response = requests.get(url, stream=True, timeout=30)
                 response.raise_for_status()
                 pic = path + '/' + new_filename
                 with open(new_full_path, 'wb') as f:
@@ -426,15 +429,15 @@ def down_pic(url, path, filename, OVER_WRITE_PICS=False):
                 
         except Exception as e:
             print(f"下载失败：{str(e)}")
-            return None
+            raise
     else:
-        print('..' + path + '/' + filename + ' exists')
+        print(full_path + ' exists')
         return path + '/' + filename
 
 
-def upd_xlsx():
+def upd_xlsx(questionnaire_path):
     # 请先手动将先前已经导入的行删掉
-    pic_file = pd.read_excel('./old/实验室网站个人信息维护【2026年2月更新】_答卷数据_2026_04_28_16_34_35.xlsx')
+    pic_file = pd.read_excel(questionnaire_path)
     qn_dict = pic_file.values  # questionnaire dict
     for person in qn_dict:
         name = person[7]
@@ -501,7 +504,7 @@ def upd_xlsx():
         'webpage': webpages
     }
     
-    writer = pd.ExcelWriter('final.xlsx')
+    writer = pd.ExcelWriter(os.path.join(SCRIPT_DIR, 'final.xlsx'))
     # sheetNames = full_dict.keys()  # 获取所有sheet的名称
     sheetNames = ["Sheet1"]
     # sheets是要写入的excel工作簿名称列表
@@ -566,5 +569,10 @@ def generate_md():
 
 
 if __name__ == '__main__':
-    # upd_xlsx()
-    generate_md()
+    parser = argparse.ArgumentParser(description='Merge questionnaire responses into final.xlsx.')
+    parser.add_argument('questionnaire', nargs='?', help='Path to the questionnaire .xlsx file.')
+    args = parser.parse_args()
+    if args.questionnaire:
+        upd_xlsx(args.questionnaire)
+    else:
+        generate_md()

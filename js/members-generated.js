@@ -28,7 +28,7 @@ window.XLANCE_MEMBERS = {
         "en": "SEIEE 3-515"
       },
       "email": "yanminqian@sjtu.edu.cn",
-      "website": "https://audiocc.sjtu.edu.cn/zh/members/yanmin.qian",
+      "website": "https://audiocc.sjtu.edu.cn/zh/members",
       "image": "assets/img/members/faculty/qym_square.jpg"
     }
   ],
@@ -724,6 +724,15 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
+            "zh": "江楠",
+            "en": "Nan Jiang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/江楠.jpg",
+          "link": ""
+        },
+        {
+          "name": {
             "zh": "涂文明",
             "en": "Wenming Tu"
           },
@@ -748,6 +757,78 @@ window.XLANCE_MEMBERS = {
           "id": "230-P",
           "image": "assets/img/members/student/韩晨烨.jpg",
           "link": ""
+        },
+        {
+          "name": {
+            "zh": "王梓鉴",
+            "en": "Zijian Wang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/王梓鉴.jpg",
+          "link": "https://kotohanon.github.io"
+        },
+        {
+          "name": {
+            "zh": "凤鹏超",
+            "en": "Pengchao Feng"
+          },
+          "id": "",
+          "image": "assets/img/members/student/凤鹏超_2.jpg",
+          "link": "https://the-bird-f.github.io"
+        },
+        {
+          "name": {
+            "zh": "霍彦儒",
+            "en": "Yanru Huo"
+          },
+          "id": "",
+          "image": "assets/img/members/student/霍彦儒.jpg",
+          "link": "https://ihatetheworld555.github.io"
+        },
+        {
+          "name": {
+            "zh": "杜俊皓",
+            "en": "Junhao Du"
+          },
+          "id": "",
+          "image": "assets/img/members/student/杜俊皓.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "卢海伦",
+            "en": "Hailun Lu"
+          },
+          "id": "",
+          "image": "assets/img/members/student/卢海伦.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "段伊樊",
+            "en": "Yifan Duan"
+          },
+          "id": "",
+          "image": "assets/img/members/octocat-placeholder.png",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "潘泽伟",
+            "en": "Pan Zewei"
+          },
+          "id": "",
+          "image": "assets/img/members/student/潘泽伟.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "王晨丞",
+            "en": "Chencheng Wang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/王晨丞.jpg",
+          "link": "https://github.com/NytePlus"
         }
       ]
     },
@@ -931,6 +1012,15 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
+            "zh": "单奕佳",
+            "en": "Yijia Shan"
+          },
+          "id": "",
+          "image": "assets/img/members/student/单奕佳_2.jpg",
+          "link": ""
+        },
+        {
+          "name": {
             "zh": "郭思佳",
             "en": "Sijia Guo"
           },
@@ -945,6 +1035,24 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/octocat-placeholder.png",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "杨子越",
+            "en": "Ziyue Yang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/杨子越_2.jpg",
+          "link": "https://drunk-mooon.github.io"
+        },
+        {
+          "name": {
+            "zh": "伍杨晴",
+            "en": "Yangqing Wu"
+          },
+          "id": "",
+          "image": "assets/img/members/student/伍杨晴.jpg",
           "link": ""
         },
         {
@@ -972,6 +1080,24 @@ window.XLANCE_MEMBERS = {
           },
           "id": "211-M",
           "image": "assets/img/members/student/陈冠豫.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "涂宇清",
+            "en": "Yuqing Tu"
+          },
+          "id": "",
+          "image": "assets/img/members/student/涂宇清_2.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "陈沛宁",
+            "en": "CHEN Peining"
+          },
+          "id": "",
+          "image": "assets/img/members/student/陈沛宁.jpg",
           "link": ""
         },
         {
@@ -1063,6 +1189,42 @@ window.XLANCE_MEMBERS = {
           "id": "",
           "image": "assets/img/members/octocat-placeholder.png",
           "link": ""
+        },
+        {
+          "name": {
+            "zh": "王榕麒",
+            "en": "Rongqi Wang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/王榕麒.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "李远钒",
+            "en": "Yuanfan Li"
+          },
+          "id": "",
+          "image": "assets/img/members/octocat-placeholder.png",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "姜一铭",
+            "en": "Yiming Jiang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/姜一铭.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "张鑫",
+            "en": "Xin Zhang"
+          },
+          "id": "",
+          "image": "assets/img/members/student/张鑫.jpg",
+          "link": ""
         }
       ]
     },
@@ -1098,15 +1260,6 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/octocat-placeholder.png",
-          "link": ""
-        },
-        {
-          "name": {
-            "zh": "单奕佳",
-            "en": "Yijia Shan"
-          },
-          "id": "",
-          "image": "assets/img/members/student/单奕佳.jpg",
           "link": ""
         },
         {
@@ -1192,15 +1345,6 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
-            "zh": "杨子越",
-            "en": "Ziyue Yang"
-          },
-          "id": "",
-          "image": "assets/img/members/student/杨子越.jpg",
-          "link": ""
-        },
-        {
-          "name": {
             "zh": "张耀中",
             "en": "Yaozhong Zhang"
           },
@@ -1224,15 +1368,6 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/octocat-placeholder.png",
-          "link": ""
-        },
-        {
-          "name": {
-            "zh": "伍杨晴",
-            "en": "Yangqing Wu"
-          },
-          "id": "",
-          "image": "assets/img/members/student/伍杨晴.jpg",
           "link": ""
         },
         {
@@ -1273,15 +1408,6 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
-            "zh": "江楠",
-            "en": "Nan Jiang"
-          },
-          "id": "",
-          "image": "assets/img/members/student/江楠.jpg",
-          "link": ""
-        },
-        {
-          "name": {
             "zh": "刘峻希",
             "en": "Junxi Liu"
           },
@@ -1296,15 +1422,6 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/student/李师萌.jpg",
-          "link": ""
-        },
-        {
-          "name": {
-            "zh": "涂宇清",
-            "en": "Yuqing Tu"
-          },
-          "id": "",
-          "image": "assets/img/members/student/涂宇清.jpg",
           "link": ""
         },
         {
@@ -1354,15 +1471,6 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
-            "zh": "陈沛宁",
-            "en": "Peining Chen"
-          },
-          "id": "",
-          "image": "assets/img/members/student/陈沛宁.jpg",
-          "link": ""
-        },
-        {
-          "name": {
             "zh": "刘翔",
             "en": "Xiang Liu"
           },
@@ -1390,30 +1498,12 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
-            "zh": "王梓鉴",
-            "en": "Zijian Wang"
-          },
-          "id": "",
-          "image": "assets/img/members/student/王梓鉴.jpg",
-          "link": "https://kotohanon.github.io"
-        },
-        {
-          "name": {
             "zh": "罗予",
             "en": "Yu Luo"
           },
           "id": "",
           "image": "assets/img/members/student/罗予.jpg",
           "link": ""
-        },
-        {
-          "name": {
-            "zh": "凤鹏超",
-            "en": "Pengchao Feng"
-          },
-          "id": "",
-          "image": "assets/img/members/student/凤鹏超_2.jpg",
-          "link": "https://the-bird-f.github.io"
         },
         {
           "name": {
@@ -1480,15 +1570,6 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
-            "zh": "霍彦儒",
-            "en": "Yanru Huo"
-          },
-          "id": "",
-          "image": "assets/img/members/student/霍彦儒.jpg",
-          "link": ""
-        },
-        {
-          "name": {
             "zh": "岑智瀚",
             "en": "Zhihan Cen"
           },
@@ -1539,6 +1620,15 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/student/王柏雯.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "丁宣铭",
+            "en": "Xuanming Ding"
+          },
+          "id": "",
+          "image": "assets/img/members/student/丁宣铭.jpg",
           "link": ""
         }
       ]
@@ -3031,6 +3121,6 @@ window.XLANCE_MEMBERS = {
       "link": ""
     }
   ],
-  "generatedAt": "2026-06-21T14:56:28.868017+00:00",
+  "generatedAt": "2026-08-31T08:52:54.847151+00:00",
   "sourceFile": "members/final.xlsx"
 };

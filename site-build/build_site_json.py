@@ -82,6 +82,9 @@ def normalize_image(value: str) -> str:
     image = image.replace("\\", "/")
     if image.startswith("/"):
         image = image[1:]
+    if image == "assets/img/octocat.png":
+        return DEFAULT_IMAGE
+    image = re.sub(r"\.(?:jpe?g|png)$", lambda match: match.group(0).lower(), image, flags=re.I)
     return image or DEFAULT_IMAGE
 
 
