@@ -1039,6 +1039,15 @@ window.XLANCE_MEMBERS = {
         },
         {
           "name": {
+            "zh": "徐瑞阳",
+            "en": "Ruiyang Xu"
+          },
+          "id": "",
+          "image": "assets/img/members/student/徐瑞阳.jpg",
+          "link": "https://xrysamuel.github.io"
+        },
+        {
+          "name": {
             "zh": "杨子越",
             "en": "Ziyue Yang"
           },
@@ -1225,6 +1234,24 @@ window.XLANCE_MEMBERS = {
           "id": "",
           "image": "assets/img/members/student/张鑫.jpg",
           "link": ""
+        },
+        {
+          "name": {
+            "zh": "陆天懿",
+            "en": "Tianyi Lu"
+          },
+          "id": "",
+          "image": "assets/img/members/student/陆天懿.jpg",
+          "link": ""
+        },
+        {
+          "name": {
+            "zh": "郑谨龄",
+            "en": "HITOMI TEE JIN LING"
+          },
+          "id": "",
+          "image": "assets/img/members/student/郑谨龄.jpg",
+          "link": "https://hitomitee.github.io"
         }
       ]
     },
@@ -1332,15 +1359,6 @@ window.XLANCE_MEMBERS = {
           },
           "id": "",
           "image": "assets/img/members/student/汪子翔.jpg",
-          "link": ""
-        },
-        {
-          "name": {
-            "zh": "徐瑞阳",
-            "en": "Ruiyang Xu"
-          },
-          "id": "",
-          "image": "assets/img/members/student/徐瑞阳.jpg",
           "link": ""
         },
         {
@@ -3121,6 +3139,6 @@ window.XLANCE_MEMBERS = {
       "link": ""
     }
   ],
-  "generatedAt": "2026-08-31T08:52:54.847151+00:00",
+  "generatedAt": "2026-09-01T08:33:23.672910+00:00",
   "sourceFile": "members/final.xlsx"
 };
