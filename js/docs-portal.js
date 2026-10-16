@@ -24,6 +24,26 @@
     if (app && path !== null) { lastPath = safe(path); app.navigate(lastPath); }
     notify(); window.scrollTo(0, 0);
   }
+  async function login(username, password) {
+    const fallback = document.documentElement.lang.startsWith('zh') ? '登录失败，请稍后重试。' : 'Sign-in failed. Please try again.';
+    const identity = await fetch('/docs/api/v1/auth/me/', { credentials: 'same-origin', cache: 'no-store' });
+    if (!identity.ok) throw new Error(fallback);
+    const session = await identity.json();
+    const response = await fetch('/docs/api/v1/auth/login/', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-CSRFToken': session.csrf_token },
+      body: JSON.stringify({ username, password })
+    });
+    const result = await response.json().catch(() => null);
+    if (!response.ok || !result?.user) {
+      const message = result?.error?.message || result?.error || result?.detail;
+      throw new Error(typeof message === 'string' ? message : fallback);
+    }
+    ++authRequest;
+    auth(result.user, true);
+    app?.update({ authVersion: ++revision });
+    go('/');
+  }
   async function logout() {
     if (!leave()) return;
     try {
@@ -80,5 +100,5 @@
     });
     refresh();
   }
-  window.XLANCE_PORTAL = { init, sync, route, href, get user() { return user; } };
+  window.XLANCE_PORTAL = { init, sync, route, href, login, get user() { return user; } };
 })();

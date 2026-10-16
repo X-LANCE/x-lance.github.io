@@ -663,8 +663,13 @@
             <button class="lang-switch" type="button" data-lang-toggle>${UI[lang].switchTo}</button>
             <div class="account-menu">
               <button class="lang-switch account-toggle" type="button" data-account-toggle data-signed-in="${!!portal?.user}" aria-expanded="false" aria-controls="account-options" title="${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}">${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}</button>
-              <div class="account-options" id="account-options" hidden>
-                ${portal?.user ? `<button type="button" data-site-logout>${lang === "zh" ? "退出登录" : "Sign out"}</button>` : `<a class="login-switch" data-docs-route="/login" href="/?docs=%2Flogin">${lang === "zh" ? "登录" : "Sign in"}</a>`}
+              <div class="account-options ${portal?.user ? "" : "account-login-panel"}" id="account-options" hidden>
+                ${portal?.user ? `<button type="button" data-site-logout>${lang === "zh" ? "退出登录" : "Sign out"}</button>` : `<form class="account-login-form" data-site-login>
+                  <label>${lang === "zh" ? "实验室账号" : "Lab username"}<input name="username" autocomplete="username" required maxlength="150" /></label>
+                  <label>${lang === "zh" ? "密码" : "Password"}<input name="password" type="password" autocomplete="current-password" required maxlength="4096" /></label>
+                  <p class="account-login-error" role="alert" hidden></p>
+                  <button type="submit">${lang === "zh" ? "登录" : "Sign in"}</button>
+                </form>`}
               </div>
             </div>
           </div>
@@ -1655,17 +1660,44 @@
     if (!toggle || !panel || panel.hidden) return;
     panel.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
+    const password = panel.querySelector('input[name="password"]');
+    if (password) password.value = '';
     if (restoreFocus) toggle.focus();
   }
   document.addEventListener('click', event => {
     const toggle = event.target.closest?.('[data-account-toggle]');
     if (toggle) {
       const panel = document.getElementById('account-options');
+      if (!panel.hidden) { closeAccountMenu(); return; }
       panel.hidden = !panel.hidden;
       toggle.setAttribute('aria-expanded', String(!panel.hidden));
+      if (!panel.hidden) panel.querySelector('input')?.focus();
       return;
     }
-    if (!event.target.closest?.('.account-menu') || event.target.closest?.('.account-options a, .account-options button')) closeAccountMenu();
+    if (!event.target.closest?.('.account-menu') || event.target.closest?.('[data-site-logout]')) closeAccountMenu();
+  });
+  document.addEventListener('submit', async event => {
+    const form = event.target;
+    if (!form.matches?.('[data-site-login]')) return;
+    event.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    if (button.disabled) return;
+    const error = form.querySelector('.account-login-error');
+    const label = button.textContent;
+    button.disabled = true;
+    button.textContent = currentLang === 'zh' ? '正在登录…' : 'Signing in…';
+    error.hidden = true;
+    try {
+      await window.XLANCE_PORTAL.login(form.elements.username.value, form.elements.password.value);
+    } catch (failure) {
+      error.textContent = failure.message;
+      error.hidden = false;
+      form.elements.password.value = '';
+      form.elements.password.focus();
+    } finally {
+      button.disabled = false;
+      button.textContent = label;
+    }
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && document.querySelector('[data-account-toggle][aria-expanded="true"]')) {
