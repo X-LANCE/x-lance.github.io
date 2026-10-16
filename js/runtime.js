@@ -657,6 +657,7 @@
           <div class="header-actions">
             <button class="theme-switch" type="button" data-theme-toggle aria-label="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}" title="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}">${themeIcon(theme)}</button>
             <button class="lang-switch" type="button" data-lang-toggle>${UI[lang].switchTo}</button>
+            <a class="lang-switch login-switch" href="https://x-lance.sjtu.edu.cn/docs/login">${lang === "zh" ? "登录" : "Login"}</a>
           </div>
         </div>
       </header>

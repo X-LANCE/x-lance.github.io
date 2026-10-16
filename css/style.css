@@ -219,6 +219,8 @@ a {
 
 .lang-switch,
 .theme-switch {
+  font-family: inherit;
+  font-size: 13px;
   border: 1px solid var(--line);
   width: 54px;
   min-width: 54px;
