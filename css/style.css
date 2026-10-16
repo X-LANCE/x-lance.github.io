@@ -2575,9 +2575,12 @@ img.progressive-image {
 /* Signed-in website navigation and document content host. */
 .portal-loading { padding: 60px 24px; text-align: center; color: var(--muted); }
 #docs-portal { display: block; min-width: 0; }
-@media (min-width: 1061px) and (max-width: 1280px) { .nav-bar:has(.account-toggle[data-signed-in="true"]) { grid-template-columns: minmax(180px, 1fr) auto; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav { grid-row: 2; grid-column: 1 / -1; justify-content: flex-start; overflow-x: auto; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .header-actions { grid-row: 1; grid-column: 2; } }
-
-@media (min-width: 1281px) { .nav-bar:has(.account-toggle[data-signed-in="true"]) .brand small { max-width: 190px; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav { gap: 0; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav a { padding: 8px 7px; white-space: nowrap; font-size: 13px; } }
+@media (min-width: 1061px) {
+  .nav-bar:has(.account-toggle[data-signed-in="true"]) { grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) auto; gap: 12px; }
+  .nav-bar:has(.account-toggle[data-signed-in="true"]) .brand small { max-width: 190px; }
+  .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav { min-width: 0; overflow-x: auto; justify-content: safe flex-end; gap: 0; }
+  .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav a { flex: 0 0 auto; padding: 8px 7px; white-space: nowrap; font-size: 13px; }
+}
 
 .account-menu { position: relative; flex-shrink: 0; }
 .account-toggle { width: auto; max-width: 120px; padding: 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
