@@ -661,7 +661,12 @@
           <div class="header-actions">
             <button class="theme-switch" type="button" data-theme-toggle aria-label="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}" title="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}">${themeIcon(theme)}</button>
             <button class="lang-switch" type="button" data-lang-toggle>${UI[lang].switchTo}</button>
-            ${portal?.user ? `<span class="site-account" title="${escapeHtml(portal.user.name)}">${escapeHtml(portal.user.name)}</span><button class="lang-switch" type="button" data-site-logout>${lang === "zh" ? "退出" : "Logout"}</button>` : `<a class="lang-switch login-switch" data-docs-route="/login" href="/?docs=%2Flogin">${lang === "zh" ? "登录" : "Login"}</a>`}
+            <div class="account-menu">
+              <button class="lang-switch account-toggle" type="button" data-account-toggle data-signed-in="${!!portal?.user}" aria-expanded="false" aria-controls="account-options" title="${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}">${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}</button>
+              <div class="account-options" id="account-options" hidden>
+                ${portal?.user ? `<button type="button" data-site-logout>${lang === "zh" ? "退出登录" : "Sign out"}</button>` : `<a class="login-switch" data-docs-route="/login" href="/?docs=%2Flogin">${lang === "zh" ? "登录" : "Sign in"}</a>`}
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -1643,6 +1648,34 @@
     });
     setTimeout(scrollToHashTarget, 80);
   }
+
+  function closeAccountMenu(restoreFocus = false) {
+    const toggle = document.querySelector('[data-account-toggle]');
+    const panel = document.getElementById('account-options');
+    if (!toggle || !panel || panel.hidden) return;
+    panel.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) toggle.focus();
+  }
+  document.addEventListener('click', event => {
+    const toggle = event.target.closest?.('[data-account-toggle]');
+    if (toggle) {
+      const panel = document.getElementById('account-options');
+      panel.hidden = !panel.hidden;
+      toggle.setAttribute('aria-expanded', String(!panel.hidden));
+      return;
+    }
+    if (!event.target.closest?.('.account-menu') || event.target.closest?.('.account-options a, .account-options button')) closeAccountMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.querySelector('[data-account-toggle][aria-expanded="true"]')) {
+      closeAccountMenu(true);
+      event.preventDefault();
+    }
+  });
+  document.addEventListener('focusin', event => {
+    if (!event.target.closest?.('.account-menu')) closeAccountMenu();
+  });
 
   window.addEventListener('xlance-preferences', () => { currentLang = detectLang(); currentTheme = detectTheme(); render(); });
   window.addEventListener("resize", () => { syncHeaderHeight(); requestAnimationFrame(syncActiveNav); });

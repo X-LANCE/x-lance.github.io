@@ -2573,10 +2573,16 @@ img.progressive-image {
 }
 
 /* Signed-in website navigation and document content host. */
-.site-account { max-width: 78px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
 .portal-loading { padding: 60px 24px; text-align: center; color: var(--muted); }
 #docs-portal { display: block; min-width: 0; }
-@media (min-width: 1061px) and (max-width: 1280px) { .nav-bar:has(.site-account) { grid-template-columns: minmax(180px, 1fr) auto; } .nav-bar:has(.site-account) .site-nav { grid-row: 2; grid-column: 1 / -1; justify-content: flex-start; overflow-x: auto; } .nav-bar:has(.site-account) .header-actions { grid-row: 1; grid-column: 2; } }
-@media (max-width: 720px) { .site-account { display: none; } }
+@media (min-width: 1061px) and (max-width: 1280px) { .nav-bar:has(.account-toggle[data-signed-in="true"]) { grid-template-columns: minmax(180px, 1fr) auto; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav { grid-row: 2; grid-column: 1 / -1; justify-content: flex-start; overflow-x: auto; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .header-actions { grid-row: 1; grid-column: 2; } }
 
-@media (min-width: 1281px) { .nav-bar:has(.site-account) .brand small { max-width: 190px; } .nav-bar:has(.site-account) .site-nav { gap: 0; } .nav-bar:has(.site-account) .site-nav a { padding: 8px 7px; white-space: nowrap; font-size: 13px; } }
+@media (min-width: 1281px) { .nav-bar:has(.account-toggle[data-signed-in="true"]) .brand small { max-width: 190px; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav { gap: 0; } .nav-bar:has(.account-toggle[data-signed-in="true"]) .site-nav a { padding: 8px 7px; white-space: nowrap; font-size: 13px; } }
+
+.account-menu { position: relative; flex-shrink: 0; }
+.account-toggle { width: auto; max-width: 120px; padding: 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.account-toggle[aria-expanded="true"] { border-color: var(--red); }
+.account-options { position: absolute; top: calc(100% + 6px); right: 0; min-width: 128px; padding: 5px; border: 1px solid var(--line); border-radius: 8px; background: var(--field-bg); box-shadow: 0 6px 20px #0002; z-index: 30; }
+.account-options a, .account-options button { display: block; width: 100%; padding: 9px 12px; border: 0; border-radius: 5px; background: transparent; color: var(--ink); font: inherit; font-size: 13px; line-height: 1.4; text-align: left; white-space: nowrap; cursor: pointer; }
+.account-options a:hover, .account-options button:hover, .account-options a:focus-visible, .account-options button:focus-visible { background: var(--accent-soft); color: var(--red-dark); }
+@media (max-width: 720px) { .account-toggle { max-width: 82px; padding: 0 6px; } }
