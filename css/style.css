@@ -2557,3 +2557,12 @@ img.progressive-image {
     filter 0.28s ease,
     transform 0.32s ease;
 }
+
+/* Signed-in website navigation and document content host. */
+.site-account { max-width: 78px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
+.portal-loading { padding: 60px 24px; text-align: center; color: var(--muted); }
+#docs-portal { display: block; min-width: 0; }
+@media (min-width: 1061px) and (max-width: 1280px) { .nav-bar:has(.site-account) { grid-template-columns: minmax(180px, 1fr) auto; } .nav-bar:has(.site-account) .site-nav { grid-row: 2; grid-column: 1 / -1; justify-content: flex-start; overflow-x: auto; } .nav-bar:has(.site-account) .header-actions { grid-row: 1; grid-column: 2; } }
+@media (max-width: 720px) { .site-account { display: none; } }
+
+@media (min-width: 1281px) { .nav-bar:has(.site-account) .brand small { max-width: 190px; } .nav-bar:has(.site-account) .site-nav { gap: 0; } .nav-bar:has(.site-account) .site-nav a { padding: 8px 7px; white-space: nowrap; font-size: 13px; } }

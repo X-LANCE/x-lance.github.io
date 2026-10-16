@@ -637,9 +637,13 @@
   }
 
   function renderHeader(active, lang, theme) {
-    const activeId = navActiveId(active);
-    const nav = DATA.nav.map((item) => `
-      <a href="${escapeHtml(item.href)}" class="${item.id === activeId ? "active" : ""}">${escapeHtml(tr(item.label, lang))}</a>
+    const portal = window.XLANCE_PORTAL;
+    const docPath = portal?.route();
+    const activeId = docPath != null ? (docPath.startsWith('/files') ? 'files' : 'docs') : navActiveId(active);
+    const items = [...DATA.nav];
+    if (portal?.user) items.push({ id: 'docs', href: portal.href('/'), label: { zh: '文档', en: 'Docs' } }, { id: 'files', href: portal.href('/files'), label: { zh: '文件', en: 'Files' } });
+    const nav = items.map((item) => `
+      <a href="${escapeHtml(item.href)}" ${item.id === "docs" || item.id === "files" ? `data-docs-route="${item.id === "files" ? "/files" : "/"}"` : ""} class="${item.id === activeId ? "active" : ""}">${escapeHtml(tr(item.label, lang))}</a>
     `).join("");
     const themeText = themeName(theme, lang);
     const header = document.getElementById("site-header");
@@ -657,7 +661,7 @@
           <div class="header-actions">
             <button class="theme-switch" type="button" data-theme-toggle aria-label="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}" title="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}">${themeIcon(theme)}</button>
             <button class="lang-switch" type="button" data-lang-toggle>${UI[lang].switchTo}</button>
-            <a class="lang-switch login-switch" href="https://x-lance.sjtu.edu.cn/docs/login">${lang === "zh" ? "登录" : "Login"}</a>
+            ${portal?.user ? `<span class="site-account" title="${escapeHtml(portal.user.name)}">${escapeHtml(portal.user.name)}</span><button class="lang-switch" type="button" data-site-logout>${lang === "zh" ? "退出" : "Logout"}</button>` : `<a class="lang-switch login-switch" data-docs-route="/login" href="/?docs=%2Flogin">${lang === "zh" ? "登录" : "Login"}</a>`}
           </div>
         </div>
       </header>
@@ -1619,7 +1623,8 @@
       source: renderSourcePage
     };
     const app = document.getElementById("app");
-    app.innerHTML = (renderers[active] || renderHome)(currentLang);
+    if (window.XLANCE_PORTAL?.route() == null) app.innerHTML = (renderers[active] || renderHome)(currentLang);
+    window.XLANCE_PORTAL?.sync(currentLang, currentTheme);
     document.title = `${tr((DATA.nav.find((item) => item.id === activeId) || {}).label, currentLang) || DATA.lab.shortName} - ${DATA.lab.shortName}`;
     document.querySelector("[data-lang-toggle]").addEventListener("click", () => {
       currentLang = currentLang === "zh" ? "en" : "zh";
@@ -1639,12 +1644,14 @@
     setTimeout(scrollToHashTarget, 80);
   }
 
-  window.addEventListener("resize", syncHeaderHeight);
+  window.addEventListener('xlance-preferences', () => { currentLang = detectLang(); currentTheme = detectTheme(); render(); });
+  window.addEventListener("resize", () => { syncHeaderHeight(); requestAnimationFrame(syncActiveNav); });
   window.addEventListener("hashchange", () => {
     requestAnimationFrame(scrollToHashTarget);
     setTimeout(scrollToHashTarget, 80);
   });
   document.addEventListener("DOMContentLoaded", () => {
+    window.XLANCE_PORTAL?.init(render);
     loadGeneratedData().finally(render);
   });
 })();
