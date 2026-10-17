@@ -1,4 +1,6 @@
 (() => {
+  // GitHub Pages serves the public site without the session or document backend.
+  if (window.location.hostname === 'x-lance.github.io') return;
   let user = null, app = null, loading = false, dirty = false, notify = () => {}, lastPath = null, revision = 0, authRequest = 0;
   const route = () => new URL(location.href).searchParams.get('docs');
   const safe = path => typeof path === 'string' && /^\/(?!\/)[^\r\n]*$/.test(path) ? path : '/';

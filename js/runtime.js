@@ -10,6 +10,41 @@
     news: "assets/data/news.json"
   };
 
+  async function prepareAssetCache() {
+    if (!window.isSecureContext || !("serviceWorker" in navigator)) return;
+    try {
+      await navigator.serviceWorker.register("/sw.js", { scope: "/", updateViaCache: "none" });
+      if (!navigator.serviceWorker.controller) {
+        await new Promise(resolve => {
+          const controlled = () => {
+            if (!navigator.serviceWorker.controller) return;
+            navigator.serviceWorker.removeEventListener("controllerchange", controlled);
+            resolve();
+          };
+          navigator.serviceWorker.addEventListener("controllerchange", controlled);
+          controlled();
+        });
+      }
+      navigator.serviceWorker.controller.postMessage({
+        type: "CACHE_PAGE_ASSETS",
+        urls: Array.from(document.querySelectorAll('script[src], link[rel="stylesheet"][href]'),
+          element => element.src || element.href)
+      });
+    } catch (error) {
+      console.warn("Static asset cache unavailable:", error);
+    }
+  }
+
+  // Let the worker capture original photos on the first visit, without making
+  // rendering depend on worker support, storage access or registration success.
+  const assetCacheReady = new Promise(resolve => {
+    const timeout = window.setTimeout(resolve, 2000);
+    prepareAssetCache().finally(() => {
+      window.clearTimeout(timeout);
+      resolve();
+    });
+  });
+
   function canonicalizeHtmlPath() {
     if (!/^https?:$/.test(window.location.protocol)) return;
     const { pathname, search, hash } = window.location;
@@ -661,7 +696,7 @@
           <div class="header-actions">
             <button class="theme-switch" type="button" data-theme-toggle aria-label="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}" title="${escapeHtml(`${UI[lang].themeTitle}: ${themeText}`)}">${themeIcon(theme)}</button>
             <button class="lang-switch" type="button" data-lang-toggle>${UI[lang].switchTo}</button>
-            <div class="account-menu">
+            ${portal ? `<div class="account-menu">
               <button class="lang-switch account-toggle" type="button" data-account-toggle data-signed-in="${!!portal?.user}" aria-expanded="false" aria-controls="account-options" title="${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}">${escapeHtml(portal?.user?.username || (lang === "zh" ? "未登录" : "Not signed in"))}</button>
               <div class="account-options ${portal?.user ? "" : "account-login-panel"}" id="account-options" hidden>
                 ${portal?.user ? `<button type="button" data-site-logout>${lang === "zh" ? "退出登录" : "Sign out"}</button>` : `<form class="account-login-form" data-site-login>
@@ -671,7 +706,7 @@
                   <button type="submit">${lang === "zh" ? "登录" : "Sign in"}</button>
                 </form>`}
               </div>
-            </div>
+            </div>` : ""}
           </div>
         </div>
       </header>
@@ -1716,7 +1751,7 @@
     setTimeout(scrollToHashTarget, 80);
   });
   document.addEventListener("DOMContentLoaded", () => {
-    window.XLANCE_PORTAL?.init(render);
-    loadGeneratedData().finally(render);
+    window.XLANCE_PORTAL?.init(() => assetCacheReady.then(render));
+    Promise.all([loadGeneratedData(), assetCacheReady]).finally(render);
   });
 })();
